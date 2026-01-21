@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FAQs - Fraittech | Frequently Asked Questions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Find answers to frequently asked questions about Fraittech's digital services, including web development, graphic design, IT support, and cloud solutions.">
+    <meta name="keywords" content="FAQs, frequently asked questions, digital services FAQ, web design help, IT support questions">
+    <meta name="author" content="Fraittech">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FAQs - Fraittech">
+    <meta property="og:description" content="Frequently asked questions about Fraittech's services. Find quick answers to common questions.">
+    <meta property="og:url" content="https://fraittech.co.ke/faqs.html">
+    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fraittech.co.ke/faqs.html">
+
+    <!-- Favicon -->
+    <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="img/favicon/favicon.svg" rel="icon" type="image/svg+xml">
+    <link href="img/favicon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/favicon/site.webmanifest" rel="manifest">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .faq-tab-button {
+            border: 2px solid #0d6efd;
+            color: #0d6efd;
+            font-weight: 600;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        .faq-tab-button:hover,
+        .faq-tab-button.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .accordion-button:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        .faq-content {
+            display: none;
+        }
+        .faq-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Header Bar Start -->
+    <div class="bg-dark py-2 px-lg-5">
+        <div class="container-xxl">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex flex-wrap gap-4 small text-white">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-phone text-primary me-2"></i>
+                            <span>+254 742 451 220</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-envelope text-primary me-2"></i>
+                            <span>info@fraittech.co.ke</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                            <span>Nanyuki, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="d-flex gap-2 justify-content-md-end">
+                        <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Header Bar End -->
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/Latest logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="project.html" class="nav-item nav-link">Project</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
+                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 mt-3 d-block d-lg-none w-100 text-center" style="background: var(--primary); color: #fff;">Get a quotation</a>
+                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
+                </div>
+            </nav>
+
+            <!-- Hero Slider Start -->
+            <div class="hero-slider-container position-relative">
+                <div class="hero-slider">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active">
+                        <img src="img/hero-slide-1.jpg" alt="Fraittech FAQs" class="hero-slide-img">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="text-white animated slideInDown">FAQs</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">FAQs</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="hero-slide">
+                        <img src="img/hero-slide-2.jpg" alt="Frequently Asked Questions" class="hero-slide-img">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="text-white animated slideInDown">Common Questions</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <p class="text-white fs-5">Find answers to your queries here</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="hero-slide">
+                        <img src="img/hero-slide-3.jpg" alt="FAQ Support" class="hero-slide-img">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="text-white animated slideInDown">Get Answers</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <p class="text-white fs-5">Learn more about our services and pricing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Slider End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- FAQ Section Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title bg-white text-center text-primary px-3">Frequently Asked Questions</p>
+                    <h1 class="text-center mb-5">Get Quick Answers</h1>
+                </div>
+
+                <!-- FAQ Category Buttons -->
+                <div class="text-center mb-5">
+                    <button class="faq-tab-button active" data-category="general">General</button>
+                    <button class="faq-tab-button" data-category="services">Services</button>
+                    <button class="faq-tab-button" data-category="pricing">Pricing</button>
+                    <button class="faq-tab-button" data-category="technical">Technical</button>
+                </div>
+
+                <!-- General FAQs -->
+                <div id="general" class="faq-content active">
+                    <div class="accordion mb-4" id="generalAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    Who is Fraittech?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#generalAccordion">
+                                <div class="accordion-body">
+                                    Fraittech is a leading digital solutions company based in Nanyuki, Kenya. We specialize in web development, graphic design, IT support, cloud services, IT consulting, and system integration. Our team of experts is dedicated to helping businesses transform digitally and achieve their goals.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    Where is Fraittech located?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                <div class="accordion-body">
+                                    We are headquartered in Nanyuki, Kenya. However, we provide services to clients across Kenya and beyond through our online platforms and remote support services.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    How can I contact Fraittech?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                <div class="accordion-body">
+                                    You can reach us through multiple channels: Phone: +254 742 451 220, Email: info@fraittech.co.ke, WhatsApp: +254 742 451 220, or fill out our contact form on the website. Our support team is available 24/7 for urgent matters.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    What are your business hours?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                <div class="accordion-body">
+                                    We operate 24/7 for urgent support matters. Our standard business hours are Monday to Friday, 8:00 AM to 6:00 PM EAT. Weekend consultations are available upon request for critical issues.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services FAQs -->
+                <div id="services" class="faq-content">
+                    <div class="accordion mb-4" id="servicesAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    What web development services do you offer?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse show" data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    We offer comprehensive web development services including: website design and development, e-commerce solutions, responsive web design, CMS implementation (WordPress, custom systems), web application development, and website maintenance and support.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                    Can you help with graphic design projects?
+                                </button>
+                            </h2>
+                            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    Yes! Our graphic design team specializes in: logo design, brand identity development, marketing materials (brochures, flyers, banners), social media graphics, packaging design, and print design. We create professional visuals that represent your brand effectively.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                    What IT support services are available?
+                                </button>
+                            </h2>
+                            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    We provide comprehensive IT support including: helpdesk support, hardware maintenance and repair, software troubleshooting, network setup and management, cybersecurity consultation, data backup and recovery, and system monitoring.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                    Do you offer cloud services?
+                                </button>
+                            </h2>
+                            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    Yes, we provide cloud solutions including: cloud storage solutions, cloud migration services, backup and disaster recovery, cloud application development, and cloud infrastructure management. We help businesses leverage cloud technology securely.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                    What is system integration?
+                                </button>
+                            </h2>
+                            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    System integration involves connecting different software applications and systems so they work together seamlessly. We help integrate ERP systems, CRM platforms, accounting software, and other business applications to streamline your operations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing FAQs -->
+                <div id="pricing" class="faq-content">
+                    <div class="accordion mb-4" id="pricingAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading10">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                    How much do your services cost?
+                                </button>
+                            </h2>
+                            <div id="collapse10" class="accordion-collapse collapse show" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    Pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including fixed-price projects, hourly rates, and maintenance packages. Request a free quote to get custom pricing for your specific needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading11">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                                    Do you offer discounts for long-term contracts?
+                                </button>
+                            </h2>
+                            <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    Yes! We offer competitive discounts for extended support contracts, retainer agreements, and long-term service engagements. Contact our sales team to discuss volume discounts and custom pricing packages.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading12">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                                    Is a free consultation available?
+                                </button>
+                            </h2>
+                            <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! We offer a free initial consultation to assess your needs and provide recommendations. This helps us understand your requirements and give you an accurate quote with no obligation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading13">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    We accept various payment methods including bank transfers, mobile money (M-Pesa), credit/debit cards, and online payment platforms. Custom payment plans and installments can be arranged for larger projects.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical FAQs -->
+                <div id="technical" class="faq-content">
+                    <div class="accordion mb-4" id="technicalAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading14">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+                                    What technologies do you work with?
+                                </button>
+                            </h2>
+                            <div id="collapse14" class="accordion-collapse collapse show" data-bs-parent="#technicalAccordion">
+                                <div class="accordion-body">
+                                    We work with modern technologies including PHP, Python, JavaScript, React, Node.js, Laravel, WordPress, MySQL, cloud platforms (AWS, Azure, Google Cloud), and various CMS platforms. We choose the right technology stack for your project needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading15">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
+                                    How long does a website project take?
+                                </button>
+                            </h2>
+                            <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#technicalAccordion">
+                                <div class="accordion-body">
+                                    Project timelines vary based on complexity and scope. A basic website typically takes 2-4 weeks, while complex e-commerce or custom applications may take 2-3 months or more. We provide a detailed timeline after the initial assessment.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading16">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16">
+                                    Do you provide website maintenance and support?
+                                </button>
+                            </h2>
+                            <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#technicalAccordion">
+                                <div class="accordion-body">
+                                    Yes! We offer ongoing website maintenance packages including updates, backups, security monitoring, performance optimization, and technical support. Choose from monthly maintenance plans suited to your needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading17">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17">
+                                    Is my data secure with your services?
+                                </button>
+                            </h2>
+                            <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#technicalAccordion">
+                                <div class="accordion-body">
+                                    Security is our top priority. We implement industry-standard security measures including SSL encryption, regular backups, firewalls, security updates, and data protection compliance (GDPR, local regulations). All your data is handled with strict confidentiality.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading18">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18">
+                                    Can you migrate my website from another provider?
+                                </button>
+                            </h2>
+                            <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#technicalAccordion">
+                                <div class="accordion-body">
+                                    Yes! We specialize in seamless website migrations with zero downtime. We handle domain migration, database transfer, and ensure all content and functionality work perfectly on the new platform.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ Section End -->
+
+        <!-- Still Have Questions Start -->
+        <div class="container-xxl py-5 bg-light">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="h-100">
+                            <h1 class="mb-4">Still Have Questions?</h1>
+                            <p class="mb-4">Can't find the answer you're looking for? Our support team is here to help. Don't hesitate to reach out with any questions about our services, pricing, or anything else.</p>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-phone text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Call Us Anytime</h5>
+                                    <p class="mb-0">+254 742 451 220</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle" style="width: 50px; height: 50px;">
+                                        <i class="fa fa-envelope text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Email Us</h5>
+                                    <p class="mb-0">info@fraittech.co.ke</p>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <img class="img-fluid" src="img/feature.jpg" alt="Support">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Still Have Questions End -->
+
+            <!--Start of Tawk.to Script-->
+            <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
+            <!--End of Tawk.to Script-->
+
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5 px-lg-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3">
+                    <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Nanyuki, Kenya</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>0742 451 220</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@fraittech.co.ke</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="contact.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="contact.html">Terms & Condition</a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p class="section-title text-white h5 mb-4">Services<span></span></p>
+                    <a class="btn btn-link" href="service-website-development.html">Website Development</a>
+                    <a class="btn btn-link" href="service-graphic-design.html">Graphic Design</a>
+                    <a class="btn btn-link" href="service-it-consulting.html">IT Consulting</a>
+                    <a class="btn btn-link" href="service-it-support.html">IT Support</a>
+                    <a class="btn btn-link" href="service-cloud-services.html">Cloud Services</a>
+                    <a class="btn btn-link" href="service-system-integration.html">System Integration</a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                    <p>Subscribe to our newsletter to receive the latest updates, IT tips, and exclusive offers delivered directly to your inbox.</p>
+                    <form class="newsletter-form position-relative w-100 mt-3" action="newsletter-handler.php" method="POST">
+                        <form id="newsletterForm" class="newsletter-form position-relative w-100 mt-3" autocomplete="off">
+                            <input name="email" id="newsletterEmail" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Your Email" style="height: 48px;" required>
+                            <button id="newsletterSubmitBtn" type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2" aria-label="Subscribe">
+                                <i class="fa fa-paper-plane text-primary fs-4"></i>
+                            </button>
+                        </form>
+                        <div id="newsletterMessage" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container px-lg-5">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; 2026 <a class="border-bottom" href="index.html">fraittech.co.ke</a>, All Right Reserved. 
+                        Designed By <a class="border-bottom" href="https://wa.me/254742451220" target="_blank">Frank Mwaniki</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="contact.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                            <a href="faqs.html">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254742451220" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Hero Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+            
+            function showSlide(n) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+
+            // FAQ Category Switching
+            document.querySelectorAll('.faq-tab-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.faq-tab-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Hide all FAQ content
+                    document.querySelectorAll('.faq-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    // Show selected FAQ content
+                    document.getElementById(this.dataset.category).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+</html>
