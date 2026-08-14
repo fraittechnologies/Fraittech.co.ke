@@ -3,28 +3,28 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Help - Fraittech | Technical Support & Assistance | Kenya</title>
+    <title>Help Center &amp; IT Knowledge Base | Fraittech Kenya</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Need help with our digital services? Get technical support, guidance, and assistance from Fraittech's expert team in Kenya.">
-    <meta name="keywords" content="help desk, technical support, customer support Kenya, digital services help, Fraittech support">
+    <meta name="description" content="Fraittech help center: working with our team, orders and privacy, plus practical IT guides (Windows CMD tips, Wi-Fi troubleshooting, security hygiene, productivity) for businesses in Kenya.">
+    <meta name="keywords" content="Fraittech help, IT knowledge base Kenya, Windows CMD tips, Wi-Fi password recover own PC, cybersecurity basics, web project FAQ, digital agency support Nanyuki">
     <meta name="author" content="Fraittech">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Help - Fraittech Support">
-    <meta property="og:description" content="Get technical support and assistance from Fraittech. Our expert team is here to help you with any questions or issues.">
-    <meta property="og:url" content="https://fraittech.co.ke/help.html">
-    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.png">
+    <meta property="og:title" content="Help Center &amp; IT Knowledge Base | Fraittech">
+    <meta property="og:description" content="Support for Fraittech services plus practical IT guides: CMD tips, Wi-Fi fixes, security habits, and productivity for Kenyan businesses.">
+    <meta property="og:url" content="https://fraittech.co.ke/help">
+    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.webp">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://fraittech.co.ke/help.html">
+    <link rel="canonical" href="https://fraittech.co.ke/help">
 
     <!-- Favicon -->
     <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
     <link href="img/favicon/favicon.svg" rel="icon" type="image/svg+xml">
-    <link href="img/favicon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/favicon/favicon-96x96.webp" rel="icon" type="image/webp" sizes="96x96">
+    <link href="img/favicon/apple-touch-icon.webp" rel="apple-touch-icon">
     <link href="img/favicon/site.webmanifest" rel="manifest">
 
     <!-- Google Web Fonts -->
@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -46,30 +46,101 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Fraittech Help Center & IT Knowledge Base",
+      "url": "https://fraittech.co.ke/help",
+      "description": "Support resources and practical IT guides from Fraittech, Kenya.",
+      "publisher": { "@type": "Organization", "name": "Fraittech", "url": "https://fraittech.co.ke" },
+      "dateModified": "2026-04-18"
+    }
+    </script>
     
     <style>
-        .help-card {
+        .ft-kb-wrap { background: linear-gradient(180deg, #f8f9ff 0%, #fff 40%); }
+        .ft-kb-search {
+            max-width: 520px;
+            border-radius: 999px;
+            border: 1px solid rgba(13, 110, 253, 0.25);
+            padding: 0.6rem 1.25rem;
+            box-shadow: 0 4px 20px rgba(13, 110, 253, 0.08);
+        }
+        .ft-kb-search input {
             border: none;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
+            outline: none;
+            width: 100%;
+            background: transparent;
         }
-        .help-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        .ft-kb-toc {
+            position: sticky;
+            top: 5.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background: #fff;
+            padding: 1.25rem 1.35rem;
+            font-size: 0.95rem;
         }
-        .help-card-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            color: white;
-            margin-bottom: 20px;
+        .ft-kb-toc a {
+            display: block;
+            padding: 0.35rem 0;
+            color: #212529;
+            text-decoration: none;
+        }
+        .ft-kb-toc a:hover { color: #0d6efd; }
+        .ft-kb-section {
+            scroll-margin-top: 5.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .ft-kb-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(13, 110, 253, 0.2);
+        }
+        .ft-kb-article {
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background: #fff;
+            padding: 1.35rem 1.5rem;
+            margin-bottom: 1rem;
+            transition: box-shadow 0.2s ease;
+        }
+        .ft-kb-article:hover {
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+        }
+        .ft-kb-article h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .ft-kb-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #0d6efd;
+            font-weight: 600;
+        }
+        .ft-kb-code {
+            font-size: 0.85rem;
+            background: #f1f3f5;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0 0;
+            overflow-x: auto;
+        }
+        .ft-kb-article.ft-kb-hidden {
+            display: none;
+        }
+        .ft-kb-ethics {
+            border-left: 4px solid #198754;
+            background: #f4fbf6;
+            padding: 0.85rem 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
         }
         .accordion-button:not(.collapsed) {
             background-color: #0d6efd;
@@ -84,11 +155,11 @@
 
 <body>
     <!-- Top Header Bar Start -->
-    <div class="bg-dark py-2 px-lg-5">
+    <div class="ft-topbar py-2 px-lg-5">
         <div class="container-xxl">
             <div class="row g-4 align-items-center">
                 <div class="col-md-8">
-                    <div class="d-flex flex-wrap gap-4 small text-white">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone text-primary me-2"></i>
                             <span>+254 742 451 220</span>
@@ -104,55 +175,195 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-end">
-                    <div class="d-flex gap-2 justify-content-md-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
                         <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-x-twitter"></i></a>
                         <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" class="text-white small" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Top Header Bar End -->
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
             </div>
         </div>
-        <!-- Spinner End -->
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <img src="img/Latest logo.png" alt="Logo"> 
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <!-- <h1 class="m-0">DGital</h1> -->
+            <img src="img/Latest logo.webp" alt="Logo">
+        </a>
+        <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
+
+            <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
+
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+
+            </a>
+
+            <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+
+                <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown mega-dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-intro">
+                            <span class="mega-menu-eyebrow">Our expertise</span>
+                            <p class="mega-menu-headline mb-0">Explore services tailored to your goals &mdash; web, creative, cloud, and ongoing support.</p>
+                        </div>
+                        <div class="container-fluid mega-menu-inner">
+                            <div class="row g-3 g-lg-4 mega-menu-grid">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-website-development.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-laptop-code"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Website Development</h6>
+                                            <p>Stunning, responsive websites for business growth</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-graphic-design.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-palette"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Graphic Design</h6>
+                                            <p>Creative designs that captivate your audience</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-consulting.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Consulting</h6>
+                                            <p>Expert guidance on technology strategy</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-support.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Support</h6>
+                                            <p>Reliable technical support & maintenance</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-system-integration.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-plug"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>System Integration</h6>
+                                            <p>Seamlessly connect your business systems</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-cloud-services.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-cloud"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Cloud Services</h6>
+                                            <p>Scalable cloud solutions & migration</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="service.html" class="btn btn-primary rounded-pill">
+                                    View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 mt-3 d-block d-lg-none w-100 text-center" style="background: var(--primary); color: #fff;">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
                 </div>
+                <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block">Get a quotation</a>
+
+            <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom align-items-center">
+            <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                <img src="img/Latest logo.webp" alt="Fraittech">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                <div class="ft-offcanvas-services">
+                    <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                        <span class="fs-5">Services</span>
+                        <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="ftOffcanvasServices">
+                        <div class="d-flex flex-column ps-2 pb-2">
+                            <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                            <a href="service-graphic-design.html" class="nav-link py-2">Graphic Design</a>
+                            <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                            <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                            <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                            <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                            <a href="service.html" class="nav-link py-2 fw-semibold">View all services</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                <a href="contact.html" class="nav-link py-2 fs-5">Contact</a>
             </nav>
+            <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+        </div>
+    </div>
 
             <!-- Hero Slider Start -->
             <div class="hero-slider-container position-relative">
                 <div class="hero-slider">
                     <!-- Slide 1 -->
                     <div class="hero-slide active">
-                        <img src="img/hero-slide-1.jpg" alt="Fraittech Help & Support" class="hero-slide-img">
+                        <img src="img/hero-slide-1.webp" alt="Fraittech Help & Support" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Help & Support</h1>
@@ -168,7 +379,7 @@
 
                     <!-- Slide 2 -->
                     <div class="hero-slide">
-                        <img src="img/hero-slide-2.jpg" alt="Technical Support" class="hero-slide-img">
+                        <img src="img/hero-slide-2.webp" alt="Technical Support" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">We're Here to Help</h1>
@@ -179,7 +390,7 @@
 
                     <!-- Slide 3 -->
                     <div class="hero-slide">
-                        <img src="img/hero-slide-3.jpg" alt="Get Assistance" class="hero-slide-img">
+                        <img src="img/hero-slide-3.webp" alt="Get Assistance" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Support Resources</h1>
@@ -193,123 +404,174 @@
         </div>
         <!-- Navbar & Hero End -->
 
-        <!-- Help Categories Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title bg-white text-center text-primary px-3">How Can We Help?</p>
-                    <h1 class="text-center mb-5">Browse Help Topics</h1>
-                </div>
-                <div class="row g-4">
-                    <!-- Website Development Help -->
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="help-card p-4">
-                            <div class="help-card-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <h3 class="mb-3">Website Development</h3>
-                            <p class="mb-3">Get help with your website, domain setup, hosting, and web application issues.</p>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fa fa-check text-success me-2"></i>Domain registration and setup</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Website hosting and deployment</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Website performance optimization</li>
-                                <li><i class="fa fa-check text-success me-2"></i>CMS troubleshooting</li>
-                            </ul>
+        <div id="cookies" class="container-xxl pt-4">
+            <div class="alert alert-light border shadow-sm mb-0" role="region" aria-labelledby="cookies-heading">
+                <h2 id="cookies-heading" class="h5 mb-2">Cookie notice</h2>
+                <p class="mb-2 small">Essential cookies keep the site working, including cart data stored in your browser. If you choose &ldquo;Accept all&rdquo; in the banner, we load our live chat (Tawk.to), which may set additional cookies. You can switch to essential-only cookies at any time using <a href="#" data-ft-cookie-prefs>cookie settings</a> in the footer.</p>
+                <p class="mb-0 small text-muted">Questions? Contact us at <a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a>.</p>
+            </div>
+        </div>
+
+        <!-- Knowledge base Start -->
+        <div class="ft-kb-wrap">
+            <div class="container-xxl py-5">
+                <div class="container-fluid px-lg-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="section-title bg-white text-center text-primary px-3 d-inline-block">Knowledge base</p>
+                        <h1 class="mb-3">Help center &amp; practical IT guides</h1>
+                        <p class="text-muted mx-auto mb-4" style="max-width: 640px;">Learn how to get the most from Fraittech, understand cart and privacy basics, and use vetted Windows command-line tricks that real IT teams rely on&mdash;written for Kenyan businesses that want fewer outages and safer devices.</p>
+                        <div class="ft-kb-search d-inline-flex align-items-center gap-2 mx-auto mb-2">
+                            <i class="fa fa-search text-primary ms-1" aria-hidden="true"></i>
+                            <label class="visually-hidden" for="ft-kb-search">Search articles</label>
+                            <input type="search" id="ft-kb-search" autocomplete="off" placeholder="Search topics (e.g. Wi-Fi, CMD, quotation, SSL)..." aria-label="Search knowledge base articles">
                         </div>
+                        <p class="small text-muted mb-0"><a href="faqs.html">FAQs</a> &middot; <a href="privacy-policy.html">Privacy policy</a> &middot; <a href="quotation.html">Request a quotation</a></p>
                     </div>
 
-                    <!-- Graphic Design Help -->
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="help-card p-4">
-                            <div class="help-card-icon">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                            <h3 class="mb-3">Graphic Design</h3>
-                            <p class="mb-3">Assistance with design projects, branding, and creative assets.</p>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fa fa-check text-success me-2"></i>Brand identity development</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Logo design assistance</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Marketing materials creation</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Design file formats and exports</li>
-                            </ul>
+                    <div class="row g-4 mt-2">
+                        <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.05s">
+                            <nav class="ft-kb-toc" aria-label="Knowledge base sections">
+                                <strong class="d-block mb-2 text-primary">Jump to</strong>
+                                <a href="#kb-fraittech">Working with Fraittech</a>
+                                <a href="#kb-privacy-shop">Orders, cart &amp; data</a>
+                                <a href="#kb-cmd">Windows CMD &amp; PowerShell</a>
+                                <a href="#kb-security">Security &amp; phishing</a>
+                                <a href="#kb-network">Networking quick fixes</a>
+                                <a href="#kb-productivity">Office productivity</a>
+                            </nav>
                         </div>
-                    </div>
+                        <div class="col-lg-9">
 
-                    <!-- IT Support Help -->
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="help-card p-4">
-                            <div class="help-card-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <h3 class="mb-3">IT Support</h3>
-                            <p class="mb-3">Technical support for hardware, software, and IT infrastructure issues.</p>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fa fa-check text-success me-2"></i>Hardware troubleshooting</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Software installation and setup</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Network connectivity issues</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Cybersecurity consultation</li>
-                            </ul>
-                        </div>
-                    </div>
+                            <section id="kb-fraittech" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-handshake text-primary me-2" aria-hidden="true"></i>Working with Fraittech</h2>
 
-                    <!-- Cloud Services Help -->
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="help-card p-4">
-                            <div class="help-card-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <h3 class="mb-3">Cloud Services</h3>
-                            <p class="mb-3">Support for cloud solutions, data management, and online storage.</p>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fa fa-check text-success me-2"></i>Cloud migration assistance</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Data backup and recovery</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Cloud storage management</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Disaster recovery planning</li>
-                            </ul>
-                        </div>
-                    </div>
+                                <article class="ft-kb-article" data-kb-search="quotation brief project scope timeline revision kenya fraittech website design">
+                                    <span class="ft-kb-tag">Projects</span>
+                                    <h3>Starting a website or branding project</h3>
+                                    <p class="small text-muted mb-2">Use <a href="quotation.html">Get a quotation</a> with a clear goal (e.g. lead generation, bookings, e-commerce). Attach logo files, inspiration links, and must-have pages. We respond with scope, milestones, and pricing.</p>
+                                    <p class="mb-0">Tip: name a single decision-maker for approvals so design rounds stay on schedule.</p>
+                                </article>
 
-                    <!-- IT Consulting Help -->
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="help-card p-4">
-                            <div class="help-card-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3 class="mb-3">IT Consulting</h3>
-                            <p class="mb-3">Strategic guidance for IT planning and digital transformation.</p>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fa fa-check text-success me-2"></i>Business technology assessment</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Digital transformation strategy</li>
-                                <li><i class="fa fa-check text-success me-2"></i>System architecture planning</li>
-                                <li><i class="fa fa-check text-success me-2"></i>IT roadmap development</li>
-                            </ul>
-                        </div>
-                    </div>
+                                <article class="ft-kb-article" data-kb-search="revision feedback design mockup approval">
+                                    <span class="ft-kb-tag">Process</span>
+                                    <h3>How to give feedback that saves time</h3>
+                                    <p class="mb-0">Group comments by page or screen, mark &ldquo;must change&rdquo; vs. &ldquo;nice to have&rdquo;, and avoid conflicting feedback from multiple people in the same round. Short Loom videos are welcome for UX issues.</p>
+                                </article>
 
-                    <!-- System Integration Help -->
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="help-card p-4">
-                            <div class="help-card-icon">
-                                <i class="fas fa-cogs"></i>
+                                <article class="ft-kb-article" data-kb-search="domain DNS SSL hosting email fraittech">
+                                    <span class="ft-kb-tag">Go-live</span>
+                                    <h3>Domains, DNS, and SSL (the short version)</h3>
+                                    <p class="mb-0"><strong>DNS</strong> points your domain to hosting; <strong>SSL</strong> encrypts traffic. When migrating, lower TTL a day before changes, cut over off-peak, and keep old hosting online until propagation finishes. We can manage this as part of a launch checklist.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-privacy-shop" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-shield-alt text-primary me-2" aria-hidden="true"></i>Orders, cart &amp; your data</h2>
+
+                                <article class="ft-kb-article" data-kb-search="cart localstorage browser checkout payment intasend">
+                                    <span class="ft-kb-tag">Shop</span>
+                                    <h3>Why your cart survives after closing the tab</h3>
+                                    <p class="mb-0">The store saves cart lines in your browser so you do not lose items. Payment still happens on our provider&rsquo;s secure page. Details: <a href="privacy-policy.html">Privacy policy</a>.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="cookies tawk chat consent essential">
+                                    <span class="ft-kb-tag">Cookies</span>
+                                    <h3>Live chat and cookies</h3>
+                                    <p class="mb-0">If you accept non-essential cookies, chat widgets may load (for example Tawk.to). Essential-only mode keeps the site working without those scripts. Use cookie settings from the banner or footer link.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-cmd" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-terminal text-primary me-2" aria-hidden="true"></i>Windows CMD &amp; PowerShell tips</h2>
+                                <p class="small text-muted">Open <strong>Command Prompt</strong> or <strong>Windows Terminal</strong> as a normal user for these examples. Run as Administrator only when a command says so.</p>
+
+                                <article class="ft-kb-article" data-kb-search="wifi password netsh wlan profile key clear recover own computer network">
+                                    <span class="ft-kb-tag">Networking</span>
+                                    <h3>View a Wi-Fi password you already saved (your PC only)</h3>
+                                    <p class="mb-2">Windows can show the key for networks <em>this device has previously joined</em>. Replace <code>YOUR_WIFI_NAME</code> with the exact SSID (use quotes if it contains spaces).</p>
+                                    <pre class="ft-kb-code mb-0">netsh wlan show profiles
+netsh wlan show profile name="YOUR_WIFI_NAME" key=clear</pre>
+                                    <div class="ft-kb-ethics mb-0"><strong>Use responsibly.</strong> Only run this on hardware you own or are authorised to administer. Do not attempt to capture other people&rsquo;s credentials or break into networks&mdash;that is illegal and unethical. Windows <strong>user account</strong> passwords are not exposed in plain text via CMD; use official password reset or Microsoft account recovery instead.</div>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="ipconfig ping tracert flushdns connectivity internet">
+                                    <span class="ft-kb-tag">Troubleshoot</span>
+                                    <h3>Quick connectivity checks</h3>
+                                    <pre class="ft-kb-code mb-2">ipconfig /all
+ping 8.8.8.8
+tracert fraittech.co.ke
+ipconfig /flushdns</pre>
+                                    <p class="mb-0"><code>ping</code> tests reachability; <code>tracert</code> shows where packets slow down; <code>flushdns</code> clears stale DNS on the PC after DNS changes.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="sfc scannow dism chkdsk repair windows">
+                                    <span class="ft-kb-tag">Maintenance</span>
+                                    <h3>Repair common Windows file issues (elevated)</h3>
+                                    <p class="mb-2">From an <strong>Administrator</strong> command prompt:</p>
+                                    <pre class="ft-kb-code mb-0">sfc /scannow
+DISM /Online /Cleanup-Image /RestoreHealth</pre>
+                                    <p class="mb-0 mt-2 small">For disk problems, schedule <code>chkdsk</code> carefully&mdash;it may require a reboot. Always backup first.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="tasklist taskkill process port netstat powershell">
+                                    <span class="ft-kb-tag">Power user</span>
+                                    <h3>See what is listening on a port</h3>
+                                    <pre class="ft-kb-code mb-0">netstat -ano | findstr :443</pre>
+                                    <p class="mb-0 mt-2">Match the PID in Task Manager or use <code>tasklist /FI "PID eq 1234"</code> to identify the process. Helpful when a dev server or printer utility grabs a port.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-security" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-lock text-primary me-2" aria-hidden="true"></i>Security habits that actually work</h2>
+
+                                <article class="ft-kb-article" data-kb-search="phishing m-pesa business email compromise 2FA">
+                                    <span class="ft-kb-tag">Threats</span>
+                                    <h3>Phishing and fake payment requests</h3>
+                                    <p class="mb-0">Verify M-Pesa or bank changes by calling your contact on a <em>known</em> number. Enable MFA on email and cloud admin accounts. Limit who can approve invoices.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="password manager backup ransomware offline">
+                                    <span class="ft-kb-tag">Basics</span>
+                                    <h3>Passwords, managers, and backups</h3>
+                                    <p class="mb-0">Use a password manager, unique passwords per site, and offline or immutable backups for accounting files. Test restores before ransomware strikes.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-network" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-network-wired text-primary me-2" aria-hidden="true"></i>Networking quick fixes</h2>
+
+                                <article class="ft-kb-article" data-kb-search="router reboot firmware guest wifi qos">
+                                    <span class="ft-kb-tag">Office</span>
+                                    <h3>Stabilise a busy office router</h3>
+                                    <p class="mb-0">Separate guest Wi-Fi, update firmware, place the AP high and central, and use wired Ethernet for desktops or IP phones when possible. For recurring drops, log times and run <code>ping -t</code> to your gateway to show patterns to your ISP.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-productivity" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-bolt text-primary me-2" aria-hidden="true"></i>Productivity</h2>
+
+                                <article class="ft-kb-article" data-kb-search="clipboard windows v win shift screenshot snipping">
+                                    <span class="ft-kb-tag">Windows</span>
+                                    <h3>Faster screenshots and window snapping</h3>
+                                    <p class="mb-0"><kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> opens Snipping Tool; <kbd>Win</kbd>+<kbd>Arrow</kbd> snaps windows. Pair with a shared cloud folder for quick design feedback loops.</p>
+                                </article>
+                            </section>
+
+                            <div class="alert alert-primary border-0 rounded-3 mb-0 wow fadeInUp" data-wow-delay="0.15s" role="note">
+                                <h3 class="h6 mb-2">Need hands-on IT or a new site?</h3>
+                                <p class="mb-2 small mb-0">Our <a href="service-it-support.html" class="alert-link">IT support</a> and <a href="service-website-development.html" class="alert-link">web development</a> teams cover Nanyuki, remote Kenya-wide engagements, and project-based work. Tell us your goal on the <a href="contact.html" class="alert-link">contact</a> page.</p>
                             </div>
-                            <h3 class="mb-3">System Integration</h3>
-                            <p class="mb-3">Help with integrating different systems and applications.</p>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fa fa-check text-success me-2"></i>API integration setup</li>
-                                <li><i class="fa fa-check text-success me-2"></i>ERP system implementation</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Data synchronization</li>
-                                <li><i class="fa fa-check text-success me-2"></i>Legacy system modernization</li>
-                            </ul>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Help Categories End -->
+        <!-- Knowledge base End -->
 
         <!-- Quick Support Start -->
         <div class="container-xxl py-5 bg-light">
-            <div class="container py-5 px-lg-5">
+            <div class="container-fluid py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title bg-white text-center text-primary px-3">Quick Support</p>
                     <h1 class="text-center mb-5">Contact Our Support Team</h1>
@@ -350,95 +612,82 @@
         </div>
         <!-- Quick Support End -->
 
-            <!--Start of Tawk.to Script-->
-            <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-            </script>
-            <!--End of Tawk.to Script-->
-
     </div>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5 px-lg-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Nanyuki, Kenya</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>0742 451 220</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@fraittech.co.ke</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="contact.html">Privacy Policy</a>
-                    <a class="btn btn-link" href="contact.html">Terms & Condition</a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4">Services<span></span></p>
-                    <a class="btn btn-link" href="service-website-development.html">Website Development</a>
-                    <a class="btn btn-link" href="service-graphic-design.html">Graphic Design</a>
-                    <a class="btn btn-link" href="service-it-consulting.html">IT Consulting</a>
-                    <a class="btn btn-link" href="service-it-support.html">IT Support</a>
-                    <a class="btn btn-link" href="service-cloud-services.html">Cloud Services</a>
-                    <a class="btn btn-link" href="service-system-integration.html">System Integration</a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                    <p>Subscribe to our newsletter to receive the latest updates, IT tips, and exclusive offers delivered directly to your inbox.</p>
-                    <form class="newsletter-form position-relative w-100 mt-3" action="newsletter-handler.php" method="POST">
-                        <form id="newsletterForm" class="newsletter-form position-relative w-100 mt-3" autocomplete="off">
-                            <input name="email" id="newsletterEmail" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Your Email" style="height: 48px;" required>
-                            <button id="newsletterSubmitBtn" type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2" aria-label="Subscribe">
-                                <i class="fa fa-paper-plane text-primary fs-4"></i>
-                            </button>
-                        </form>
-                        <div id="newsletterMessage" class="mt-3"></div>
-                </div>
-            </div>
-        </div>
-        <div class="container px-lg-5">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2026 <a class="border-bottom" href="index.html">fraittech.co.ke</a>, All Right Reserved. 
-                        Designed By <a class="border-bottom" href="https://wa.me/254742451220" target="_blank">Frank Mwaniki</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="index.html">Home</a>
-                            <a href="contact.html">Cookies</a>
-                            <a href="help.html">Help</a>
-                            <a href="faqs.html">FAQs</a>
+            <!-- Footer Start -->
+            <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="ft-footer-bg" aria-hidden="true"></div>
+                <div class="container position-relative py-5 px-3 px-lg-4">
+                    <div class="row g-4 g-xl-5 align-items-start">
+                        <div class="col-md-6 col-lg-4">
+                            <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                                <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                            </a>
+                            <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                            <div class="ft-footer-social d-flex flex-wrap gap-2">
+                                <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                                <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="ft-footer-social-btn" href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <h3 class="ft-footer-heading">Quick links</h3>
+                            <ul class="ft-footer-list list-unstyled mb-0">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="blog/index.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="quotation.html">Get a quote</a></li>
+                                <li><a href="privacy-policy.html">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-3">
+                            <h3 class="ft-footer-heading">Services</h3>
+                            <ul class="ft-footer-list list-unstyled mb-0">
+                                <li><a href="service-website-development.html">Website development</a></li>
+                                <li><a href="service-graphic-design.html">Graphic design</a></li>
+                                <li><a href="service-it-consulting.html">IT consulting</a></li>
+                                <li><a href="service-it-support.html">IT support</a></li>
+                                <li><a href="service-cloud-services.html">Cloud services</a></li>
+                                <li><a href="service-system-integration.html">System integration</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h3 class="ft-footer-heading">Contact</h3>
+                            <ul class="ft-footer-contact list-unstyled mb-0">
+                                <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                                <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254742451220" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+                <div class="ft-footer-bottom">
+                    <div class="container px-3 px-lg-4">
+                        <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                            <p class="ft-footer-copy mb-0 text-center text-md-start">
+                                &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                            </p>
+                            <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                                <a href="index.html">Home</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">?</span>
+                                <a href="faqs.html">FAQs</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">?</span>
+                                <a href="help.html">Help</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">?</span>
+                                <a href="privacy-policy.html">Privacy</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer End -->
 
     <!-- JavaScript Libraries -->
+    <script src="js/cookies.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -467,21 +716,34 @@
             setInterval(() => {
                 showSlide(currentSlide + 1);
             }, 5000);
+
+            var searchInput = document.getElementById('ft-kb-search');
+            if (searchInput) {
+                var articles = document.querySelectorAll('.ft-kb-article');
+                var sections = document.querySelectorAll('.ft-kb-section');
+                function filterKb() {
+                    var q = searchInput.value.trim().toLowerCase();
+                    if (!q) {
+                        articles.forEach(function (el) { el.classList.remove('ft-kb-hidden'); });
+                        sections.forEach(function (sec) { sec.style.display = ''; });
+                        return;
+                    }
+                    var tokens = q.split(/\s+/).filter(Boolean);
+                    articles.forEach(function (el) {
+                        var hay = (el.getAttribute('data-kb-search') || '') + ' ' + el.textContent;
+                        hay = hay.toLowerCase();
+                        var ok = tokens.every(function (t) { return hay.indexOf(t) !== -1; });
+                        el.classList.toggle('ft-kb-hidden', !ok);
+                    });
+                    sections.forEach(function (sec) {
+                        var any = sec.querySelector('.ft-kb-article:not(.ft-kb-hidden)');
+                        sec.style.display = any ? '' : 'none';
+                    });
+                }
+                searchInput.addEventListener('input', filterKb);
+            }
         });
     </script>
 </body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 
 </html>

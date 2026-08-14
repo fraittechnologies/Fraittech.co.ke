@@ -14,17 +14,17 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Fraittech Team - Digital Experts Kenya">
     <meta property="og:description" content="Meet the experienced team behind Fraittech's digital marketing and web solutions services.">
-    <meta property="og:url" content="https://fraittech.co.ke/team.html">
-    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.png">
+    <meta property="og:url" content="https://fraittech.co.ke/team">
+    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.webp">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://fraittech.co.ke/team.html">
+    <link rel="canonical" href="https://fraittech.co.ke/team">
 
     <!-- Favicon -->
     <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
     <link href="img/favicon/favicon.svg" rel="icon" type="image/svg+xml">
-    <link href="img/favicon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/favicon/favicon-96x96.webp" rel="icon" type="image/webp" sizes="96x96">
+    <link href="img/favicon/apple-touch-icon.webp" rel="apple-touch-icon">
     <link href="img/favicon/site.webmanifest" rel="manifest">
 
     <!-- Google Web Fonts -->
@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -46,16 +46,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Top Header Bar Start -->
-    <div class="bg-dark py-2 px-lg-5">
+    <div class="ft-topbar py-2 px-lg-5">
         <div class="container-xxl">
             <div class="row g-4 align-items-center">
                 <div class="col-md-8">
-                    <div class="d-flex flex-wrap gap-4 small text-white">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone text-primary me-2"></i>
                             <span>+254 742 451 220</span>
@@ -71,57 +72,188 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-end">
-                    <div class="d-flex gap-2 justify-content-md-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
                         <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-x-twitter"></i></a>
                         <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" class="text-white small" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Top Header Bar End -->
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
             </div>
         </div>
-        <!-- Spinner End -->
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <!-- <h1 class="m-0">DGital</h1> -->
-                   <img src="img/Latest logo.png" alt="Logo"> 
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <!-- <h1 class="m-0">DGital</h1> -->
+            <img src="img/Latest logo.webp" alt="Logo">
+        </a>
+        <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
+            <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+            <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+                <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown mega-dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-intro">
+                            <span class="mega-menu-eyebrow">Our expertise</span>
+                            <p class="mega-menu-headline mb-0">Explore services tailored to your goals – web, creative, cloud, and ongoing support.</p>
+                        </div>
+                        <div class="container-fluid mega-menu-inner">
+                            <div class="row g-3 g-lg-4 mega-menu-grid">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-website-development.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-laptop-code"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Website Development</h6>
+                                            <p>Stunning, responsive websites for business growth</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-graphic-design.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-palette"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Graphic Design</h6>
+                                            <p>Creative designs that captivate your audience</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-consulting.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Consulting</h6>
+                                            <p>Expert guidance on technology strategy</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-support.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Support</h6>
+                                            <p>Reliable technical support & maintenance</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-system-integration.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-plug"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>System Integration</h6>
+                                            <p>Seamlessly connect your business systems</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-cloud-services.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-cloud"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Cloud Services</h6>
+                                            <p>Scalable cloud solutions & migration</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="service.html" class="btn btn-primary rounded-pill">
+                                    View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 mt-3 d-block d-lg-none w-100 text-center" style="background: var(--primary); color: #fff;">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
                 </div>
+                <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block">Get a quotation</a>
+
+            <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom align-items-center">
+            <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                <img src="img/Latest logo.webp" alt="Fraittech">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                <div class="ft-offcanvas-services">
+                    <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                        <span class="fs-5">Services</span>
+                        <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="ftOffcanvasServices">
+                        <div class="d-flex flex-column ps-2 pb-2">
+                            <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                            <a href="service-graphic-design.html" class="nav-link py-2">Graphic Design</a>
+                            <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                            <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                            <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                            <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                            <a href="service.html" class="nav-link py-2 fw-semibold">View all services</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                <a href="contact.html" class="nav-link py-2 fs-5">Contact</a>
             </nav>
+            <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+        </div>
+    </div>
 
             <!-- Hero Slider Start -->
             <div class="hero-slider-container position-relative">
                 <div class="hero-slider">
                     <!-- Slide 1 -->
                     <div class="hero-slide active">
-                        <img src="img/hero-slide-1.jpg" alt="Our Team" class="hero-slide-img">
+                        <img src="img/hero-slide-1.webp" alt="Our Team" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Our Team</h1>
@@ -137,7 +269,7 @@
 
                     <!-- Slide 2 -->
                     <div class="hero-slide">
-                        <img src="img/hero-slide-2.jpg" alt="Team Members" class="hero-slide-img">
+                        <img src="img/hero-slide-2.webp" alt="Team Members" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Team Members</h1>
@@ -148,7 +280,7 @@
 
                     <!-- Slide 3 -->
                     <div class="hero-slide">
-                        <img src="img/hero-slide-3.jpg" alt="Collaboration" class="hero-slide-img">
+                        <img src="img/hero-slide-3.webp" alt="Collaboration" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Collaboration</h1>
@@ -182,7 +314,7 @@
 
         <!-- Team Start -->
         <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
+            <div class="container-fluid py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our Team<span></span></p>
                     <h1 class="text-center mb-5">Our Team Members</h1>
@@ -191,13 +323,13 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item bg-light rounded">
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/frank.png" alt="">
+                                <img class="img-fluid rounded-circle mb-4" src="img/frank.webp" alt="">
                                 <h5>Frank Mwaniki</h5>
                                 <span>CEO & Founder</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-x-twitter"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
@@ -206,13 +338,13 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item bg-light rounded">
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/woman 2.jpg" alt="">
+                                <img class="img-fluid rounded-circle mb-4" src="img/woman 2.webp" alt="">
                                 <h5>Jessica Brown</h5>
                                 <span>Web Designer</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-x-twitter"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
@@ -221,13 +353,13 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item bg-light rounded">
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-3.jpg" alt="">
+                                <img class="img-fluid rounded-circle mb-4" src="img/team-3.webp" alt="">
                                 <h5>Jennifer Mwikali</h5>
                                 <span>Graphics Designer</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-x-twitter"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
@@ -236,13 +368,13 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item bg-light rounded">
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/woman 2.jpg" alt="">
+                                <img class="img-fluid rounded-circle mb-4" src="img/woman 2.webp" alt="">
                                 <h5>Frank Mwaniki</h5>
                                 <span>CEO & Founder</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-x-twitter"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
@@ -251,13 +383,13 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item bg-light rounded">
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-3.jpg" alt="">
+                                <img class="img-fluid rounded-circle mb-4" src="img/team-3.webp" alt="">
                                 <h5>Jessica Brown</h5>
                                 <span>Web Designer</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-x-twitter"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
@@ -266,13 +398,13 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item bg-light rounded">
                             <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/frank.png" alt="">
+                                <img class="img-fluid rounded-circle mb-4" src="img/frank.webp" alt="">
                                 <h5>Jennifer Mwikali</h5>
                                 <span>Graphics Designer</span>
                             </div>
                             <div class="d-flex justify-content-center p-4">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-x-twitter"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
@@ -284,91 +416,79 @@
         <!-- Team End -->
         
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Nanyuki, Kenya</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>0742 451 220</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@fraittech.co.ke</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="contact.html">Privacy Policy</a>
-                        <a class="btn btn-link" href="contact.html">Terms & Condition</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Services<span></span></p>
-                        <a class="btn btn-link" href="service-website-development.html">Website Development</a>
-                        <a class="btn btn-link" href="service-graphic-design.html">Graphic Design</a>
-                        <a class="btn btn-link" href="service-it-consulting.html">IT Consulting</a>
-                        <a class="btn btn-link" href="service-it-support.html">IT Support</a>
-                        <a class="btn btn-link" href="service-cloud-services.html">Cloud Services</a>
-                        <a class="btn btn-link" href="service-system-integration.html">System Integration</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Subscribe to our newsletter to receive the latest updates, IT tips, and exclusive offers delivered directly to your inbox.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; 2026 <a class="border-bottom" href="index.html">fraittech.co.ke</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://wa.me/254742451220" target="_blank">Frank Mwaniki</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="contact.html">Cookies</a>
-                                <a href="help.html">Help</a>
-                                <a href="faqs.html">FAQs</a>
+                <!-- Footer Start -->
+                <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="ft-footer-bg" aria-hidden="true"></div>
+                    <div class="container position-relative py-5 px-3 px-lg-4">
+                        <div class="row g-4 g-xl-5 align-items-start">
+                            <div class="col-md-6 col-lg-4">
+                                <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                                    <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                                </a>
+                                <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                                <div class="ft-footer-social d-flex flex-wrap gap-2">
+                                    <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="ft-footer-social-btn" href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <h3 class="ft-footer-heading">Quick links</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="service.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="blog/index.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="quotation.html">Get a quote</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-3">
+                                <h3 class="ft-footer-heading">Services</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="service-website-development.html">Website development</a></li>
+                                    <li><a href="service-graphic-design.html">Graphic design</a></li>
+                                    <li><a href="service-it-consulting.html">IT consulting</a></li>
+                                    <li><a href="service-it-support.html">IT support</a></li>
+                                    <li><a href="service-cloud-services.html">Cloud services</a></li>
+                                    <li><a href="service-system-integration.html">System integration</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <h3 class="ft-footer-heading">Contact</h3>
+                                <ul class="ft-footer-contact list-unstyled mb-0">
+                                    <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                                    <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-            <!--Start of Tawk.to Script-->
-            <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-            </script>
-            <!--End of Tawk.to Script-->
+                    <div class="ft-footer-bottom">
+                        <div class="container px-3 px-lg-4">
+                            <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                                <p class="ft-footer-copy mb-0 text-center text-md-start">
+                                    &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                                </p>
+                                <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                                    <a href="index.html">Home</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="faqs.html">FAQs</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="help.html">Help</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="privacy-policy.html">Privacy</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer End -->
 
     </div>
+    <script src="js/cookies.js"></script>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254742451220" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -382,18 +502,5 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 
 </html>

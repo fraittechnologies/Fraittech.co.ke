@@ -1,0 +1,566 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Checkout — Fraittech Kenya</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Complete your Fraittech order — enter your details and pay securely via IntaSend.">
+    <link rel="canonical" href="https://fraittech.co.ke/checkout.html">
+    <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Header Bar Start -->
+    <div class="ft-topbar py-2 px-lg-5">
+        <div class="container-xxl">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-8">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-phone text-primary me-2" aria-hidden="true"></i>
+                            <a href="tel:+254742451220" class="text-white text-decoration-none">+254 742 451 220</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-envelope text-primary me-2" aria-hidden="true"></i>
+                            <a href="mailto:info@fraittech.co.ke" class="text-white text-decoration-none">info@fraittech.co.ke</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-map-marker-alt text-primary me-2" aria-hidden="true"></i>
+                            <span>Nanyuki, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
+                        <a href="#" class="text-white small" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white small" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-white small" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white small" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Header Bar End -->
+
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
+            </div>
+        </div>
+
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="img/Latest logo.webp" alt="Logo">
+                </a>
+                <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
+                    <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+                    </a>
+                    <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+                        <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <div class="nav-item dropdown mega-dropdown">
+                            <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="mega-menu-intro">
+                                    <span class="mega-menu-eyebrow">Our expertise</span>
+                                    <p class="mega-menu-headline mb-0">Explore services tailored to your goals&mdash;web, creative, cloud, and ongoing support.</p>
+                                </div>
+                                <div class="container-fluid mega-menu-inner">
+                                    <div class="row g-3 g-lg-4 mega-menu-grid">
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="service-website-development.html" class="mega-item">
+                                                <div class="mega-icon">
+                                                    <i class="fa fa-laptop-code"></i>
+                                                </div>
+                                                <div class="mega-text">
+                                                    <h6>Website Development</h6>
+                                                    <p>Stunning, responsive websites for business growth</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="service-graphic-design.html" class="mega-item">
+                                                <div class="mega-icon">
+                                                    <i class="fa fa-palette"></i>
+                                                </div>
+                                                <div class="mega-text">
+                                                    <h6>Graphic Design</h6>
+                                                    <p>Creative designs that captivate your audience</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="service-it-consulting.html" class="mega-item">
+                                                <div class="mega-icon">
+                                                    <i class="fa fa-user-tie"></i>
+                                                </div>
+                                                <div class="mega-text">
+                                                    <h6>IT Consulting</h6>
+                                                    <p>Expert guidance on technology strategy</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="service-it-support.html" class="mega-item">
+                                                <div class="mega-icon">
+                                                    <i class="fa fa-headset"></i>
+                                                </div>
+                                                <div class="mega-text">
+                                                    <h6>IT Support</h6>
+                                                    <p>Reliable technical support & maintenance</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="service-system-integration.html" class="mega-item">
+                                                <div class="mega-icon">
+                                                    <i class="fa fa-plug"></i>
+                                                </div>
+                                                <div class="mega-text">
+                                                    <h6>System Integration</h6>
+                                                    <p>Seamlessly connect your business systems</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="service-cloud-services.html" class="mega-item">
+                                                <div class="mega-icon">
+                                                    <i class="fa fa-cloud"></i>
+                                                </div>
+                                                <div class="mega-text">
+                                                    <h6>Cloud Services</h6>
+                                                    <p>Scalable cloud solutions & migration</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mega-footer">
+                                        <a href="service.html" class="btn btn-primary rounded-pill">
+                                            View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                        <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block">Get a quotation</a>
+
+                    <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+                <div class="offcanvas-header border-bottom align-items-center">
+                    <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                        <img src="img/Latest logo.webp" alt="Logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+                    <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                        <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                        <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                        <div class="ft-offcanvas-services">
+                            <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                                <span class="fs-5">Services</span>
+                                <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                            </a>
+                            <div class="collapse" id="ftOffcanvasServices">
+                                <div class="d-flex flex-column ps-2 pb-2">
+                                    <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                                    <a href="service-graphic-design.html" class="nav-link py-2">Graphic Design</a>
+                                    <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                                    <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                                    <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                                    <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                                    <a href="service.html" class="nav-link py-2 fw-semibold">View all services</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                        <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                        <a href="contact.html" class="nav-link py-2 fs-5">Contact</a>
+                    </nav>
+                    <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+                </div>
+            </div>
+
+            <div class="bg-primary py-4">
+                <div class="container-xxl px-lg-5 text-center text-white">
+                    <h1 class="mb-2" style="font-family: Jost, sans-serif;">Checkout</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="cart.html">Cart</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Checkout</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-xxl py-5 ft-cart-page">
+            <div class="container-fluid px-lg-5">
+                <div id="checkoutEmpty" class="ft-cart-card p-5 text-center d-none">
+                    <p class="text-muted mb-3">Your cart is empty. Add a package from our services first.</p>
+                    <a href="service.html" class="btn btn-primary rounded-pill">View services</a>
+                </div>
+
+                <div id="checkoutFormWrap" class="row g-4 d-none">
+                    <div class="col-lg-7">
+                        <div class="ft-cart-card p-4 p-lg-5">
+                            <h2 class="h5 mb-4" style="font-family: Jost, sans-serif;">Your details</h2>
+                            <form id="checkoutForm" novalidate>
+                                <input type="hidden" id="payAmount" value="">
+                                <input type="hidden" id="orderSummary" value="">
+                                <div class="mb-3">
+                                    <label class="form-label" for="customer_name">Full name <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" name="customer_name" id="customer_name" required autocomplete="name" placeholder="Your name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" name="email" id="email" required autocomplete="email" placeholder="you@company.com">
+                                    <div class="form-text">Used for your payment receipt.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="customer_phone">Phone <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="tel" name="customer_phone" id="customer_phone" required autocomplete="tel" placeholder="e.g. 254712345678">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="company">Company / organisation <span class="text-muted">(optional)</span></label>
+                                    <input class="form-control" type="text" name="company" id="company" autocomplete="organization">
+                                </div>
+                                <div class="mb-0">
+                                    <label class="form-label" for="notes">Notes <span class="text-muted">(optional)</span></label>
+                                    <textarea class="form-control" name="notes" id="notes" rows="3" placeholder="Anything we should know about your project or billing?"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="ft-cart-card p-4 ft-checkout-sticky">
+                            <h2 class="h5 mb-3" style="font-family: Jost, sans-serif;">Order summary</h2>
+                            <div id="checkoutLines" class="small mb-3"></div>
+                            <div class="d-flex justify-content-between border-top pt-3">
+                                <span class="fw-semibold">Total due</span>
+                                <strong class="text-primary fs-5" id="checkoutTotal">KES 0</strong>
+                            </div>
+                            <p class="small text-muted mt-3 mb-0">Pay securely with Mpesa, Bank, or Card.</p>
+                            <span class="ft-intasend-trust d-block mt-4 pt-3 border-top border-light text-center">
+                                <a class="ft-intasend-trust__link" href="https://intasend.com/security" target="_blank" rel="noopener noreferrer">
+                                    <img class="ft-intasend-trust__img img-fluid" src="https://intasend-prod-static.s3.amazonaws.com/img/trust-badges/intasend-trust-badge-with-mpesa-hr-light.png" alt="IntaSend Secure Payments (PCI-DSS Compliant)">
+                                </a>
+                                <strong><a class="ft-intasend-trust__caption d-block text-decoration-none" href="https://intasend.com/security" target="_blank" rel="noopener noreferrer">Secured by IntaSend Payments</a></strong>
+                            </span>
+                            <div class="mt-4 pt-3 border-top border-light text-start">
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="1" id="agreeTerms" name="agree_terms" form="checkoutForm" required>
+                                    <label class="form-check-label" for="agreeTerms">I agree to proceed to secure payment. I understand package details may be confirmed with the team after payment.</label>
+                                </div>
+                                <!-- IntaSend binds to .intaSendPayButton; triggered from #checkoutProceedBtn after validation -->
+                                <button type="button" id="intaSendPayHidden" form="checkoutForm" class="intaSendPayButton visually-hidden position-absolute" style="width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;" tabindex="-1" aria-hidden="true" data-amount="1" data-currency="KES">Pay</button>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="button" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold" id="checkoutProceedBtn" form="checkoutForm">
+                                        <i class="fa fa-lock me-2" aria-hidden="true"></i>Proceed to payment
+                                    </button>
+                                    <a href="cart.html" class="btn btn-outline-secondary rounded-pill px-4 py-2">Back to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Start -->
+        <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="ft-footer-bg" aria-hidden="true"></div>
+            <div class="container position-relative py-5 px-3 px-lg-4">
+                <div class="row g-4 g-xl-5 align-items-start">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                            <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                        </a>
+                        <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                        <div class="ft-footer-social d-flex flex-wrap gap-2">
+                            <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                            <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="ft-footer-social-btn" href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <h3 class="ft-footer-heading">Quick links</h3>
+                        <ul class="ft-footer-list list-unstyled mb-0">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="quotation.html">Get a quote</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-3">
+                        <h3 class="ft-footer-heading">Services</h3>
+                        <ul class="ft-footer-list list-unstyled mb-0">
+                            <li><a href="service-website-development.html">Website development</a></li>
+                            <li><a href="service-graphic-design.html">Graphic design</a></li>
+                            <li><a href="service-it-consulting.html">IT consulting</a></li>
+                            <li><a href="service-it-support.html">IT support</a></li>
+                            <li><a href="service-cloud-services.html">Cloud services</a></li>
+                            <li><a href="service-system-integration.html">System integration</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h3 class="ft-footer-heading">Contact</h3>
+                        <ul class="ft-footer-contact list-unstyled mb-0">
+                            <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                            <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-footer-bottom">
+                <div class="container px-3 px-lg-4">
+                    <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                        <p class="ft-footer-copy mb-0 text-center text-md-start">
+                            &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                        </p>
+                        <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                            <a href="index.html">Home</a>
+                            <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                            <a href="faqs.html">FAQs</a>
+                            <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                            <a href="help.html">Help</a>
+                            <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                            <a href="privacy-policy.html">Privacy</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+    </div>
+
+    <script src="js/cookies.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/intasend-inlinejs-sdk@4.0.7/build/intasend-inline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        (function () {
+            FraittechCart.updateCartBadges();
+
+            var emptyEl = document.getElementById('checkoutEmpty');
+            var wrapEl = document.getElementById('checkoutFormWrap');
+            var linesEl = document.getElementById('checkoutLines');
+            var totalEl = document.getElementById('checkoutTotal');
+            var form = document.getElementById('checkoutForm');
+            var payAmount = document.getElementById('payAmount');
+            var orderSummary = document.getElementById('orderSummary');
+            var proceedBtn = document.getElementById('checkoutProceedBtn');
+            var intaBtn = document.getElementById('intaSendPayHidden');
+
+            function escapeHtml(s) {
+                var d = document.createElement('div');
+                d.textContent = s;
+                return d.innerHTML;
+            }
+
+            function render() {
+                var lines = FraittechCart.getLinesDetailed();
+                var sub = FraittechCart.getSubtotal();
+                FraittechCart.updateCartBadges();
+
+                if (!lines.length || sub <= 0) {
+                    emptyEl.classList.remove('d-none');
+                    wrapEl.classList.add('d-none');
+                    return;
+                }
+                emptyEl.classList.add('d-none');
+                wrapEl.classList.remove('d-none');
+
+                linesEl.innerHTML = lines.map(function (l) {
+                    var note = l.priceNote ? ' <span class="text-muted">(' + escapeHtml(l.priceNote) + ')</span>' : '';
+                    return '<div class="d-flex justify-content-between py-2 border-bottom border-light">' +
+                        '<span>' + escapeHtml(l.title) + ' × ' + l.qty + note + '</span>' +
+                        '<span>' + escapeHtml(FraittechCart.formatMoney(l.lineTotal)) + '</span></div>';
+                }).join('');
+
+                totalEl.textContent = FraittechCart.formatMoney(sub);
+                payAmount.value = String(Math.round(sub));
+                orderSummary.value = FraittechCart.buildOrderSummaryText();
+            }
+
+            window.addEventListener('fraittech-cart-updated', render);
+            render();
+
+            function normalizePhone254(raw) {
+                var d = String(raw || '').replace(/\D/g, '');
+                if (d.indexOf('254') === 0 && d.length >= 12) return d.slice(0, 12);
+                if (d.length === 9 && d.indexOf('7') === 0) return '254' + d;
+                if (d.length === 10 && d.indexOf('07') === 0) return '254' + d.slice(1);
+                return d;
+            }
+
+            function splitName(full) {
+                full = String(full || '').trim();
+                if (!full) return { first: '', last: '' };
+                var i = full.indexOf(' ');
+                if (i === -1) return { first: full, last: '' };
+                return { first: full.slice(0, i), last: full.slice(i + 1).trim() };
+            }
+
+            /* If intasend-public.php is unreachable (file:// preview, no PHP, wrong path), checkout still works. Keep in sync with intasend-credentials.php $PUBLIC_KEY. */
+            var INTASEND_FALLBACK = {
+                publishableKey: 'ISPubKey_live_4d64aa6f-3bfa-4131-8894-8fd4c2fe5f21',
+                live: true
+            };
+
+            function initIntaSendCheckout(cfg) {
+                if (typeof window.IntaSend !== 'function') {
+                    if (typeof window.FtNotify !== 'undefined') {
+                        window.FtNotify.warning('Payment script did not load. Disable ad blockers for this site or check your connection.', 'Checkout');
+                    }
+                    return;
+                }
+                var key = cfg && cfg.publishableKey;
+                if (!key) {
+                    if (typeof window.FtNotify !== 'undefined') {
+                        window.FtNotify.warning('Payment is not configured. Please contact us.', 'Checkout');
+                    }
+                    return;
+                }
+                new window.IntaSend({
+                    publicAPIKey: key,
+                    live: cfg.live !== false
+                })
+                    .on('COMPLETE', function () {
+                        if (typeof window.FtNotify !== 'undefined') {
+                            window.FtNotify.success('Payment completed. Thank you!', 'Checkout');
+                        }
+                        try {
+                            FraittechCart.clearCart();
+                            FraittechCart.updateCartBadges();
+                        } catch (e) { /* ignore */ }
+                        render();
+                    })
+                    .on('FAILED', function (res) {
+                        if (typeof window.FtNotify !== 'undefined') {
+                            window.FtNotify.error((res && res.message) ? res.message : 'Payment did not complete. You can try again.', 'Checkout');
+                        }
+                    })
+                    .on('IN-PROGRESS', function () {
+                        if (typeof window.FtNotify !== 'undefined') {
+                            window.FtNotify.info('Payment in progress…', 'Checkout');
+                        }
+                    });
+            }
+
+            var intasendConfigUrl = new URL('intasend-public.php', window.location.href).href;
+            fetch(intasendConfigUrl, { headers: { 'Accept': 'application/json' } })
+                .then(function (r) {
+                    if (!r.ok) return null;
+                    return r.json();
+                })
+                .then(function (cfg) {
+                    if (cfg && cfg.publishableKey) {
+                        initIntaSendCheckout(cfg);
+                    } else {
+                        initIntaSendCheckout(INTASEND_FALLBACK);
+                    }
+                })
+                .catch(function () {
+                    initIntaSendCheckout(INTASEND_FALLBACK);
+                });
+
+            if (form && proceedBtn && intaBtn) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    proceedBtn.click();
+                });
+                proceedBtn.addEventListener('click', function () {
+                    if (typeof FraittechCart === 'undefined') return;
+                    var sub = FraittechCart.getSubtotal();
+                    if (sub <= 0) {
+                        if (typeof window.FtNotify !== 'undefined') {
+                            window.FtNotify.warning('Your cart is empty or the total is invalid.');
+                        }
+                        return;
+                    }
+                    if (!form.checkValidity()) {
+                        form.reportValidity();
+                        return;
+                    }
+                    var nameEl = document.getElementById('customer_name');
+                    var emailEl = document.getElementById('email');
+                    var phoneEl = document.getElementById('customer_phone');
+                    var coEl = document.getElementById('company');
+                    var ntEl = document.getElementById('notes');
+                    var fullName = nameEl ? nameEl.value.trim() : '';
+                    var nm = splitName(fullName);
+                    var summary = FraittechCart.buildOrderSummaryText();
+                    if (coEl && coEl.value.trim()) summary += ' | Company: ' + coEl.value.trim().substring(0, 80);
+                    if (ntEl && ntEl.value.trim()) summary += ' | Notes: ' + ntEl.value.trim().substring(0, 200);
+                    summary = summary.substring(0, 500);
+                    payAmount.value = String(Math.round(sub));
+                    orderSummary.value = summary;
+
+                    var phone254 = normalizePhone254(phoneEl ? phoneEl.value : '');
+                    intaBtn.setAttribute('data-amount', String(Math.round(sub)));
+                    intaBtn.setAttribute('data-currency', 'KES');
+                    intaBtn.setAttribute('data-email', emailEl ? emailEl.value.trim() : '');
+                    intaBtn.setAttribute('data-phone_number', phone254);
+                    intaBtn.setAttribute('data-first_name', nm.first);
+                    intaBtn.setAttribute('data-last_name', nm.last);
+                    intaBtn.setAttribute('data-comment', summary);
+                    intaBtn.setAttribute('data-api_ref', 'cart-' + Date.now());
+                    intaBtn.setAttribute('data-redirect_url', new URL('payment-success.php?status=successful', window.location.href).href);
+
+                    intaBtn.click();
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>

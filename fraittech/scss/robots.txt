@@ -1,0 +1,21 @@
+# Robots.txt for Fraittech.co.ke
+# Allow search engines to crawl and index all pages
+
+User-agent: *
+Allow: /
+Disallow: /PHPMailer/
+Disallow: /scss/
+Disallow: /*.php$
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (optional - time in seconds between requests)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://fraittech.co.ke/sitemap.xml

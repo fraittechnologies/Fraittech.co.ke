@@ -1,0 +1,22 @@
+/* Footer: center brand column on small screens */
+@media (max-width: 767.98px) {
+    .ft-footer > .container .row > .col-md-6.col-lg-4:first-child {
+        text-align: center;
+    }
+
+    .ft-footer > .container .row > .col-md-6.col-lg-4:first-child .ft-footer-brand {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .ft-footer > .container .row > .col-md-6.col-lg-4:first-child .ft-footer-social {
+        justify-content: center;
+    }
+
+    .ft-footer > .container .row > .col-md-6.col-lg-4:first-child .ft-footer-lead {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 26rem;
+    }
+}

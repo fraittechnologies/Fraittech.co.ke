@@ -6,6 +6,8 @@ error_reporting(E_ALL);
 // Include PHPMailer and config
 // Load config array
 $config = require 'config.php';
+require_once __DIR__ . '/smtp-helper.php';
+require_once __DIR__ . '/email-layout.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
@@ -36,8 +38,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $timeline = isset($_POST['timeline']) ? trim(htmlspecialchars($_POST['timeline'])) : '';
 
     // Validate required fields
-    if (empty($clientName) || empty($clientEmail) || empty($projectDescription) || empty($budgetRange) || empty($timeline)) {
+    if (empty($clientName) || empty($clientEmail) || empty($clientPhone) || empty($projectDescription) || empty($serviceType)) {
         $response['message'] = 'Please fill in all required fields with valid information.';
+        echo json_encode($response);
+        exit;
+    }
+
+    if (strlen($clientName) < 2) {
+        $response['message'] = 'Please enter your full name.';
+        echo json_encode($response);
+        exit;
+    }
+
+    if (strlen($projectDescription) < 20) {
+        $response['message'] = 'Please add a little more detail about what you need.';
         echo json_encode($response);
         exit;
     }
@@ -49,18 +63,106 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    $phoneDigits = preg_replace('/\D+/', '', $clientPhone);
+    if ($phoneDigits === '') {
+        $response['message'] = 'Please enter your phone number.';
+        echo json_encode($response);
+        exit;
+    }
+    if (strpos($phoneDigits, '254') === 0) {
+        $phoneNorm = substr($phoneDigits, 0, 12);
+    } elseif (isset($phoneDigits[0]) && $phoneDigits[0] === '0' && strlen($phoneDigits) >= 10) {
+        $phoneNorm = '254' . substr($phoneDigits, 1, 9);
+    } elseif (isset($phoneDigits[0]) && ($phoneDigits[0] === '7' || $phoneDigits[0] === '1') && strlen($phoneDigits) === 9) {
+        $phoneNorm = '254' . $phoneDigits;
+    } else {
+        $phoneNorm = $phoneDigits;
+    }
+    if (!preg_match('/^254[71]\d{8}$/', $phoneNorm)) {
+        $response['message'] = 'Enter a valid Kenyan mobile number, e.g. 0712 345 678.';
+        echo json_encode($response);
+        exit;
+    }
+
+    $quoteFile = null;
+    if (isset($_FILES['projectFile']) && is_array($_FILES['projectFile']) && (int) $_FILES['projectFile']['error'] !== UPLOAD_ERR_NO_FILE) {
+        $file = $_FILES['projectFile'];
+        $err = (int) $file['error'];
+        if ($err !== UPLOAD_ERR_OK) {
+            $response['message'] = $err === UPLOAD_ERR_INI_SIZE || $err === UPLOAD_ERR_FORM_SIZE
+                ? 'The attached file is too large. Keep it under 8 MB.'
+                : 'The attached file could not be uploaded. Try another file.';
+            echo json_encode($response);
+            exit;
+        }
+        $maxBytes = 8 * 1024 * 1024;
+        if ((int) $file['size'] > $maxBytes || (int) $file['size'] < 1) {
+            $response['message'] = 'Keep the attached file under 8 MB.';
+            echo json_encode($response);
+            exit;
+        }
+        $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+        $allowedExt = ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg', 'webp', 'gif', 'zip', 'txt'];
+        $mime = '';
+        if (function_exists('finfo_open')) {
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            if ($finfo) {
+                $mime = (string) finfo_file($finfo, $file['tmp_name']);
+                finfo_close($finfo);
+            }
+        }
+        if (!in_array($ext, $allowedExt, true)) {
+            $response['message'] = 'Attach a PDF, Word, image, ZIP, or text file.';
+            echo json_encode($response);
+            exit;
+        }
+        $blockedMime = [
+            'text/html',
+            'text/javascript',
+            'application/javascript',
+            'application/x-httpd-php',
+            'application/x-php',
+        ];
+        if ($mime !== '' && in_array($mime, $blockedMime, true)) {
+            $response['message'] = 'That file type is not allowed.';
+            echo json_encode($response);
+            exit;
+        }
+        $safeName = preg_replace('/[^\w.\- ()]+/', '_', basename($file['name']));
+        if ($safeName === '' || $safeName === '_' || $safeName === '.') {
+            $safeName = 'attachment.' . $ext;
+        }
+        $quoteFile = [
+            'tmp' => $file['tmp_name'],
+            'name' => $safeName,
+        ];
+    }
+
+    $challengeA = isset($_POST['challenge_a']) ? (int) $_POST['challenge_a'] : null;
+    $challengeB = isset($_POST['challenge_b']) ? (int) $_POST['challenge_b'] : null;
+    $challengeAnswer = isset($_POST['challenge_answer']) ? (int) $_POST['challenge_answer'] : null;
+    if (
+        $challengeA === null ||
+        $challengeB === null ||
+        $challengeAnswer === null ||
+        $challengeA < 1 ||
+        $challengeA > 20 ||
+        $challengeB < 1 ||
+        $challengeB > 20 ||
+        $challengeAnswer !== ($challengeA + $challengeB)
+    ) {
+        $response['message'] = 'Please solve the quick check correctly before sending.';
+        echo json_encode($response);
+        exit;
+    }
+
     try {
         // Initialize PHPMailer
         $mail = new PHPMailer(true);
 
         // SMTP configuration
         $mail->isSMTP();
-        $mail->Host = $config['smtp_host'];
-        $mail->SMTPAuth = true;
-        $mail->Username = $config['smtp_user'];
-        $mail->Password = $config['smtp_pass'];
-        $mail->SMTPSecure = $config['smtp_secure'] === 'ssl' ? PHPMailer::ENCRYPTION_SMTPS : PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = $config['smtp_port'];
+        ft_configure_phpmailer_smtp($mail, $config);
         $mail->CharSet = 'UTF-8';
 
         // Set email parameters
@@ -87,76 +189,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'flexible' => 'Flexible (3+ months)'
         ];
 
-        $budgetReadable = isset($budgetLabels[$budgetRange]) ? $budgetLabels[$budgetRange] : $budgetRange;
-        $timelineReadable = isset($timelineLabels[$timeline]) ? $timelineLabels[$timeline] : $timeline;
+        $budgetReadable = $budgetRange === ''
+            ? 'Not specified'
+            : (isset($budgetLabels[$budgetRange]) ? $budgetLabels[$budgetRange] : $budgetRange);
+        $timelineReadable = $timeline === ''
+            ? 'Not specified'
+            : (isset($timelineLabels[$timeline]) ? $timelineLabels[$timeline] : $timeline);
+        $estimatedReadable = $estimatedPrice === '' ? 'Not specified (see list / cart pricing)' : $estimatedPrice;
 
-        // Create HTML email body
-        $emailBody = "
-        <html>
-            <head>
-                <style>
-                    body { font-family: Arial, sans-serif; }
-                    .container { max-width: 600px; margin: 0 auto; border: 1px solid #ddd; padding: 20px; }
-                    .header { background-color: #007bff; color: white; padding: 10px; text-align: center; }
-                    .content { padding: 20px; }
-                    .field { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-                    .field:last-child { border-bottom: none; }
-                    .label { font-weight: bold; color: #333; }
-                    .value { color: #666; margin-top: 5px; }
-                </style>
-            </head>
-            <body>
-                <div class='container'>
-                    <div class='header'>
-                        <h2>New Quotation Request</h2>
-                    </div>
-                    <div class='content'>
-                        <h3>Client Information</h3>
-                        <div class='field'>
-                            <div class='label'>Name:</div>
-                            <div class='value'>" . $clientName . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Email:</div>
-                            <div class='value'>" . $clientEmail . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Phone:</div>
-                            <div class='value'>" . (!empty($clientPhone) ? $clientPhone : 'Not provided') . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Company:</div>
-                            <div class='value'>" . (!empty($clientCompany) ? $clientCompany : 'Not provided') . "</div>
-                        </div>
+        $staffInner = '<p class="ft-em-lead">New quotation request from the website. Use <strong>Reply</strong> to reach the client.</p>'
+            . ft_em_card('Client', ''
+                . ft_em_row('Name', $clientName)
+                . ft_em_row('Email', $clientEmail)
+                . ft_em_row('Phone', !empty($clientPhone) ? $clientPhone : 'Not provided')
+                . ft_em_row('Company', !empty($clientCompany) ? $clientCompany : 'Not provided')
+            )
+            . ft_em_card('Project', ''
+                . ft_em_row('Service type', $serviceType)
+                . ft_em_row('Estimated price', $estimatedReadable)
+                . ft_em_row('Budget range', $budgetReadable)
+                . ft_em_row('Timeline', $timelineReadable)
+                . '<div class="ft-em-divider"></div>'
+                . '<span class="ft-em-label">Project description</span><div class="ft-em-value">' . nl2br(ft_email_e($projectDescription)) . '</div>'
+                . ($quoteFile ? ft_em_row('Attachment', $quoteFile['name']) : '')
+            );
 
-                        <h3>Project Details</h3>
-                        <div class='field'>
-                            <div class='label'>Service Type:</div>
-                            <div class='value'>" . (!empty($serviceType) ? $serviceType : 'Not specified') . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Estimated Price:</div>
-                            <div class='value'>" . (!empty($estimatedPrice) ? $estimatedPrice : 'To be determined') . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Project Description:</div>
-                            <div class='value'>" . nl2br($projectDescription) . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Budget Range:</div>
-                            <div class='value'>" . $budgetReadable . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Timeline:</div>
-                            <div class='value'>" . $timelineReadable . "</div>
-                        </div>
-                    </div>
-                </div>
-            </body>
-        </html>";
+        $emailBody = ft_email_document(
+            'Quote request: ' . $serviceType . ' — ' . $clientName,
+            'Internal notification',
+            'New quotation request',
+            $clientName,
+            $staffInner,
+            ['for_customer' => false]
+        );
         
         $mail->Body = $emailBody;
         $mail->AltBody = "Client: $clientName\nEmail: $clientEmail\nPhone: $clientPhone\nCompany: $clientCompany\nService: $serviceType\nDescription: $projectDescription\nBudget: $budgetReadable\nTimeline: $timelineReadable";
+
+        if ($quoteFile) {
+            $mail->addAttachment($quoteFile['tmp'], $quoteFile['name']);
+        }
 
         // Send email
         if ($mail->send()) {
@@ -167,92 +239,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
                 $confirmMail = new PHPMailer(true);
                 $confirmMail->isSMTP();
-                $confirmMail->Host = $config['smtp_host'];
-                $confirmMail->SMTPAuth = true;
-                $confirmMail->Username = $config['smtp_user'];
-                $confirmMail->Password = $config['smtp_pass'];
-                $confirmMail->SMTPSecure = $config['smtp_secure'] === 'ssl' ? PHPMailer::ENCRYPTION_SMTPS : PHPMailer::ENCRYPTION_STARTTLS;
-                $confirmMail->Port = $config['smtp_port'];
+                ft_configure_phpmailer_smtp($confirmMail, $config);
                 $confirmMail->CharSet = 'UTF-8';
 
                 $confirmMail->setFrom($config['from_email'], $config['from_name']);
                 $confirmMail->addAddress($clientEmail, $clientName);
 
                 $confirmMail->isHTML(true);
-                $confirmMail->Subject = '✓ Quotation Request Received - ' . $config['from_name'];
-                $confirmMail->Body = "
-                <html>
-                    <head>
-                        <style>
-                            body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
-                            .container { max-width: 600px; margin: 0 auto; background-color: white; padding: 30px; border-radius: 8px; }
-                            .header { background-color: #007bff; color: white; padding: 20px; text-align: center; border-radius: 4px; margin-bottom: 20px; }
-                            .header h2 { margin: 0; }
-                            .content { color: #333; line-height: 1.6; }
-                            .details-box { background-color: #f0f8ff; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0; }
-                            .detail-item { margin: 10px 0; }
-                            .detail-label { font-weight: bold; color: #0056b3; display: inline-block; width: 120px; }
-                            .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999; }
-                            .contact-info { background-color: #f9f9f9; padding: 15px; border-radius: 4px; margin: 20px 0; }
-                        </style>
-                    </head>
-                    <body>
-                        <div class='container'>
-                            <div class='header'>
-                                <h2>✓ Quotation Request Received!</h2>
-                            </div>
-                            <div class='content'>
-                                <p>Hello <strong>" . htmlspecialchars($clientName) . ",</strong></p>
-                                
-                                <p>Thank you for reaching out to Frait Technologies! We have successfully received your quotation request and appreciate your interest in our services.</p>
-                                
-                                <div class='details-box'>
-                                    <p><strong>Your Request Summary:</strong></p>
-                                    <div class='detail-item'>
-                                        <span class='detail-label'>Service:</span> " . htmlspecialchars(!empty($serviceType) ? $serviceType : 'As discussed') . "
-                                    </div>
-                                    <div class='detail-item'>
-                                        <span class='detail-label'>Budget Range:</span> " . $budgetReadable . "
-                                    </div>
-                                    <div class='detail-item'>
-                                        <span class='detail-label'>Timeline:</span> " . $timelineReadable . "
-                                    </div>
-                                    <div class='detail-item'>
-                                        <span class='detail-label'>Submitted:</span> " . date('F j, Y \a\t g:i A') . "
-                                    </div>
-                                    " . (!empty($clientCompany) ? "<div class='detail-item'><span class='detail-label'>Company:</span> " . htmlspecialchars($clientCompany) . "</div>" : "") . "
-                                </div>
-                                
-                                <p><strong>Next Steps:</strong></p>
-                                <ol>
-                                    <li>Our team will thoroughly review your project requirements</li>
-                                    <li>We'll analyze your budget range and timeline</li>
-                                    <li>We'll prepare a detailed, customized quotation</li>
-                                    <li>You'll receive our quotation via email within <strong>24-48 hours</strong></li>
-                                </ol>
-                                
-                                <div class='contact-info'>
-                                    <p><strong>Need to reach us sooner?</strong></p>
-                                    <p>Feel free to contact us directly:<br>
-                                    📞 Phone: +254 742 451 220<br>
-                                    📧 Email: info@fraittechnologies.co.ke<br>
-                                    📍 Location: Nanyuki, Kenya
-                                    </p>
-                                </div>
-                                
-                                <p>We're excited to work with you on this project!</p>
-                                
-                                <p>Best regards,<br>
-                                <strong>" . $config['from_name'] . "</strong><br>
-                                <small>Digital Solutions & Development</small>
-                                </p>
-                            </div>
-                            <div class='footer'>
-                                <p>This is an automated confirmation email. Our team has received your request and will be in touch shortly. Please keep this email for your reference.</p>
-                            </div>
-                        </div>
-                    </body>
-                </html>";
+                $confirmMail->Subject = 'Quotation request received — ' . $config['from_name'];
+                $summaryRows = ft_em_row('Service', $serviceType)
+                    . ft_em_row('Budget range', $budgetReadable)
+                    . ft_em_row('Timeline', $timelineReadable)
+                    . ft_em_row('Submitted', date('F j, Y \a\t g:i A'));
+                if (!empty($clientCompany)) {
+                    $summaryRows .= ft_em_row('Company', $clientCompany);
+                }
+                if ($quoteFile) {
+                    $summaryRows .= ft_em_row('Attachment', $quoteFile['name']);
+                }
+                $confirmInner = '<p class="ft-em-lead">Hello <strong>' . ft_email_e($clientName) . '</strong>,</p>'
+                    . '<p class="ft-em-lead" style="margin-top:0;">Thank you for your quotation request. We have received your details and will review them shortly.</p>'
+                    . ft_em_highlight('Your request summary', $summaryRows)
+                    . '<p class="ft-em-lead" style="margin-bottom:12px;"><strong>Next steps</strong></p>'
+                    . '<ol class="ft-em-list"><li>We review your requirements and scope.</li><li>We align on timeline and options.</li><li>We send a tailored quotation.</li><li>Expect an email within <strong>24–48 hours</strong>.</li></ol>'
+                    . ft_em_card('Need us sooner?', '<p class="ft-em-lead" style="margin:0;">Call <a href="tel:+254742451220">+254 742 451 220</a> or email <a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a>.</p>')
+                    . '<p class="ft-em-lead" style="margin-top:24px;margin-bottom:0;">Best regards,<br><strong>' . ft_email_e($config['from_name']) . '</strong><br><span style="color:#64748b;font-size:14px;">Digital solutions &amp; development</span></p>';
+
+                $confirmMail->Body = ft_email_document(
+                    'Your quotation request is with our team.',
+                    'Thank you',
+                    "We've received your quotation request",
+                    null,
+                    $confirmInner,
+                    [
+                        'for_customer' => true,
+                        'footer_note' => 'Automated confirmation — keep this email for your records. Our team will follow up at the address you provided.',
+                    ]
+                );
 
                 $confirmMail->send();
             } catch (Exception $e) {

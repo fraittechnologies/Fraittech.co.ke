@@ -1,0 +1,479 @@
+/* ============================================
+   DESIGN BUILDER CUSTOM STYLES
+   Visual Website Builder Component Styles
+   ============================================ */
+
+/* ========== Form Container ========== */
+.builder-form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    height: auto;
+}
+
+.builder-form-container h2 {
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* ========== Form Sections ========== */
+.form-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.form-section:hover {
+    box-shadow: 0 3px 15px rgba(112, 180, 233, 0.15);
+}
+
+.section-title {
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    color: var(--primary);
+}
+
+/* ========== Section Checkboxes ========== */
+.section-checkboxes .form-check {
+    padding: 12px 15px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.section-checkboxes .form-check:hover {
+    border-color: var(--primary);
+    transform: translateX(5px);
+}
+
+.section-checkboxes .form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0.15em;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+}
+
+.section-checkboxes .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.section-checkboxes .form-check-label {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.section-checkboxes .form-check-label i {
+    margin-right: 8px;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+/* ========== Color Picker ========== */
+.color-picker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.color-picker-wrapper:focus-within {
+    border-color: var(--primary);
+}
+
+.color-input {
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.color-value {
+    font-weight: 600;
+    color: var(--dark);
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+/* ========== Select and Input Fields ========== */
+.form-select,
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(112, 180, 233, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+/* ========== Content Forms ========== */
+.content-form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--secondary);
+}
+
+.content-form .section-title {
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+/* ========== Submit Button ========== */
+.btn-primary-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, #4a9bd4 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(112, 180, 233, 0.4);
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(112, 180, 233, 0.6);
+}
+
+/* ========== Preview Container ========== */
+.preview-container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: relative;
+}
+
+.sticky-preview {
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.preview-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #4a9bd4 100%);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview-header h5 {
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.preview-header .btn-outline-primary {
+    background: white;
+    color: var(--primary);
+    border: 2px solid white;
+}
+
+.preview-header .btn-outline-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+/* ========== Preview Content ========== */
+.preview-content {
+    padding: 30px;
+    min-height: 400px;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Preview Logo */
+.preview-logo {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.preview-logo img {
+    max-width: 200px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.placeholder-logo {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+/* Preview Sections */
+.preview-section {
+    padding: 40px 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-preview {
+    background: linear-gradient(135deg, var(--primary) 0%, #4a9bd4 100%);
+    color: white;
+    padding: 60px 30px;
+}
+
+.preview-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.preview-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-bottom: 0;
+}
+
+.about-preview,
+.services-preview,
+.gallery-preview,
+.contact-preview {
+    background: white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.preview-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.preview-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ========== Mobile Responsiveness ========== */
+@media (max-width: 991.98px) {
+    .sticky-preview {
+        position: relative;
+        top: 0;
+        max-height: none;
+        margin-top: 30px;
+    }
+
+    .builder-form-container {
+        padding: 20px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    .preview-content {
+        padding: 20px;
+    }
+
+    .preview-section {
+        padding: 30px 20px;
+    }
+
+    .preview-title {
+        font-size: 1.5rem;
+    }
+
+    .preview-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .builder-form-container {
+        padding: 15px;
+    }
+
+    .color-picker-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .color-input {
+        width: 100%;
+    }
+
+    .preview-header {
+        padding: 15px;
+    }
+
+    .preview-content {
+        padding: 15px;
+    }
+
+    .preview-section {
+        padding: 25px 15px;
+    }
+
+    .preview-title {
+        font-size: 1.3rem;
+    }
+
+    .preview-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== Success Modal Styling ========== */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon i {
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* ========== Loading State ========== */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========== File Upload Styling ========== */
+input[type="file"] {
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #4a9bd4;
+    transform: translateY(-2px);
+}
+
+/* ========== Scrollbar Styling ========== */
+.preview-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.preview-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.preview-content::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.preview-content::-webkit-scrollbar-thumb:hover {
+    background: #4a9bd4;
+}
+
+/* ========== Utility Classes ========== */
+.text-primary-custom {
+    color: var(--primary) !important;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary) !important;
+}
+
+.text-secondary-custom {
+    color: var(--secondary) !important;
+}
+
+.bg-secondary-custom {
+    background-color: var(--secondary) !important;
+}

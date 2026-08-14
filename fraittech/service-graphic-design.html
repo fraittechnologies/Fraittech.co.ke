@@ -10,25 +10,26 @@
     <meta name="author" content="Fraittech">
     <meta name="robots" content="index, follow">
     
-    <link rel="canonical" href="https://fraittech.co.ke/service-graphic-design.html">
+    <link rel="canonical" href="https://fraittech.co.ke/service-graphic-design">
     <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="bg-dark py-2 px-lg-5">
+    <div class="ft-topbar py-2 px-lg-5">
         <div class="container-xxl">
             <div class="row g-4 align-items-center">
                 <div class="col-md-8">
-                    <div class="d-flex flex-wrap gap-4 small text-white">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone text-primary me-2"></i>
                             <span>+254 742 451 220</span>
@@ -44,51 +45,192 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-end">
-                    <div class="d-flex gap-2 justify-content-md-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
                         <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-x-twitter"></i></a>
                         <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" class="text-white small" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-xxl bg-white p-0">
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
             </div>
         </div>
 
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                   <img src="img/Latest logo.png" alt="Logo"> 
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link active">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <img src="img/Latest logo.webp" alt="Logo">
+        </a>
+        <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
+
+            <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
+
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+
+            </a>
+
+            <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+
+                <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown mega-dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-intro">
+                            <span class="mega-menu-eyebrow">Our expertise</span>
+                            <p class="mega-menu-headline mb-0">Explore services tailored to your goals – web, creative, cloud, and ongoing support.</p>
+                        </div>
+                        <div class="container-fluid mega-menu-inner">
+                            <div class="row g-3 g-lg-4 mega-menu-grid">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-website-development.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-laptop-code"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Website Development</h6>
+                                            <p>Stunning, responsive websites for business growth</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-graphic-design.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-palette"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Graphic Design</h6>
+                                            <p>Creative designs that captivate your audience</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-consulting.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Consulting</h6>
+                                            <p>Expert guidance on technology strategy</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-support.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Support</h6>
+                                            <p>Reliable technical support & maintenance</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-system-integration.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-plug"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>System Integration</h6>
+                                            <p>Seamlessly connect your business systems</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-cloud-services.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-cloud"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Cloud Services</h6>
+                                            <p>Scalable cloud solutions & migration</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="service.html" class="btn btn-primary rounded-pill">
+                                    View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 mt-3 d-block d-lg-none w-100 text-center" style="background: var(--primary); color: #fff;">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
                 </div>
+                <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block">Get a quotation</a>
+
+            <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom align-items-center">
+            <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                <img src="img/Latest logo.webp" alt="Fraittech">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                <div class="ft-offcanvas-services">
+                    <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                        <span class="fs-5">Services</span>
+                        <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="ftOffcanvasServices">
+                        <div class="d-flex flex-column ps-2 pb-2">
+                            <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                            <a href="service-graphic-design.html" class="nav-link py-2 active" aria-current="page">Graphic Design</a>
+                            <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                            <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                            <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                            <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                            <a href="service.html" class="nav-link py-2 fw-semibold">View all services</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                <a href="contact.html" class="nav-link py-2 fs-5">Contact</a>
             </nav>
+            <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+        </div>
+    </div>
 
             <!-- Hero Slider Start -->
             <div class="hero-slider-container position-relative">
                 <div class="hero-slider">
                     <div class="hero-slide active">
-                        <img src="img/hero-slide-1.jpg" alt="Graphic Design" class="hero-slide-img">
+                        <img src="img/hero-slide-1.webp" alt="Graphic Design" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Graphic Design</h1>
@@ -102,7 +244,7 @@
                         </div>
                     </div>
                     <div class="hero-slide">
-                        <img src="img/hero-slide-2.jpg" alt="Creative Design" class="hero-slide-img">
+                        <img src="img/hero-slide-2.webp" alt="Creative Design" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Creative Design</h1>
@@ -111,7 +253,7 @@
                         </div>
                     </div>
                     <div class="hero-slide">
-                        <img src="img/hero-slide-3.jpg" alt="Brand Identity" class="hero-slide-img">
+                        <img src="img/hero-slide-3.webp" alt="Brand Identity" class="hero-slide-img">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <h1 class="text-white animated slideInDown">Brand Identity</h1>
@@ -133,125 +275,181 @@
 
         <!-- Service Detail Start -->
         <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
+            <div class="container-fluid py-5 px-lg-5">
                 <div class="row g-5">
-                    <div class="col-lg-8">
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <h2 class="mb-4">Transform Your Brand with Creative Design</h2>
-                            <p class="mb-4">Our graphic design services help you build a strong visual identity that resonates with your target audience. From logos to complete brand guidelines, we create designs that stand out and communicate your message effectively.</p>
-                            
-                            <h4 class="mt-5 mb-3">Our Design Services</h4>
-                            <ul class="list-unstyled">
-                                <li class="mb-3"><i class="fa fa-check text-success me-2"></i> <strong>Logo Design:</strong> Memorable, unique logos that represent your brand's essence</li>
-                                <li class="mb-3"><i class="fa fa-check text-success me-2"></i> <strong>Brand Identity:</strong> Complete branding packages including color palettes and style guides</li>
-                                <li class="mb-3"><i class="fa fa-check text-success me-2"></i> <strong>Print Design:</strong> Business cards, brochures, flyers, and other marketing materials</li>
-                                <li class="mb-3"><i class="fa fa-check text-success me-2"></i> <strong>Digital Design:</strong> Social media graphics, web design elements, and digital assets</li>
-                                <li class="mb-3"><i class="fa fa-check text-success me-2"></i> <strong>Packaging Design:</strong> Product packaging that attracts customers and enhances brand value</li>
-                                <li class="mb-3"><i class="fa fa-check text-success me-2"></i> <strong>Illustration:</strong> Custom illustrations and artwork for unique visual impact</li>
+                    <div class="col-12 wow fadeInUp" data-wow-delay="0.05s">
+                        <h2 class="mb-4">Transform Your Brand with Creative Design</h2>
+                        <p class="mb-0 lead text-muted">Our graphic design services help you build a strong visual identity that resonates with your audience. From logos to full brand systems, we create work that stands out and communicates clearly.</p>
+                    </div>
+
+                    <div class="col-12 mt-2 mt-lg-4">
+                        <div class="bg-light rounded-4 p-4 p-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                            <h3 class="h4 mb-4" style="font-family: Jost, sans-serif; font-weight: 700;">What We Offer</h3>
+                            <ul class="list-unstyled row g-3 g-lg-4 mb-0">
+                                <li class="col-md-6 col-xl-4 d-flex"><i class="fa fa-check text-success me-3 mt-1 flex-shrink-0"></i><span><strong>Logo design:</strong> Memorable marks that reflect your brand's essence</span></li>
+                                <li class="col-md-6 col-xl-4 d-flex"><i class="fa fa-check text-success me-3 mt-1 flex-shrink-0"></i><span><strong>Brand identity:</strong> Colour, typography, and guidelines you can reuse everywhere</span></li>
+                                <li class="col-md-6 col-xl-4 d-flex"><i class="fa fa-check text-success me-3 mt-1 flex-shrink-0"></i><span><strong>Print design:</strong> Cards, brochures, flyers, and campaign collateral</span></li>
+                                <li class="col-md-6 col-xl-4 d-flex"><i class="fa fa-check text-success me-3 mt-1 flex-shrink-0"></i><span><strong>Digital design:</strong> Social templates, web graphics, and ad creatives</span></li>
+                                <li class="col-md-6 col-xl-4 d-flex"><i class="fa fa-check text-success me-3 mt-1 flex-shrink-0"></i><span><strong>Packaging:</strong> Concepts that work on shelf and in photos</span></li>
+                                <li class="col-md-6 col-xl-4 d-flex"><i class="fa fa-check text-success me-3 mt-1 flex-shrink-0"></i><span><strong>Illustration:</strong> Custom artwork when stock doesn't cut it</span></li>
                             </ul>
-
-                            <h4 class="mt-5 mb-3">Our Creative Process</h4>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="bg-light p-4 rounded">
-                                        <h6 class="text-primary mb-2">1. Research & Discovery</h6>
-                                        <p class="m-0">We research your industry, competitors, and target market to create informed designs.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="bg-light p-4 rounded">
-                                        <h6 class="text-primary mb-2">2. Concept Development</h6>
-                                        <p class="m-0">Multiple design concepts are created and presented for your review.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="bg-light p-4 rounded">
-                                        <h6 class="text-primary mb-2">3. Design & Refinement</h6>
-                                        <p class="m-0">Your feedback is incorporated and designs are refined to perfection.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="bg-light p-4 rounded">
-                                        <h6 class="text-primary mb-2">4. Final Production</h6>
-                                        <p class="m-0">High-quality files in all required formats ready for print and digital use.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h4 class="mt-5 mb-3">Tools & Software We Use</h4>
-                            <p>Adobe Creative Suite (Photoshop, Illustrator, InDesign), Figma, CorelDRAW, and other industry-standard design tools</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
-                        <div class="sticky-top" style="top: 100px;">
-                            <!-- Pricing Card -->
-                            <div class="bg-primary text-white rounded p-5 mb-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <h4 class="mb-4">Pricing</h4>
-                                <div class="mb-4">
-                                    <h6>Starting Price</h6>
-                                    <h3 class="text-white mb-3">KES 3,000</h3>
-                                    <small class="d-block mb-3">Basic logo design with 3 concepts</small>
+                    <div class="col-12 mt-2 mt-lg-4">
+                        <div class="border rounded-4 p-4 p-lg-5 wow fadeInUp" data-wow-delay="0.15s" style="border-color: rgba(112, 180, 233, 0.25) !important;">
+                            <h3 class="h4 mb-4" style="font-family: Jost, sans-serif; font-weight: 700;">Our Process</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="bg-light p-4 rounded-3 h-100">
+                                        <h6 class="text-primary mb-2">1. Research &amp; discovery</h6>
+                                        <p class="m-0 small">We learn your industry, competitors, and audience so concepts are grounded.</p>
+                                    </div>
                                 </div>
-                                <hr class="bg-white">
-                                <div class="mb-4">
-                                    <h6>What's Included</h6>
-                                    <ul class="list-unstyled small">
-                                        <li class="mb-2"><i class="fa fa-check me-2"></i>3 design concepts</li>
-                                        <li class="mb-2"><i class="fa fa-check me-2"></i>2 rounds of revisions</li>
-                                        <li class="mb-2"><i class="fa fa-check me-2"></i>Final files in multiple formats</li>
-                                        <li class="mb-2"><i class="fa fa-check me-2"></i>Unlimited concept variations</li>
+                                <div class="col-md-6">
+                                    <div class="bg-light p-4 rounded-3 h-100">
+                                        <h6 class="text-primary mb-2">2. Concept development</h6>
+                                        <p class="m-0 small">We present directions you can react to – not one-size-fits-all filler.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bg-light p-4 rounded-3 h-100">
+                                        <h6 class="text-primary mb-2">3. Design &amp; refinement</h6>
+                                        <p class="m-0 small">Your feedback shapes the work until it feels right for launch.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bg-light p-4 rounded-3 h-100">
+                                        <h6 class="text-primary mb-2">4. Final production</h6>
+                                        <p class="m-0 small">Print- and web-ready exports, plus source files where agreed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-2 mt-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <h3 class="h4 mb-3" style="font-family: Jost, sans-serif; font-weight: 700;">Tools &amp; software</h3>
+                        <p class="mb-0 text-muted">Adobe Creative Suite (Photoshop, Illustrator, InDesign), Figma, CorelDRAW, and other industry-standard tools.</p>
+                    </div>
+
+                    <div class="col-12 mt-2 mt-lg-5 wd-pricing-section">
+                        <div class="text-center mb-4 mb-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                            <h3 class="wd-pricing-head mb-2">Pricing</h3>
+                            <p class="wd-pricing-sub text-muted mb-0">Three clear tiers – scale up when you need more depth.</p>
+                        </div>
+                        <div class="row g-4 justify-content-center align-items-lg-stretch">
+                            <div class="col-sm-10 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
+                                <article class="wd-pricing-card wd-pricing-card--starter">
+                                    <span class="wd-pricing-card__badge">Essentials</span>
+                                    <h4 class="wd-pricing-card__title">Starter</h4>
+                                    <div class="wd-pricing-card__price-row">
+                                        <span class="wd-pricing-card__currency">KES</span>
+                                        <span class="wd-pricing-card__amount">3,000</span>
+                                    </div>
+                                    <p class="wd-pricing-card__note">Logo exploration – great when you're just getting started.</p>
+                                    <p class="wd-pricing-card__includes">What's included</p>
+                                    <ul class="wd-pricing-card__list">
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> 3 logo concepts</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> 2 revision rounds</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> PNG &amp; vector exports</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Basic colour notes</li>
+                                    </ul>
+                                    <a href="cart.html?add=gd-starter" class="btn btn-outline-primary wd-pricing-card__btn w-100">Purchase</a>
+                                </article>
+                            </div>
+                            <div class="col-sm-10 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.25s">
+                                <article class="wd-pricing-card wd-pricing-card--standard wd-pricing-card--featured">
+                                    <span class="wd-pricing-card__badge wd-pricing-card__badge--hot">Most popular</span>
+                                    <h4 class="wd-pricing-card__title">Standard</h4>
+                                    <div class="wd-pricing-card__price-row">
+                                        <span class="wd-pricing-card__currency">KES</span>
+                                        <span class="wd-pricing-card__amount">12,000</span>
+                                    </div>
+                                    <p class="wd-pricing-card__note">Brand kit light – logo lockups, type, and social templates.</p>
+                                    <p class="wd-pricing-card__includes">What's included</p>
+                                    <ul class="wd-pricing-card__list">
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Everything in Starter</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Wordmark &amp; icon variations</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Simple brand one-pager</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> 3 social template sizes</li>
+                                    </ul>
+                                    <a href="cart.html?add=gd-standard" class="btn wd-pricing-card__btn w-100">Purchase</a>
+                                </article>
+                            </div>
+                            <div class="col-sm-10 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.35s">
+                                <article class="wd-pricing-card wd-pricing-card--premium">
+                                    <span class="wd-pricing-card__badge">Full identity</span>
+                                    <h4 class="wd-pricing-card__title">Premium</h4>
+                                    <div class="wd-pricing-card__price-row">
+                                        <span class="wd-pricing-card__currency">KES</span>
+                                        <span class="wd-pricing-card__amount">28,000</span>
+                                    </div>
+                                    <p class="wd-pricing-card__note">Deeper system – guidelines, patterns, and rollout support.</p>
+                                    <p class="wd-pricing-card__includes">What's included</p>
+                                    <ul class="wd-pricing-card__list">
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Everything in Standard</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Extended brand guidelines</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Pattern / texture direction</li>
+                                        <li><span class="wd-pricing-card__check" aria-hidden="true"><i class="fa fa-check"></i></span> Stationery or one print item</li>
+                                    </ul>
+                                    <a href="cart.html?add=gd-premium" class="btn btn-primary wd-pricing-card__btn w-100">Purchase</a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4 mt-lg-5">
+                        <div class="bg-light rounded-4 p-4 p-lg-5 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-4 text-center text-lg-start">
+                                    <h3 class="h4 mb-0" style="font-family: Jost, sans-serif; font-weight: 700;"><i class="fa fa-clock text-primary me-2" aria-hidden="true"></i>Turnaround time</h3>
+                                    <p class="text-muted small mb-0 mt-2 mb-lg-0">Typical timelines after kickoff</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="bg-white rounded-3 p-4 h-100 border" style="border-color: rgba(112, 180, 233, 0.25) !important;">
+                                                <p class="text-primary fw-semibold mb-1 small text-uppercase" style="letter-spacing: 0.04em;">Logo</p>
+                                                <p class="mb-0 fw-bold text-dark">5–10 working days</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="bg-white rounded-3 p-4 h-100 border" style="border-color: rgba(112, 180, 233, 0.25) !important;">
+                                                <p class="text-primary fw-semibold mb-1 small text-uppercase" style="letter-spacing: 0.04em;">Branding</p>
+                                                <p class="mb-0 fw-bold text-dark">2–4 weeks</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="bg-white rounded-3 p-4 h-100 border" style="border-color: rgba(112, 180, 233, 0.25) !important;">
+                                                <p class="text-primary fw-semibold mb-1 small text-uppercase" style="letter-spacing: 0.04em;">Marketing</p>
+                                                <p class="mb-0 fw-bold text-dark">3–7 days</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted small mt-3 mb-0 text-center text-md-start">Rush slots available when the calendar allows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4 mt-lg-5">
+                        <div class="bg-light rounded-4 p-4 p-lg-5 wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="row align-items-start g-4">
+                                <div class="col-lg-4 text-center text-lg-start">
+                                    <h3 class="h4 mb-0" style="font-family: Jost, sans-serif; font-weight: 700;"><i class="fa fa-box-open text-primary me-2" aria-hidden="true"></i>Final deliverables</h3>
+                                    <p class="text-muted small mb-0 mt-2">What you take away at handover</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <ul class="list-unstyled row g-3 mb-0 small">
+                                        <li class="col-md-6 d-flex align-items-start"><i class="fa fa-check text-primary me-2 mt-1"></i>High-resolution artwork</li>
+                                        <li class="col-md-6 d-flex align-items-start"><i class="fa fa-check text-primary me-2 mt-1"></i>Multiple file formats</li>
+                                        <li class="col-md-6 d-flex align-items-start"><i class="fa fa-check text-primary me-2 mt-1"></i>Print-ready exports</li>
+                                        <li class="col-md-6 d-flex align-items-start"><i class="fa fa-check text-primary me-2 mt-1"></i>Web-optimised assets</li>
+                                        <li class="col-md-6 d-flex align-items-start"><i class="fa fa-check text-primary me-2 mt-1"></i>Source files (per agreement)</li>
+                                        <li class="col-md-6 d-flex align-items-start"><i class="fa fa-check text-primary me-2 mt-1"></i>Usage notes</li>
                                     </ul>
                                 </div>
-                                <a href="quotation.html" class="btn btn-light rounded-pill w-100 py-2 mt-4">Get Custom Quote</a>
-                            </div>
-
-                            <!-- Turnaround Time -->
-                            <div class="bg-light rounded p-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                                <h5 class="mb-3">⏱️ Turnaround Time</h5>
-                                <p class="mb-2"><strong>Logo Design:</strong> 5-10 working days</p>
-                                <p class="mb-2"><strong>Branding Package:</strong> 2-4 weeks</p>
-                                <p class="mb-2"><strong>Marketing Materials:</strong> 3-7 days</p>
-                                <small class="text-muted">Expedited services available for urgent projects</small>
-                            </div>
-
-                            <!-- Payment Options -->
-                            <div class="bg-light rounded p-4 mb-4 wow fadeInUp" data-wow-delay="0.5s">
-                                <h5 class="mb-4 pb-3 border-bottom border-success" style="color: #00C853; font-weight: 700; font-size: 1.1rem;">💳 <strong>Payment Options</strong></h5>
-                                <ul class="list-unstyled small">
-                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i><strong>50% deposit upfront</strong></li>
-                                    <li class="mb-3"><i class="fa fa-check text-success me-2"></i><strong>50% on completion</strong></li>
-                                    <li class="mb-4 pb-3 border-bottom">
-                                        <strong class="d-block mb-3 text-dark" style="font-size: 1rem;">Payment Methods:</strong>
-                                        <span class="d-block mb-2 p-2 rounded" style="background-color: #f0f9f6; border-left: 4px solid #00C853;"><i class="fa fa-mobile" style="color: #00C853; font-weight: bold; font-size: 1.1rem;"></i> <strong style="color: #00C853;">M-Pesa</strong> (Pay Bill/Send Money)</span>
-                                        <span class="d-block p-2 rounded" style="background-color: #f0f9f6;"><i class="fa fa-building" style="color: #00C853; font-weight: bold; font-size: 1.1rem;"></i> <strong style="color: #00C853;">Bank Transfer</strong></span>
-                                    </li>
-                                    <li class="mb-3 p-3 rounded" style="background-color: #f0f9f6; border: 2px solid #00C853;">
-                                        <strong class="text-dark d-block mb-2">Paybill:</strong> 
-                                        <span class="badge" style="background-color: #00C853; font-size: 0.95rem; font-weight: bold; padding: 0.6rem 1rem;">542542</span>
-                                    </li>
-                                    <li class="mb-2 p-3 rounded" style="background-color: #f0f9f6; border: 2px solid #00C853;">
-                                        <strong class="text-dark d-block mb-2">Account:</strong> 
-                                        <span class="badge" style="background-color: #00C853; font-size: 0.95rem; font-weight: bold; padding: 0.6rem 1rem;">451220</span>
-                                        <button class="btn btn-sm btn-success w-100 mt-3" data-bs-toggle="modal" data-bs-target="#paymentModal">
-                                            <i class="fa fa-credit-card me-2"></i>Click to Pay
-                                        </button>
-                                    </li>
-                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i><strong>Flexible payment terms</strong></li>
-                                </ul>
-                            </div>
-
-                            <!-- Deliverables -->
-                            <div class="bg-light rounded p-4 wow fadeInUp" data-wow-delay="0.6s">
-                                <h5 class="mb-3">📦 Final Deliverables</h5>
-                                <ul class="list-unstyled small">
-                                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>High-resolution files</li>
-                                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Multiple file formats</li>
-                                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Print-ready files</li>
-                                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Web-optimized files</li>
-                                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Source files</li>
-                                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Usage rights documentation</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -260,68 +458,159 @@
         </div>
         <!-- Service Detail End -->
 
-        <!-- CTA Section -->
-        <div class="container-xxl py-5 bg-primary">
-            <div class="container py-5 px-lg-5 text-center">
-                <h2 class="text-white mb-4">Ready to Elevate Your Brand?</h2>
-                <p class="text-white mb-4">Let's create stunning designs that make your brand unforgettable.</p>
-                <a href="quotation.html" class="btn btn-light rounded-pill py-3 px-5">Request a Quotation</a>
-                <a href="contact.html" class="btn btn-outline-light rounded-pill py-3 px-5 ms-2">Contact Us</a>
-            </div>
-        </div>
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Nanyuki, Kenya</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>0742 451 220</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@fraittech.co.ke</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="contact.html">Privacy Policy</a>
-                        <a class="btn btn-link" href="contact.html">Terms & Condition</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Services<span></span></p>
-                        <a class="btn btn-link" href="service-website-development.html">Website Development</a>
-                        <a class="btn btn-link" href="service-graphic-design.html">Graphic Design</a>
-                        <a class="btn btn-link" href="service-it-consulting.html">IT Consulting</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Stay updated with latest IT solutions and exclusive offers.</p>
-                    </div>
+        <!-- Start your project -->
+        <div class="container-xxl py-5 dream-brief-wrap">
+            <div class="container-fluid py-5 px-lg-5">
+                <div class="text-center mx-auto mb-4 mb-lg-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 640px;">
+                    <p class="dream-brief-kicker mb-2">Tell us what you need</p>
+                    <h2 class="dream-brief-title mb-3">Kick off your graphic design project</h2>
+                    <p class="text-muted mb-0">Request a quote, email us, or message on WhatsApp – we'll recommend the right package.</p>
                 </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; 2026 <a class="border-bottom" href="index.html">fraittech.co.ke</a>, All Right Reserved.
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-xl-8">
+                        <div class="dream-brief-card shadow-sm text-center p-4 p-lg-5 wow fadeInUp" data-wow-delay="0.15s">
+                            <p class="lead text-muted mb-4 mb-lg-5">Share a rough brief (even bullet points) and we'll follow up with clear next steps.</p>
+                            <div class="d-flex flex-column flex-sm-row flex-wrap justify-content-center gap-3">
+                                <a href="quotation.html" class="btn btn-primary btn-lg rounded-pill px-4">Get a quotation</a>
+                                <a href="contact.html" class="btn btn-outline-primary btn-lg rounded-pill px-4">Contact us</a>
+                                <a href="https://wa.me/254742451220" class="btn btn-success btn-lg rounded-pill px-4" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+
+        <section class="wd-cta-build" aria-labelledby="gd-cta-heading">
+            <div class="container-xxl px-3 px-lg-5">
+                <div class="wd-cta-build-inner wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row align-items-center g-4 g-xl-5">
+                        <div class="col-lg-7 text-center text-lg-start">
+                            <p class="wd-cta-build-eyebrow">Creative that converts</p>
+                            <h2 id="gd-cta-heading" class="wd-cta-build-title">Ready for design that feels like your brand?</h2>
+                            <p class="wd-cta-build-lead mb-0">We blend strategy and craft so your visuals work in print, on social, and alongside your website.</p>
+                            <div class="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start gap-3 mt-4">
+                                <a href="quotation.html" class="btn btn-light btn-lg rounded-pill px-4 px-sm-5 py-3">
+                                    <i class="fa fa-file-signature me-2"></i>Get a quotation
+                                </a>
+                                <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-4 px-sm-5 py-3">
+                                    <i class="fa fa-envelope me-2"></i>Contact us
+                                </a>
+                            </div>
+                            <a href="https://wa.me/254742451220" class="wd-cta-build-wa d-flex w-100 w-lg-auto justify-content-center justify-content-lg-start" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                Chat on WhatsApp instead
+                            </a>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="wd-cta-pill">
+                                <div class="wd-cta-pill-icon" aria-hidden="true"><i class="fa fa-palette"></i></div>
+                                <div>
+                                    <strong>Concepts you can choose from</strong>
+                                    <span>We show directions early so you're never guessing what 'final' might look like.</span>
+                                </div>
+                            </div>
+                            <div class="wd-cta-pill">
+                                <div class="wd-cta-pill-icon" aria-hidden="true"><i class="fa fa-file-export"></i></div>
+                                <div>
+                                    <strong>Files that are ready to use</strong>
+                                    <span>Print, web, and social exports – named and organised for your team.</span>
+                                </div>
+                            </div>
+                            <div class="wd-cta-pill">
+                                <div class="wd-cta-pill-icon" aria-hidden="true"><i class="fa fa-tags"></i></div>
+                                <div>
+                                    <strong>From KES 3,000</strong>
+                                    <span>Starter, Standard, and Premium – upgrade when your brand grows.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Footer Start -->
+                <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="ft-footer-bg" aria-hidden="true"></div>
+                    <div class="container position-relative py-5 px-3 px-lg-4">
+                        <div class="row g-4 g-xl-5 align-items-start">
+                            <div class="col-md-6 col-lg-4">
+                                <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                                    <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                                </a>
+                                <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                                <div class="ft-footer-social d-flex flex-wrap gap-2">
+                                    <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="ft-footer-social-btn" href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <h3 class="ft-footer-heading">Quick links</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="service.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="blog/index.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="quotation.html">Get a quote</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-3">
+                                <h3 class="ft-footer-heading">Services</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="service-website-development.html">Website development</a></li>
+                                    <li><a href="service-graphic-design.html">Graphic design</a></li>
+                                    <li><a href="service-it-consulting.html">IT consulting</a></li>
+                                    <li><a href="service-it-support.html">IT support</a></li>
+                                    <li><a href="service-cloud-services.html">Cloud services</a></li>
+                                    <li><a href="service-system-integration.html">System integration</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <h3 class="ft-footer-heading">Contact</h3>
+                                <ul class="ft-footer-contact list-unstyled mb-0">
+                                    <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                                    <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ft-footer-bottom">
+                        <div class="container px-3 px-lg-4">
+                            <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                                <p class="ft-footer-copy mb-0 text-center text-md-start">
+                                    &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                                </p>
+                                <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                                    <a href="index.html">Home</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="faqs.html">FAQs</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="help.html">Help</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="privacy-policy.html">Privacy</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer End -->
 
 
     </div>
 
-    <a href="https://wa.me/254742451220" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <script src="js/cookies.js"></script>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -348,7 +637,6 @@
                             <label for="paymentEmail" class="form-label">Email (Optional)</label>
                             <input type="email" class="form-control" id="paymentEmail" placeholder="your@email.com">
                         </div>
-                        <div id="paymentMessage"></div>
                         <span style="display:block; text-align: center">
                             <a href="https://intasend.com/security" target="_blank">
                                 <img src="https://intasend-prod-static.s3.amazonaws.com/img/trust-badges/intasend-trust-badge-with-mpesa-hr-dark.png" width="375px" alt="IntaSend Secure Payments (PCI-DSS Compliant)">
@@ -367,75 +655,6 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('submitPayment').addEventListener('click', async function() {
-            const amount = document.getElementById('paymentAmount').value;
-            const phone = document.getElementById('paymentPhone').value;
-            const email = document.getElementById('paymentEmail').value;
-            const messageDiv = document.getElementById('paymentMessage');
-            
-            // Validation
-            if (!amount || amount <= 0) {
-                messageDiv.innerHTML = '<div class="alert alert-danger">Please enter a valid amount</div>';
-                return;
-            }
-            
-            if (!phone || phone.length < 10) {
-                messageDiv.innerHTML = '<div class="alert alert-danger">Please enter a valid phone number</div>';
-                return;
-            }
-            
-            // Show loading state
-            const btn = this;
-            btn.disabled = true;
-            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
-            
-            try {
-                const response = await fetch('payment-handler.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        amount: amount,
-                        phone: phone,
-                        email: email
-                    })
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    messageDiv.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
-                    setTimeout(() => {
-                        bootstrap.Modal.getInstance(document.getElementById('paymentModal')).hide();
-                        document.getElementById('paymentForm').reset();
-                    }, 2000);
-                } else {
-                    messageDiv.innerHTML = '<div class="alert alert-danger">' + data.message + '</div>';
-                }
-            } catch (error) {
-                messageDiv.innerHTML = '<div class="alert alert-danger">Error processing payment. Please try again.</div>';
-                console.error('Payment error:', error);
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = 'Send STK Push';
-            }
-        });
-    </script>
 </body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 
 </html>

@@ -6,6 +6,8 @@ error_reporting(E_ALL);
 // Include PHPMailer and config
 // Load config array
 $config = require 'config.php';
+require_once __DIR__ . '/smtp-helper.php';
+require_once __DIR__ . '/email-layout.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
@@ -24,15 +26,80 @@ $response = [
 
 // Check if form was submitted via POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Bot traps
+    $honeypot = isset($_POST['company_website']) ? trim((string) $_POST['company_website']) : '';
+    if ($honeypot !== '') {
+        $response['success'] = true;
+        $response['message'] = 'Thank you! Your message has been sent successfully. We will get back to you soon.';
+        echo json_encode($response);
+        exit;
+    }
+
+    $started = isset($_POST['form_started']) ? (int) $_POST['form_started'] : 0;
+    if ($started > 0) {
+        $elapsedMs = (int) round(microtime(true) * 1000) - $started;
+        if ($elapsedMs >= 0 && $elapsedMs < 2500) {
+            $response['message'] = 'Please take a moment to complete the form, then try again.';
+            echo json_encode($response);
+            exit;
+        }
+    }
+
+    $challengeA = isset($_POST['challenge_a']) ? (int) $_POST['challenge_a'] : null;
+    $challengeB = isset($_POST['challenge_b']) ? (int) $_POST['challenge_b'] : null;
+    $challengeAnswer = isset($_POST['challenge_answer']) ? (int) $_POST['challenge_answer'] : null;
+    if (
+        $challengeA === null ||
+        $challengeB === null ||
+        $challengeAnswer === null ||
+        $challengeA < 1 ||
+        $challengeA > 20 ||
+        $challengeB < 1 ||
+        $challengeB > 20 ||
+        $challengeAnswer !== ($challengeA + $challengeB)
+    ) {
+        $response['message'] = 'Please solve the quick check correctly before sending.';
+        echo json_encode($response);
+        exit;
+    }
+
     // Get form data
     $name = isset($_POST['name']) ? trim(htmlspecialchars($_POST['name'])) : '';
     $email = isset($_POST['email']) ? trim(htmlspecialchars($_POST['email'])) : '';
     $subject = isset($_POST['subject']) ? trim(htmlspecialchars($_POST['subject'])) : '';
     $message = isset($_POST['message']) ? trim(htmlspecialchars($_POST['message'])) : '';
+    $phone = isset($_POST['phone']) ? trim(htmlspecialchars($_POST['phone'])) : '';
 
     // Validate form data
-    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+    if (empty($name) || empty($email) || empty($phone) || empty($subject) || empty($message)) {
         $response['message'] = 'Please fill in all required fields with valid information.';
+        echo json_encode($response);
+        exit;
+    }
+
+    $phoneDigits = preg_replace('/\D+/', '', $phone);
+    if ($phoneDigits === '') {
+        $response['message'] = 'Please enter your phone number.';
+        echo json_encode($response);
+        exit;
+    }
+    if (strpos($phoneDigits, '254') === 0) {
+        $phoneNorm = substr($phoneDigits, 0, 12);
+    } elseif (isset($phoneDigits[0]) && $phoneDigits[0] === '0' && strlen($phoneDigits) >= 10) {
+        $phoneNorm = '254' . substr($phoneDigits, 1, 9);
+    } elseif (isset($phoneDigits[0]) && ($phoneDigits[0] === '7' || $phoneDigits[0] === '1') && strlen($phoneDigits) === 9) {
+        $phoneNorm = '254' . $phoneDigits;
+    } else {
+        $phoneNorm = $phoneDigits;
+    }
+    if (!preg_match('/^254[71]\d{8}$/', $phoneNorm)) {
+        $response['message'] = 'Enter a valid Kenyan mobile number, e.g. 0712 345 678.';
+        echo json_encode($response);
+        exit;
+    }
+
+    if (strlen($name) < 2 || strlen($subject) < 3 || strlen($message) < 10) {
+        $response['message'] = 'Please complete the required fields with enough detail.';
         echo json_encode($response);
         exit;
     }
@@ -50,12 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // SMTP configuration
         $mail->isSMTP();
-        $mail->Host = $config['smtp_host'];
-        $mail->SMTPAuth = true;
-        $mail->Username = $config['smtp_user'];
-        $mail->Password = $config['smtp_pass'];
-        $mail->SMTPSecure = $config['smtp_secure'] === 'ssl' ? PHPMailer::ENCRYPTION_SMTPS : PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = $config['smtp_port'];
+        ft_configure_phpmailer_smtp($mail, $config);
         $mail->CharSet = 'UTF-8';
 
         // Set email parameters
@@ -67,47 +129,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isHTML(true);
         $mail->Subject = 'New Contact Form Submission: ' . $subject;
         
-        // Create HTML email body
-        $emailBody = "
-        <html>
-            <head>
-                <style>
-                    body { font-family: Arial, sans-serif; }
-                    .container { max-width: 600px; margin: 0 auto; border: 1px solid #ddd; padding: 20px; }
-                    .header { background-color: #007bff; color: white; padding: 10px; text-align: center; }
-                    .content { padding: 20px; }
-                    .field { margin-bottom: 15px; }
-                    .label { font-weight: bold; color: #333; }
-                    .value { color: #666; margin-top: 5px; }
-                </style>
-            </head>
-            <body>
-                <div class='container'>
-                    <div class='header'>
-                        <h2>New Contact Form Submission</h2>
-                    </div>
-                    <div class='content'>
-                        <div class='field'>
-                            <div class='label'>Name:</div>
-                            <div class='value'>" . $name . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Email:</div>
-                            <div class='value'>" . $email . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Subject:</div>
-                            <div class='value'>" . $subject . "</div>
-                        </div>
-                        <div class='field'>
-                            <div class='label'>Message:</div>
-                            <div class='value'>" . nl2br($message) . "</div>
-                        </div>
-                    </div>
-                </div>
-            </body>
-           
-        </html>";
+        $staffInner = '<p class="ft-em-lead">Someone submitted the contact form on the website. Reply directly to the sender using the address below.</p>'
+            . ft_em_card('Contact', ''
+                . ft_em_row('Name', $name)
+                . ft_em_row('Email', $email)
+                . ft_em_row('Phone', $phone)
+                . ft_em_row('Subject', $subject)
+            )
+            . ft_em_card('Message', '<div class="ft-em-value">' . nl2br(ft_email_e($message)) . '</div>');
+
+        $emailBody = ft_email_document(
+            'New contact: ' . $subject,
+            'Internal notification',
+            'New contact form message',
+            $subject,
+            $staffInner,
+            ['for_customer' => false]
+        );
         
         $mail->Body = $emailBody;
         $mail->AltBody = "Name: $name\nEmail: $email\nSubject: $subject\nMessage: $message";
@@ -121,74 +159,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
                 $confirmMail = new PHPMailer(true);
                 $confirmMail->isSMTP();
-                $confirmMail->Host = $config['smtp_host'];
-                $confirmMail->SMTPAuth = true;
-                $confirmMail->Username = $config['smtp_user'];
-                $confirmMail->Password = $config['smtp_pass'];
-                $confirmMail->SMTPSecure = $config['smtp_secure'] === 'ssl' ? PHPMailer::ENCRYPTION_SMTPS : PHPMailer::ENCRYPTION_STARTTLS;
-                $confirmMail->Port = $config['smtp_port'];
+                ft_configure_phpmailer_smtp($confirmMail, $config);
                 $confirmMail->CharSet = 'UTF-8';
 
                 $confirmMail->setFrom($config['from_email'], $config['from_name']);
                 $confirmMail->addAddress($email, $name);
 
                 $confirmMail->isHTML(true);
-                $confirmMail->Subject = '✓ Message Received - ' . $config['from_name'];
-                $confirmMail->Body = "
-                <html>
-                    <head>
-                        <style>
-                            body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
-                            .container { max-width: 600px; margin: 0 auto; background-color: white; padding: 30px; border-radius: 8px; }
-                            .header { background-color: #28a745; color: white; padding: 20px; text-align: center; border-radius: 4px; margin-bottom: 20px; }
-                            .header h2 { margin: 0; }
-                            .content { color: #333; line-height: 1.6; }
-                            .details-box { background-color: #f9f9f9; border-left: 4px solid #28a745; padding: 15px; margin: 20px 0; }
-                            .detail-item { margin: 8px 0; }
-                            .detail-label { font-weight: bold; color: #555; }
-                            .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999; }
-                        </style>
-                    </head>
-                    <body>
-                        <div class='container'>
-                            <div class='header'>
-                                <h2>✓ We've Received Your Message!</h2>
-                            </div>
-                            <div class='content'>
-                                <p>Hello <strong>" . htmlspecialchars($name) . ",</strong></p>
-                                
-                                <p>Thank you for contacting Frait Technologies! We have successfully received your message and will review it shortly.</p>
-                                
-                                <div class='details-box'>
-                                    <p><strong>Your Message Details:</strong></p>
-                                    <div class='detail-item'>
-                                        <span class='detail-label'>Subject:</span> " . htmlspecialchars($subject) . "
-                                    </div>
-                                    <div class='detail-item'>
-                                        <span class='detail-label'>Received:</span> " . date('F j, Y \a\t g:i A') . "
-                                    </div>
-                                </div>
-                                
-                                <p>Our team is committed to providing excellent service. We typically respond to inquiries within 24-48 hours during business days.</p>
-                                
-                                <p><strong>What Happens Next?</strong></p>
-                                <ul>
-                                    <li>We will carefully review your message</li>
-                                    <li>Our team will reach out to you at <strong>" . htmlspecialchars($email) . "</strong></li>
-                                    <li>If you have any urgent matters, feel free to call us at +254 742 451 220</li>
-                                </ul>
-                                
-                                <p>Best regards,<br>
-                                <strong>" . $config['from_name'] . "</strong><br>
-                                <small>info@fraittechnologies.co.ke | Nanyuki, Kenya</small>
-                                </p>
-                            </div>
-                            <div class='footer'>
-                                <p>This is an automated confirmation email. Please do not reply to this email. Your original message has been forwarded to our team.</p>
-                            </div>
-                        </div>
-                    </body>
-                </html>";
+                $confirmMail->Subject = 'We received your message — ' . $config['from_name'];
+                $confirmInner = '<p class="ft-em-lead">Hello <strong>' . ft_email_e($name) . '</strong>,</p>'
+                    . '<p class="ft-em-lead" style="margin-top:0;">Thank you for contacting <strong>Fraittech</strong>. We have received your message and will review it shortly.</p>'
+                    . ft_em_highlight('Your submission', ''
+                        . ft_em_row('Subject', $subject)
+                        . ft_em_row('Received', date('F j, Y \a\t g:i A'))
+                    )
+                    . '<p class="ft-em-lead" style="margin-bottom:12px;"><strong>What happens next</strong></p>'
+                    . '<ul class="ft-em-list"><li>Our team reviews your message.</li><li>We reply within <strong>24–48 business hours</strong> at <strong>' . ft_email_e($email) . '</strong>.</li><li>For urgent matters, call <a href="tel:+254742451220">+254 742 451 220</a>.</li></ul>'
+                    . '<p class="ft-em-lead" style="margin-top:24px;margin-bottom:0;">Best regards,<br><strong>' . ft_email_e($config['from_name']) . '</strong></p>';
+
+                $confirmMail->Body = ft_email_document(
+                    'We received your message and will reply soon.',
+                    'Thank you',
+                    "We've received your message",
+                    null,
+                    $confirmInner,
+                    [
+                        'for_customer' => true,
+                        'footer_note' => 'Automated confirmation — your message was delivered to our team. Prefer not to use this inbox? Write to info@fraittech.co.ke.',
+                    ]
+                );
 
                 $confirmMail->send();
             } catch (Exception $e) {

@@ -3,28 +3,28 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Get Free Quote - Fraittech Digital Solutions Kenya</title>
+    <title>Quotation request - Fraittech Digital Solutions Kenya</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Request a free quotation from Fraittech for your web design, digital marketing, or custom development project. Quick response guaranteed.">
+    <meta name="description" content="Submit a quotation request to Fraittech. Tell us about your project; we will follow up with next steps.">
     <meta name="keywords" content="free quote digital marketing, web design quotation, project estimate Kenya, custom development pricing">
     <meta name="author" content="Fraittech">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Get Free Quote - Fraittech Digital Solutions">
-    <meta property="og:description" content="Request your free quotation for digital marketing, web design, or development services from Fraittech.">
-    <meta property="og:url" content="https://fraittech.co.ke/quotation.html">
-    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.png">
+    <meta property="og:title" content="Quotation request - Fraittech Digital Solutions">
+    <meta property="og:description" content="Submit a quotation request for web, design, cloud, or support services from Fraittech.">
+    <meta property="og:url" content="https://fraittech.co.ke/quotation">
+    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.webp">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://fraittech.co.ke/quotation.html">
+    <link rel="canonical" href="https://fraittech.co.ke/quotation">
 
     <!-- Favicon -->
     <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
     <link href="img/favicon/favicon.svg" rel="icon" type="image/svg+xml">
-    <link href="img/favicon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/favicon/favicon-96x96.webp" rel="icon" type="image/webp" sizes="96x96">
+    <link href="img/favicon/apple-touch-icon.webp" rel="apple-touch-icon">
     <link href="img/favicon/site.webmanifest" rel="manifest">
 
     <!-- Google Web Fonts -->
@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -46,15 +46,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/quotation-page.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="ft-quotation">
     <!-- Top Header Bar Start -->
-    <div class="bg-dark py-2 px-lg-5">
+    <div class="ft-topbar py-2 px-lg-5">
         <div class="container-xxl">
             <div class="row g-4 align-items-center">
                 <div class="col-md-8">
-                    <div class="d-flex flex-wrap gap-4 small text-white">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone text-primary me-2"></i>
                             <span>+254 742 451 220</span>
@@ -70,11 +72,11 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-end">
-                    <div class="d-flex gap-2 justify-content-md-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
                         <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-x-twitter"></i></a>
                         <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" class="text-white small" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -82,432 +84,436 @@
     </div>
     <!-- Top Header Bar End -->
 
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
             </div>
         </div>
-        <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <!-- <h1 class="m-0">DGital</h1> -->
-                   <img src="img/Latest logo.png" alt="Logo"> 
-            <!--Start of Tawk.to Script-->
-            <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-            </script>
-            <!--End of Tawk.to Script-->
+<!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <!-- <h1 class="m-0">DGital</h1> -->
+            <img src="img/Latest logo.webp" alt="Logo">
+        </a>
+        <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
 
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
-                </div>
-            </nav>
+            <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
 
-            <!-- Hero Slider Start -->
-            <div class="hero-slider-container position-relative">
-                <div class="hero-slider">
-                    <!-- Slide 1 -->
-                    <div class="hero-slide active">
-                        <img src="img/hero-slide-1.jpg" alt="Get a Quotation" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Get a Quotation</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item text-white active" aria-current="page">Get a Quotation</li>
-                                </ol>
-                            </nav>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+
+            </a>
+
+            <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+
+                <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown mega-dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-intro">
+                            <span class="mega-menu-eyebrow">Our expertise</span>
+                            <p class="mega-menu-headline mb-0">Explore services tailored to your goals – web, creative, cloud, and ongoing support.</p>
+                        </div>
+                        <div class="container-fluid mega-menu-inner">
+                            <div class="row g-3 g-lg-4 mega-menu-grid">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-website-development.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-laptop-code"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Website Development</h6>
+                                            <p>Stunning, responsive websites for business growth</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-graphic-design.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-palette"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Graphic Design</h6>
+                                            <p>Creative designs that captivate your audience</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-consulting.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Consulting</h6>
+                                            <p>Expert guidance on technology strategy</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-support.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Support</h6>
+                                            <p>Reliable technical support & maintenance</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-system-integration.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-plug"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>System Integration</h6>
+                                            <p>Seamlessly connect your business systems</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-cloud-services.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-cloud"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Cloud Services</h6>
+                                            <p>Scalable cloud solutions & migration</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="service.html" class="btn btn-primary rounded-pill">
+                                    View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="hero-slide">
-                        <img src="img/web_dev.jpg" alt="Free Estimate" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Free Estimate</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <p class="text-white fs-5">Get a personalized quote for your project</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="hero-slide">
-                        <img src="img/working-1.jpg" alt="Affordable Pricing" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Affordable Pricing</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <p class="text-white fs-5">Quality solutions at competitive rates</p>
-                        </div>
-                    </div>
                 </div>
-
-                <!-- Previous Button -->
-                <button class="hero-slider-btn prev" onclick="changeSlide(-1)">
-                    <i class="fa fa-chevron-left"></i>
-                </button>
-
-                <!-- Next Button -->
-                <button class="hero-slider-btn next" onclick="changeSlide(1)">
-                    <i class="fa fa-chevron-right"></i>
-                </button>
-
-                <!-- Slider Indicators -->
-                <div class="hero-slider-indicators">
-                    <span class="indicator active" onclick="currentSlide(1)"></span>
-                    <span class="indicator" onclick="currentSlide(2)"></span>
-                    <span class="indicator" onclick="currentSlide(3)"></span>
-                </div>
+                <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <!-- Hero Slider End -->
+            <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block" style="background: var(--secondary); color: #fff;">Get a quotation</a>
+
+            <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom align-items-center">
+            <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                <img src="img/Latest logo.webp" alt="Fraittech">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                <div class="ft-offcanvas-services">
+                    <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                        <span class="fs-5">Services</span>
+                        <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="ftOffcanvasServices">
+                        <div class="d-flex flex-column ps-2 pb-2">
+                            <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                            <a href="service-graphic-design.html" class="nav-link py-2">Graphic Design</a>
+                            <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                            <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                            <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                            <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                            <a href="service.html" class="nav-link py-2 fw-semibold">View all services</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                <a href="contact.html" class="nav-link py-2 fs-5">Contact</a>
+            </nav>
+            <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+        </div>
+    </div>
+
         </div>
         <!-- Navbar & Hero End -->
 
+        <main class="ft-quotation-page border-bottom border-top border-light" id="quotation-request">
+        <section class="ft-quotation-section" aria-labelledby="quotation-heading">
+            <div class="container py-5 px-3 px-lg-4">
+                <div class="ft-quotation-section__inner">
+                    <header class="ft-q-head">
+                    <nav aria-label="Breadcrumb">
+                        <ol class="breadcrumb mb-3 pb-2 justify-content-center flex-wrap">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Quotation request</li>
+                        </ol>
+                    </nav>
+                    <p class="ft-q-eyebrow">Get a quote</p>
+                    <h1 id="quotation-heading">Quotation request</h1>
+                    <p class="ft-q-lede">Tell us what you need and we will follow up. Package pricing is on our services pages and in the cart.</p>
+                    </header>
+                        <div class="ft-q-card">
+                            <form id="quotationForm" class="ft-ajax" action="quotation-handler.php" method="POST" enctype="multipart/form-data" data-ft-busy-label="Submitting…" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <p class="ft-q-group">Your details</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="ft-q-field mb-0" data-field="name">
+                                            <label class="ft-q-label" for="clientName">Your name <span class="text-danger">*</span></label>
+                                            <div class="ft-q-control">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                                <input class="ft-q-input" type="text" id="clientName" name="clientName" placeholder="e.g. Jane Wanjiku" autocomplete="name" maxlength="80">
+                                                <span class="ft-q-status" aria-hidden="true"></span>
+                                            </div>
+                                            <p class="ft-q-hint" id="name-hint" role="status" aria-live="polite"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="ft-q-field mb-0" data-field="email">
+                                            <label class="ft-q-label" for="clientEmail">Email <span class="text-danger">*</span></label>
+                                            <div class="ft-q-control">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                <input class="ft-q-input" type="email" id="clientEmail" name="clientEmail" placeholder="you@company.com" autocomplete="email" maxlength="120">
+                                                <span class="ft-q-status" aria-hidden="true"></span>
+                                            </div>
+                                            <p class="ft-q-hint" id="email-hint" role="status" aria-live="polite">We will send your quotation to this address.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="ft-q-field mb-0" data-field="phone">
+                                            <label class="ft-q-label" for="clientPhone">Phone <span class="text-danger">*</span></label>
+                                            <div class="ft-q-control">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                                <input class="ft-q-input" type="tel" id="clientPhone" name="clientPhone" placeholder="0712 345 678" autocomplete="tel" inputmode="tel" maxlength="16">
+                                                <span class="ft-q-status" aria-hidden="true"></span>
+                                            </div>
+                                            <p class="ft-q-hint" id="phone-hint" role="status" aria-live="polite">Kenyan mobile, 10 digits. e.g. 0712 345 678</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="ft-q-field mb-0" data-field="company">
+                                            <label class="ft-q-label" for="clientCompany">Company / organisation <span class="ft-q-optional">optional</span></label>
+                                            <div class="ft-q-control">
+                                                <i class="fa fa-building" aria-hidden="true"></i>
+                                                <input class="ft-q-input" type="text" id="clientCompany" name="clientCompany" placeholder="Your organisation" autocomplete="organization" maxlength="80">
+                                                <span class="ft-q-status" aria-hidden="true"></span>
+                                            </div>
+                                            <p class="ft-q-hint" id="company-hint" role="status" aria-live="polite"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="ft-q-group">Project</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="ft-q-field mb-0" data-field="service">
+                                            <label class="ft-q-label" for="serviceType">Service or area <span class="text-danger">*</span></label>
+                                            <div class="ft-q-control ft-q-control--select">
+                                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                                <select class="ft-q-input" id="serviceType" name="serviceType">
+                                                    <option value="" selected>Choose one</option>
+                                                    <option value="Website development">Website development</option>
+                                                    <option value="Graphic design">Graphic design</option>
+                                                    <option value="IT consulting">IT consulting</option>
+                                                    <option value="IT support">IT support</option>
+                                                    <option value="System integration">System integration</option>
+                                                    <option value="Cloud services">Cloud services</option>
+                                                    <option value="Other / not sure">Other / not sure</option>
+                                                </select>
+                                                <span class="ft-q-status" aria-hidden="true"></span>
+                                            </div>
+                                            <p class="ft-q-hint" id="service-hint" role="status" aria-live="polite"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="ft-q-field mb-0" data-field="timeline">
+                                            <label class="ft-q-label" for="timeline">Timeline preference <span class="ft-q-optional">optional</span></label>
+                                            <div class="ft-q-control ft-q-control--select">
+                                                <i class="fa fa-clock" aria-hidden="true"></i>
+                                                <select class="ft-q-input" id="timeline" name="timeline">
+                                                    <option value="" selected>Prefer not to say</option>
+                                                    <option value="urgent">Urgent (1–2 weeks)</option>
+                                                    <option value="normal">Normal (1–2 months)</option>
+                                                    <option value="flexible">Flexible (3+ months)</option>
+                                                </select>
+                                                <span class="ft-q-status" aria-hidden="true"></span>
+                                            </div>
+                                            <p class="ft-q-hint" id="timeline-hint" role="status" aria-live="polite"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="ft-q-field mb-0" data-field="description">
+                                            <label class="ft-q-label" for="projectDescription">What do you need? <span class="text-danger">*</span></label>
+                                            <div class="ft-q-control ft-q-control--area">
+                                                <i class="fa fa-comment-alt" aria-hidden="true"></i>
+                                                <textarea class="ft-q-input" id="projectDescription" name="projectDescription" rows="6" maxlength="2000" placeholder="Goals, scope, links, deadlines—anything that helps us help you."></textarea>
+                                                <span class="ft-q-status" aria-hidden="true"></span>
+                                            </div>
+                                            <p class="ft-q-hint" id="description-hint" role="status" aria-live="polite">Goals, scope, links, deadlines — anything that helps.</p>
+                                            <div class="ft-q-upload" data-field="file">
+                                                <input class="ft-q-upload__input" type="file" id="projectFile" name="projectFile" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.webp,.gif,.zip,.txt,application/pdf,image/*">
+                                                <label class="ft-q-upload__drop" for="projectFile" id="projectFileDrop">
+                                                    <span class="ft-q-upload__icon" aria-hidden="true"><i class="fa fa-paperclip"></i></span>
+                                                    <span class="ft-q-upload__copy">
+                                                        <strong>Attach a file</strong>
+                                                        <span>PDF, Word, image, or ZIP — optional, max 8 MB</span>
+                                                    </span>
+                                                </label>
+                                                <div class="ft-q-upload__picked" id="projectFilePicked" hidden>
+                                                    <i class="fa fa-file" aria-hidden="true"></i>
+                                                    <span class="ft-q-upload__name" id="projectFileName"></span>
+                                                    <span class="ft-q-upload__size" id="projectFileSize"></span>
+                                                    <button type="button" class="ft-q-upload__remove" id="projectFileRemove" aria-label="Remove file">&times;</button>
+                                                </div>
+                                                <p class="ft-q-hint" id="file-hint" role="status" aria-live="polite"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="ft-q-field mb-0" data-field="challenge">
+                                            <div class="ft-challenge" id="ftChallenge">
+                                                <div class="ft-challenge__copy">
+                                                    <div class="ft-challenge__head">
+                                                        <span class="ft-challenge__eyebrow">Quick check</span>
+                                                        <p class="ft-challenge__title mb-0">Confirm you are human</p>
+                                                    </div>
+                                                    <p class="ft-challenge__prompt mb-0">
+                                                        What is <strong id="challengeQuestion">…</strong>?
+                                                    </p>
+                                                </div>
+                                                <div class="ft-challenge__solve">
+                                                    <div class="ft-challenge__row">
+                                                        <div class="ft-q-control ft-q-control--challenge">
+                                                            <i class="fa fa-shield-alt" aria-hidden="true"></i>
+                                                            <input class="ft-q-input" type="number" id="challenge_answer" name="challenge_answer" inputmode="numeric" autocomplete="off" aria-describedby="challenge-hint" placeholder="Answer">
+                                                            <span class="ft-q-status" aria-hidden="true"></span>
+                                                        </div>
+                                                        <button type="button" class="btn btn-outline-secondary ft-challenge__refresh" id="challengeRefresh" aria-label="New challenge">
+                                                            <i class="fa fa-sync-alt" aria-hidden="true"></i>
+                                                        </button>
+                                                    </div>
+                                                    <p class="ft-q-hint" id="challenge-hint" role="status" aria-live="polite">Type the sum of the two numbers.</p>
+                                                    <input type="hidden" name="challenge_a" id="challenge_a" value="">
+                                                    <input type="hidden" name="challenge_b" id="challenge_b" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-        <!-- Quotation Services Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-5">Select a Service & Get a Quotation</h1>
-                </div>
-                <div class="row g-4">
-                    <!-- Website Development -->
-                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="quotation-service-card">
-                            <div class="quotation-service-header">
-                                <div class="service-icon-large">
-                                    <i class="fa fa-laptop-code fa-3x"></i>
+                                <input type="hidden" name="estimatedPrice" value="">
+                                <input type="hidden" name="budgetRange" value="">
+
+                                <div class="ft-q-actions">
+                                    <button type="submit" class="ft-q-submit">Submit quotation request</button>
+                                    <a href="contact.html" class="ft-q-link">Contact us directly</a>
                                 </div>
-                                <h4>Website Development</h4>
-                            </div>
-                            <div class="quotation-service-body">
-                                <p class="service-description">Create stunning, responsive websites that deliver exceptional user experiences and drive business growth with modern web technologies.</p>
-                                <div class="pricing-section">
-                                    <p class="pricing-label">Starting Price:</p>
-                                    <p class="pricing-value">KES 25,000</p>
-                                </div>
-                                <button class="btn btn-primary w-100 py-2 get-quotation-btn" data-service="Website Development" data-price="25000">Get Quotation</button>
-                            </div>
+                            </form>
                         </div>
-                    </div>
-
-                    <!-- Graphic Design -->
-                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="quotation-service-card">
-                            <div class="quotation-service-header">
-                                <div class="service-icon-large">
-                                    <i class="fa fa-palette fa-3x"></i>
-                                </div>
-                                <h4>Graphic Design</h4>
-                            </div>
-                            <div class="quotation-service-body">
-                                <p class="service-description">Transform your brand identity with creative and professional graphic design solutions that captivate your audience and communicate your message effectively.</p>
-                                <div class="pricing-section">
-                                    <p class="pricing-label">Starting Price:</p>
-                                    <p class="pricing-value">KES 15,000</p>
-                                </div>
-                                <button class="btn btn-primary w-100 py-2 get-quotation-btn" data-service="Graphic Design" data-price="15000">Get Quotation</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- IT Consulting -->
-                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="quotation-service-card">
-                            <div class="quotation-service-header">
-                                <div class="service-icon-large">
-                                    <i class="fa fa-user-tie fa-3x"></i>
-                                </div>
-                                <h4>IT Consulting</h4>
-                            </div>
-                            <div class="quotation-service-body">
-                                <p class="service-description">Get expert guidance on technology strategy, infrastructure planning, and digital transformation to optimize your business operations and achieve your goals.</p>
-                                <div class="pricing-section">
-                                    <p class="pricing-label">Starting Price:</p>
-                                    <p class="pricing-value">KES 35,000</p>
-                                </div>
-                                <button class="btn btn-primary w-100 py-2 get-quotation-btn" data-service="IT Consulting" data-price="35000">Get Quotation</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- IT Support -->
-                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="quotation-service-card">
-                            <div class="quotation-service-header">
-                                <div class="service-icon-large">
-                                    <i class="fa fa-headset fa-3x"></i>
-                                </div>
-                                <h4>IT Support</h4>
-                            </div>
-                            <div class="quotation-service-body">
-                                <p class="service-description">Ensure your technology runs smoothly with reliable IT support services, troubleshooting, maintenance, and technical assistance when you need it most.</p>
-                                <div class="pricing-section">
-                                    <p class="pricing-label">Starting Price:</p>
-                                    <p class="pricing-value">KES 20,500/month</p>
-                                </div>
-                                <button class="btn btn-primary w-100 py-2 get-quotation-btn" data-service="IT Support" data-price="20500">Get Quotation</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- System Integration -->
-                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="quotation-service-card">
-                            <div class="quotation-service-header">
-                                <div class="service-icon-large">
-                                    <i class="fa fa-plug fa-3x"></i>
-                                </div>
-                                <h4>System Integration</h4>
-                            </div>
-                            <div class="quotation-service-body">
-                                <p class="service-description">Seamlessly connect and integrate your business systems, applications, and platforms to improve workflow efficiency and data consistency across your organization.</p>
-                                <div class="pricing-section">
-                                    <p class="pricing-label">Starting Price:</p>
-                                    <p class="pricing-value">KES 75,000</p>
-                                </div>
-                                <button class="btn btn-primary w-100 py-2 get-quotation-btn" data-service="System Integration" data-price="75000">Get Quotation</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud Services -->
-                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="quotation-service-card">
-                            <div class="quotation-service-header">
-                                <div class="service-icon-large">
-                                    <i class="fa fa-cloud fa-3x"></i>
-                                </div>
-                                <h4>Cloud Services</h4>
-                            </div>
-                            <div class="quotation-service-body">
-                                <p class="service-description">Leverage the power of cloud computing to scale your business, improve efficiency, and reduce costs with our comprehensive cloud solutions and migration services.</p>
-                                <div class="pricing-section">
-                                    <p class="pricing-label">Starting Price:</p>
-                                    <p class="pricing-value">Custom</p>
-                                </div>
-                                <button class="btn btn-primary w-100 py-2 get-quotation-btn" data-service="Cloud Services" data-price="Custom">Get Quotation</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Quotation Services End -->
-
-
-        <!-- Quotation Modal -->
-        <div class="modal fade" id="quotationModal" tabindex="-1" aria-labelledby="quotationModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title" id="quotationModalLabel">Get a Quotation</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="quotationMessage"></div>
-                        <form id="quotationForm">
-                            <div class="row g-3">
-                                <!-- Service Type (Pre-filled) -->
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="serviceType" name="serviceType" placeholder="Service Type" readonly>
-                                        <label for="serviceType">Service</label>
-                                    </div>
-                                </div>
-
-                                <!-- Estimated Price -->
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="estimatedPrice" name="estimatedPrice" placeholder="Estimated Price" readonly>
-                                        <label for="estimatedPrice">Estimated Price (Starting)</label>
-                                    </div>
-                                </div>
-
-                                <!-- Name -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Your Name" required>
-                                        <label for="clientName">Your Name</label>
-                                    </div>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Your Email" required>
-                                        <label for="clientEmail">Your Email</label>
-                                    </div>
-                                </div>
-
-                                <!-- Phone -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="clientPhone" name="clientPhone" placeholder="Your Phone">
-                                        <label for="clientPhone">Your Phone</label>
-                                    </div>
-                                </div>
-
-                                <!-- Company -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="clientCompany" name="clientCompany" placeholder="Company Name">
-                                        <label for="clientCompany">Company Name</label>
-                                    </div>
-                                </div>
-
-                                <!-- Project Description -->
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Describe your project requirements" id="projectDescription" name="projectDescription" style="height: 150px" required></textarea>
-                                        <label for="projectDescription">Project Description</label>
-                                    </div>
-                                </div>
-
-                                <!-- Budget Range -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="budgetRange" name="budgetRange" required>
-                                            <option value="">Select Budget Range</option>
-                                            <option value="below_10k">Below KES 10,000</option>
-                                            <option value="10k_30k">KES 10,000 - 30,000</option>
-                                            <option value="30k_50k">KES 30,000 - 50,000</option>
-                                            <option value="50k_100k">KES 50,000 - 100,000</option>
-                                            <option value="above_100k">Above KES 100,000</option>
-                                        </select>
-                                        <label for="budgetRange">Budget Range</label>
-                                    </div>
-                                </div>
-
-                                <!-- Timeline -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="timeline" name="timeline" required>
-                                            <option value="">Select Timeline</option>
-                                            <option value="urgent">Urgent (1-2 weeks)</option>
-                                            <option value="normal">Normal (1-2 months)</option>
-                                            <option value="flexible">Flexible (3+ months)</option>
-                                        </select>
-                                        <label for="timeline">Timeline</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" id="submitQuotationBtn">Submit Quotation Request</button>
-                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Quotation Modal End -->
+        </section>
+    </main>
 
 
-        <!-- Newsletter Start -->
-        <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span></p>
-                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
-                        <p class="text-white mb-4">Stay updated with the latest digital trends, exclusive insights, and special offers. Subscribe to our newsletter and never miss an opportunity to grow your business.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                <!-- Footer Start -->
+                <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="ft-footer-bg" aria-hidden="true"></div>
+                    <div class="container position-relative py-5 px-3 px-lg-4">
+                        <div class="row g-4 g-xl-5 align-items-start">
+                            <div class="col-md-6 col-lg-4">
+                                <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                                    <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                                </a>
+                                <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                                <div class="ft-footer-social d-flex flex-wrap gap-2">
+                                    <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="ft-footer-social-btn" href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <h3 class="ft-footer-heading">Quick links</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="service.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="blog/index.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="quotation.html">Get a quote</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-3">
+                                <h3 class="ft-footer-heading">Services</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="service-website-development.html">Website development</a></li>
+                                    <li><a href="service-graphic-design.html">Graphic design</a></li>
+                                    <li><a href="service-it-consulting.html">IT consulting</a></li>
+                                    <li><a href="service-it-support.html">IT support</a></li>
+                                    <li><a href="service-cloud-services.html">Cloud services</a></li>
+                                    <li><a href="service-system-integration.html">System integration</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <h3 class="ft-footer-heading">Contact</h3>
+                                <ul class="ft-footer-contact list-unstyled mb-0">
+                                    <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                                    <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter End -->
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Nanyuki, Kenya</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>0742 451 220</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@fraittech.co.ke</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <div class="ft-footer-bottom">
+                        <div class="container px-3 px-lg-4">
+                            <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                                <p class="ft-footer-copy mb-0 text-center text-md-start">
+                                    &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                                </p>
+                                <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                                    <a href="index.html">Home</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="faqs.html">FAQs</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="help.html">Help</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="privacy-policy.html">Privacy</a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="contact.html">Privacy Policy</a>
-                        <a class="btn btn-link" href="contact.html">Terms & Condition</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Services<span></span></p>
-                        <a class="btn btn-link" href="service-website-development.html">Website Development</a>
-                        <a class="btn btn-link" href="service-graphic-design.html">Graphic Design</a>
-                        <a class="btn btn-link" href="service-it-consulting.html">IT Consulting</a>
-                        <a class="btn btn-link" href="service-it-support.html">IT Support</a>
-                        <a class="btn btn-link" href="service-cloud-services.html">Cloud Services</a>
-                        <a class="btn btn-link" href="service-system-integration.html">System Integration</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Subscribe to our newsletter to receive the latest updates, IT tips, and exclusive offers delivered directly to your inbox.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; 2026 <a class="border-bottom" href="index.html">fraittech.co.ke</a>, All Right Reserved. 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+                </footer>
+                <!-- Footer End -->
 
     </div>
 
     <!-- JavaScript Libraries -->
+    <script src="js/cookies.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -520,129 +526,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-    <!-- Quotation Page Script -->
-    <script>
-        $(document).ready(function() {
-            // When Get Quotation button is clicked
-            $('.get-quotation-btn').click(function() {
-                var service = $(this).data('service');
-                var price = $(this).data('price');
-                
-                // Pre-fill the modal form
-                $('#serviceType').val(service);
-                $('#estimatedPrice').val('KES ' + price.toLocaleString());
-                
-                // Show the modal
-                var quotationModal = new bootstrap.Modal(document.getElementById('quotationModal'));
-                quotationModal.show();
-            });
-
-            // Submit quotation form
-            $('#submitQuotationBtn').click(function() {
-                var form = document.getElementById('quotationForm');
-                const submitBtn = document.getElementById('submitQuotationBtn');
-                const messageDiv = document.getElementById('quotationMessage');
-                
-                // Validate form
-                if (!form.checkValidity()) {
-                    form.classList.add('was-validated');
-                    return;
-                }
-
-                // Prevent double submission
-                if (submitBtn.disabled) return;
-
-                // Collect form data
-                var formData = new FormData(form);
-
-                // Clear previous messages
-                messageDiv.innerHTML = '';
-
-                // Show loading state with spinner
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Submitting...';
-                submitBtn.classList.add('disabled');
-
-                // Send to server via AJAX
-                fetch('quotation-handler.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.success) {
-                        // Show success message with icon
-                        messageDiv.innerHTML = `
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <i class="fas fa-check-circle me-2"></i>
-                                <strong>Success!</strong> ${data.message}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        `;
-                        form.reset();
-                        form.classList.remove('was-validated');
-                        
-                        // Close modal after 3 seconds
-                        setTimeout(function() {
-                            var quotationModal = bootstrap.Modal.getInstance(document.getElementById('quotationModal'));
-                            if (quotationModal) {
-                                quotationModal.hide();
-                            }
-                            messageDiv.innerHTML = '';
-                        }, 3000);
-                    } else {
-                        // Show error message with icon
-                        messageDiv.innerHTML = `
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <i class="fas fa-exclamation-circle me-2"></i>
-                                <strong>Error!</strong> ${data.message}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        `;
-                    }
-                })
-                .catch(error => {
-                    // Show network error
-                    messageDiv.innerHTML = `
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <i class="fas fa-times-circle me-2"></i>
-                            <strong>Error!</strong> Failed to submit quotation request. Please check your connection and try again.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    `;
-                    console.error('Fetch error:', error);
-                })
-                .finally(() => {
-                    // Reset button state
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('disabled');
-                    submitBtn.innerHTML = 'Submit Quotation Request';
-                });
-            });
-        });
-    </script>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254742451220" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <script src="js/quotation-form.js"></script>
 </body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 
 </html>

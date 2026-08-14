@@ -1,0 +1,314 @@
+/* Fraittech blog & article layout */
+.ft-blog-page {
+    background:
+        radial-gradient(1200px 600px at 12% -8%, rgba(13, 110, 253, 0.09), transparent 55%),
+        radial-gradient(900px 480px at 88% 12%, rgba(99, 102, 241, 0.06), transparent 50%),
+        linear-gradient(180deg, #f3f5fc 0%, #fafbfd 28%, #ffffff 100%);
+}
+.ft-blog-hero {
+    padding: 2.5rem 0 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background: #fff;
+}
+.ft-blog-hero h1 {
+    font-family: "Jost", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.65rem, 4vw, 2.35rem);
+    line-height: 1.2;
+    max-width: 22ch;
+    letter-spacing: -0.02em;
+}
+.ft-blog-hero .lead {
+    max-width: 52ch;
+    color: #4b5568;
+    font-weight: 500;
+    line-height: 1.65;
+}
+.ft-blog-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.ft-blog-meta .badge {
+    font-weight: 600;
+}
+
+/* Single blog post — centered headline stack (index uses .ft-blog-hero--modern) */
+.ft-blog-hero:not(.ft-blog-hero--modern) .container-xxl {
+    text-align: center;
+}
+.ft-blog-hero:not(.ft-blog-hero--modern) .container-xxl > p:first-child {
+    text-align: left;
+}
+.ft-blog-hero:not(.ft-blog-hero--modern) .badge {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    border-radius: 999px;
+}
+.ft-blog-hero:not(.ft-blog-hero--modern) h1 {
+    max-width: min(100%, 38rem);
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: balance;
+}
+.ft-blog-hero:not(.ft-blog-hero--modern) .lead {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ft-blog-hero:not(.ft-blog-hero--modern) .ft-blog-meta {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ft-article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 0 4rem;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #212529;
+}
+.ft-article h2 {
+    font-family: "Jost", system-ui, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem;
+    line-height: 1.3;
+}
+.ft-article h3 {
+    font-size: 1.12rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+}
+.ft-article p {
+    margin-bottom: 1rem;
+}
+.ft-article ul,
+.ft-article ol {
+    margin-bottom: 1rem;
+    padding-left: 1.25rem;
+}
+.ft-article li {
+    margin-bottom: 0.35rem;
+}
+.ft-article figure {
+    margin: 1.75rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 40px rgba(40, 52, 111, 0.1);
+}
+.ft-article figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.ft-article figcaption {
+    font-size: 0.85rem;
+    color: #6c757d;
+    padding: 0.65rem 1rem;
+    background: #f8f9fa;
+}
+.ft-article .ft-callout {
+    border-left: 4px solid #0d6efd;
+    background: #f0f6ff;
+    padding: 1rem 1.25rem;
+    border-radius: 0 10px 10px 0;
+    margin: 1.5rem 0;
+    font-size: 0.98rem;
+}
+.ft-blog-card {
+    border-radius: 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+    background: #fff;
+    height: 100%;
+    padding: 0.65rem;
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 12px 40px rgba(15, 23, 42, 0.06);
+    transition: box-shadow 0.28s ease, transform 0.28s ease, border-color 0.28s ease;
+}
+.ft-blog-card:hover {
+    box-shadow:
+        0 2px 4px rgba(15, 23, 42, 0.04),
+        0 22px 56px rgba(13, 110, 253, 0.12);
+    transform: translateY(-4px);
+    border-color: rgba(13, 110, 253, 0.14);
+}
+.ft-blog-card__img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.85rem;
+    display: block;
+}
+.ft-blog-card__body {
+    padding: 1.15rem 0.85rem 1.35rem;
+    text-align: center;
+}
+.ft-blog-card__tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #0b5ed7;
+    font-weight: 700;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(13, 110, 253, 0.1);
+}
+.ft-blog-card__title {
+    font-family: "Jost", system-ui, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 0.65rem auto 0.5rem;
+    line-height: 1.4;
+    text-align: center;
+    text-wrap: balance;
+    max-width: 28ch;
+}
+.ft-blog-card__title a {
+    color: inherit;
+    text-decoration: none;
+}
+.ft-blog-card__title a:hover {
+    color: #0d6efd;
+}
+.ft-blog-card__excerpt {
+    font-size: 0.9rem;
+    color: #5c6370;
+    margin: 0 auto;
+    max-width: 34ch;
+    line-height: 1.55;
+    text-align: center;
+}
+
+/* Blog index — modern listing */
+.ft-blog-hero--modern {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(800px 420px at 0% 0%, rgba(13, 110, 253, 0.11), transparent 60%),
+        radial-gradient(640px 380px at 100% 30%, rgba(99, 102, 241, 0.08), transparent 55%),
+        linear-gradient(165deg, #f8f9ff 0%, #ffffff 45%, #f5f7fd 100%);
+    border-bottom: 1px solid rgba(13, 110, 253, 0.07);
+}
+.ft-blog-hero--modern::before {
+    content: "";
+    position: absolute;
+    inset: -40% 55% auto -20%;
+    height: 120%;
+    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.85), transparent 55%);
+    pointer-events: none;
+    opacity: 0.9;
+}
+.ft-blog-hero--modern .container-xxl {
+    position: relative;
+    z-index: 1;
+}
+.ft-blog-hero__inner {
+    padding-top: clamp(2.75rem, 5vw, 4rem);
+    padding-bottom: clamp(2.25rem, 4vw, 3.5rem);
+}
+.ft-blog-hero__intro {
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.ft-blog-hero--modern .ft-blog-hero__lead {
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4b5568;
+    font-weight: 500;
+    line-height: 1.65;
+}
+.ft-blog-stats-card--hero {
+    max-width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.75rem;
+    text-align: center;
+}
+.ft-blog-hero--modern .badge {
+    font-weight: 600;
+    font-size: 0.78rem;
+    padding: 0.45rem 0.95rem !important;
+    background: linear-gradient(135deg, #0d6efd 0%, #3d8bfd 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.28);
+}
+.ft-blog-hero--modern h1 {
+    max-width: min(100%, 36rem);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1.85rem, 4.2vw, 2.6rem);
+    line-height: 1.15;
+    text-wrap: balance;
+}
+.ft-blog-stats-card {
+    border: 1px solid rgba(13, 110, 253, 0.1) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 18px 48px rgba(13, 110, 253, 0.1) !important;
+}
+.ft-blog-toolbar {
+    margin-top: 0.5rem;
+    margin-bottom: 2.25rem !important;
+    padding: 1.15rem 1.35rem;
+    border-radius: 1.15rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 16px 48px rgba(15, 23, 42, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.ft-blog-toolbar .ft-blog-search-wrap {
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 0.85rem !important;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+}
+.ft-blog-toolbar .form-control:focus {
+    box-shadow: none;
+}
+.ft-blog-filters .ft-blog-filter-btn {
+    border-radius: 999px;
+    padding: 0.52rem 1.2rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    background: #fff;
+    color: #374151;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.ft-blog-filters .ft-blog-filter-btn:hover {
+    border-color: rgba(13, 110, 253, 0.4);
+    color: #0d6efd;
+    transform: translateY(-1px);
+}
+.ft-blog-filters .ft-blog-filter-btn.active {
+    background: linear-gradient(135deg, #0d6efd 0%, #2563eb 100%);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 10px 26px rgba(13, 110, 253, 0.32);
+}
+.ft-blog-stats-card .letter-spacing-1 {
+    letter-spacing: 0.06em;
+}
+
+/* Index grid breathing room */
+#ftBlogGrid {
+    --bs-gutter-y: 1.75rem;
+}

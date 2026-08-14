@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Help Center &amp; IT Knowledge Base | Fraittech Kenya</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Fraittech help center: working with our team, orders and privacy, plus practical IT guides (Windows CMD tips, Wi-Fi troubleshooting, security hygiene, productivity) for businesses in Kenya.">
+    <meta name="keywords" content="Fraittech help, IT knowledge base Kenya, Windows CMD tips, Wi-Fi password recover own PC, cybersecurity basics, web project FAQ, digital agency support Nanyuki">
+    <meta name="author" content="Fraittech">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Help Center &amp; IT Knowledge Base | Fraittech">
+    <meta property="og:description" content="Support for Fraittech services plus practical IT guides: CMD tips, Wi-Fi fixes, security habits, and productivity for Kenyan businesses.">
+    <meta property="og:url" content="https://fraittech.co.ke/help.html">
+    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fraittech.co.ke/help.html">
+
+    <!-- Favicon -->
+    <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="img/favicon/favicon.svg" rel="icon" type="image/svg+xml">
+    <link href="img/favicon/favicon-96x96.webp" rel="icon" type="image/webp" sizes="96x96">
+    <link href="img/favicon/apple-touch-icon.webp" rel="apple-touch-icon">
+    <link href="img/favicon/site.webmanifest" rel="manifest">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Fraittech Help Center & IT Knowledge Base",
+      "url": "https://fraittech.co.ke/help.html",
+      "description": "Support resources and practical IT guides from Fraittech, Kenya.",
+      "publisher": { "@type": "Organization", "name": "Fraittech", "url": "https://fraittech.co.ke" },
+      "dateModified": "2026-04-18"
+    }
+    </script>
+    
+    <style>
+        .ft-kb-wrap { background: linear-gradient(180deg, #f8f9ff 0%, #fff 40%); }
+        .ft-kb-search {
+            max-width: 520px;
+            border-radius: 999px;
+            border: 1px solid rgba(13, 110, 253, 0.25);
+            padding: 0.6rem 1.25rem;
+            box-shadow: 0 4px 20px rgba(13, 110, 253, 0.08);
+        }
+        .ft-kb-search input {
+            border: none;
+            outline: none;
+            width: 100%;
+            background: transparent;
+        }
+        .ft-kb-toc {
+            position: sticky;
+            top: 5.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background: #fff;
+            padding: 1.25rem 1.35rem;
+            font-size: 0.95rem;
+        }
+        .ft-kb-toc a {
+            display: block;
+            padding: 0.35rem 0;
+            color: #212529;
+            text-decoration: none;
+        }
+        .ft-kb-toc a:hover { color: #0d6efd; }
+        .ft-kb-section {
+            scroll-margin-top: 5.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .ft-kb-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(13, 110, 253, 0.2);
+        }
+        .ft-kb-article {
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background: #fff;
+            padding: 1.35rem 1.5rem;
+            margin-bottom: 1rem;
+            transition: box-shadow 0.2s ease;
+        }
+        .ft-kb-article:hover {
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+        }
+        .ft-kb-article h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .ft-kb-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #0d6efd;
+            font-weight: 600;
+        }
+        .ft-kb-code {
+            font-size: 0.85rem;
+            background: #f1f3f5;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0 0;
+            overflow-x: auto;
+        }
+        .ft-kb-article.ft-kb-hidden {
+            display: none;
+        }
+        .ft-kb-ethics {
+            border-left: 4px solid #198754;
+            background: #f4fbf6;
+            padding: 0.85rem 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .accordion-button:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Header Bar Start -->
+    <div class="ft-topbar py-2 px-lg-5">
+        <div class="container-xxl">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-8">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-phone text-primary me-2"></i>
+                            <span>+254 742 451 220</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-envelope text-primary me-2"></i>
+                            <span>info@fraittech.co.ke</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                            <span>Nanyuki, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
+                        <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Header Bar End -->
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
+            </div>
+        </div>
+
+        <!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <!-- <h1 class="m-0">DGital</h1> -->
+            <img src="img/Latest logo.webp" alt="Logo">
+        </a>
+        <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
+
+            <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
+
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+
+            </a>
+
+            <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+
+                <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown mega-dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-intro">
+                            <span class="mega-menu-eyebrow">Our expertise</span>
+                            <p class="mega-menu-headline mb-0">Explore services tailored to your goals &mdash; web, creative, cloud, and ongoing support.</p>
+                        </div>
+                        <div class="container-fluid mega-menu-inner">
+                            <div class="row g-3 g-lg-4 mega-menu-grid">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-website-development.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-laptop-code"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Website Development</h6>
+                                            <p>Stunning, responsive websites for business growth</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-graphic-design.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-palette"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Graphic Design</h6>
+                                            <p>Creative designs that captivate your audience</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-consulting.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Consulting</h6>
+                                            <p>Expert guidance on technology strategy</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-support.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Support</h6>
+                                            <p>Reliable technical support & maintenance</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-system-integration.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-plug"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>System Integration</h6>
+                                            <p>Seamlessly connect your business systems</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-cloud-services.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-cloud"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Cloud Services</h6>
+                                            <p>Scalable cloud solutions & migration</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="service.html" class="btn btn-primary rounded-pill">
+                                    View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block">Get a quotation</a>
+
+            <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom align-items-center">
+            <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                <img src="img/Latest logo.webp" alt="Fraittech">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                <div class="ft-offcanvas-services">
+                    <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                        <span class="fs-5">Services</span>
+                        <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="ftOffcanvasServices">
+                        <div class="d-flex flex-column ps-2 pb-2">
+                            <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                            <a href="service-graphic-design.html" class="nav-link py-2">Graphic Design</a>
+                            <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                            <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                            <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                            <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                            <a href="service.html" class="nav-link py-2 fw-semibold">View all services</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                <a href="contact.html" class="nav-link py-2 fs-5">Contact</a>
+            </nav>
+            <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+        </div>
+    </div>
+
+            <!-- Hero Slider Start -->
+            <div class="hero-slider-container position-relative">
+                <div class="hero-slider">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active">
+                        <img src="img/hero-slide-1.webp" alt="Fraittech Help & Support" class="hero-slide-img">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="text-white animated slideInDown">Help & Support</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">Help</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="hero-slide">
+                        <img src="img/hero-slide-2.webp" alt="Technical Support" class="hero-slide-img">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="text-white animated slideInDown">We're Here to Help</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <p class="text-white fs-5">Expert assistance for all your digital needs</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="hero-slide">
+                        <img src="img/hero-slide-3.webp" alt="Get Assistance" class="hero-slide-img">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="text-white animated slideInDown">Support Resources</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <p class="text-white fs-5">Find answers and solutions quickly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Slider End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <div id="cookies" class="container-xxl pt-4">
+            <div class="alert alert-light border shadow-sm mb-0" role="region" aria-labelledby="cookies-heading">
+                <h2 id="cookies-heading" class="h5 mb-2">Cookie notice</h2>
+                <p class="mb-2 small">Essential cookies keep the site working, including cart data stored in your browser. If you choose &ldquo;Accept all&rdquo; in the banner, we load our live chat (Tawk.to), which may set additional cookies. You can switch to essential-only cookies at any time using <a href="#" data-ft-cookie-prefs>cookie settings</a> in the footer.</p>
+                <p class="mb-0 small text-muted">Questions? Contact us at <a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a>.</p>
+            </div>
+        </div>
+
+        <!-- Knowledge base Start -->
+        <div class="ft-kb-wrap">
+            <div class="container-xxl py-5">
+                <div class="container-fluid px-lg-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="section-title bg-white text-center text-primary px-3 d-inline-block">Knowledge base</p>
+                        <h1 class="mb-3">Help center &amp; practical IT guides</h1>
+                        <p class="text-muted mx-auto mb-4" style="max-width: 640px;">Learn how to get the most from Fraittech, understand cart and privacy basics, and use vetted Windows command-line tricks that real IT teams rely on&mdash;written for Kenyan businesses that want fewer outages and safer devices.</p>
+                        <div class="ft-kb-search d-inline-flex align-items-center gap-2 mx-auto mb-2">
+                            <i class="fa fa-search text-primary ms-1" aria-hidden="true"></i>
+                            <label class="visually-hidden" for="ft-kb-search">Search articles</label>
+                            <input type="search" id="ft-kb-search" autocomplete="off" placeholder="Search topics (e.g. Wi-Fi, CMD, quotation, SSL)..." aria-label="Search knowledge base articles">
+                        </div>
+                        <p class="small text-muted mb-0"><a href="faqs.html">FAQs</a> &middot; <a href="privacy-policy.html">Privacy policy</a> &middot; <a href="quotation.html">Request a quotation</a></p>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.05s">
+                            <nav class="ft-kb-toc" aria-label="Knowledge base sections">
+                                <strong class="d-block mb-2 text-primary">Jump to</strong>
+                                <a href="#kb-fraittech">Working with Fraittech</a>
+                                <a href="#kb-privacy-shop">Orders, cart &amp; data</a>
+                                <a href="#kb-cmd">Windows CMD &amp; PowerShell</a>
+                                <a href="#kb-security">Security &amp; phishing</a>
+                                <a href="#kb-network">Networking quick fixes</a>
+                                <a href="#kb-productivity">Office productivity</a>
+                            </nav>
+                        </div>
+                        <div class="col-lg-9">
+
+                            <section id="kb-fraittech" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-handshake text-primary me-2" aria-hidden="true"></i>Working with Fraittech</h2>
+
+                                <article class="ft-kb-article" data-kb-search="quotation brief project scope timeline revision kenya fraittech website design">
+                                    <span class="ft-kb-tag">Projects</span>
+                                    <h3>Starting a website or branding project</h3>
+                                    <p class="small text-muted mb-2">Use <a href="quotation.html">Get a quotation</a> with a clear goal (e.g. lead generation, bookings, e-commerce). Attach logo files, inspiration links, and must-have pages. We respond with scope, milestones, and pricing.</p>
+                                    <p class="mb-0">Tip: name a single decision-maker for approvals so design rounds stay on schedule.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="revision feedback design mockup approval">
+                                    <span class="ft-kb-tag">Process</span>
+                                    <h3>How to give feedback that saves time</h3>
+                                    <p class="mb-0">Group comments by page or screen, mark &ldquo;must change&rdquo; vs. &ldquo;nice to have&rdquo;, and avoid conflicting feedback from multiple people in the same round. Short Loom videos are welcome for UX issues.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="domain DNS SSL hosting email fraittech">
+                                    <span class="ft-kb-tag">Go-live</span>
+                                    <h3>Domains, DNS, and SSL (the short version)</h3>
+                                    <p class="mb-0"><strong>DNS</strong> points your domain to hosting; <strong>SSL</strong> encrypts traffic. When migrating, lower TTL a day before changes, cut over off-peak, and keep old hosting online until propagation finishes. We can manage this as part of a launch checklist.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-privacy-shop" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-shield-alt text-primary me-2" aria-hidden="true"></i>Orders, cart &amp; your data</h2>
+
+                                <article class="ft-kb-article" data-kb-search="cart localstorage browser checkout payment intasend">
+                                    <span class="ft-kb-tag">Shop</span>
+                                    <h3>Why your cart survives after closing the tab</h3>
+                                    <p class="mb-0">The store saves cart lines in your browser so you do not lose items. Payment still happens on our provider&rsquo;s secure page. Details: <a href="privacy-policy.html">Privacy policy</a>.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="cookies tawk chat consent essential">
+                                    <span class="ft-kb-tag">Cookies</span>
+                                    <h3>Live chat and cookies</h3>
+                                    <p class="mb-0">If you accept non-essential cookies, chat widgets may load (for example Tawk.to). Essential-only mode keeps the site working without those scripts. Use cookie settings from the banner or footer link.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-cmd" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-terminal text-primary me-2" aria-hidden="true"></i>Windows CMD &amp; PowerShell tips</h2>
+                                <p class="small text-muted">Open <strong>Command Prompt</strong> or <strong>Windows Terminal</strong> as a normal user for these examples. Run as Administrator only when a command says so.</p>
+
+                                <article class="ft-kb-article" data-kb-search="wifi password netsh wlan profile key clear recover own computer network">
+                                    <span class="ft-kb-tag">Networking</span>
+                                    <h3>View a Wi-Fi password you already saved (your PC only)</h3>
+                                    <p class="mb-2">Windows can show the key for networks <em>this device has previously joined</em>. Replace <code>YOUR_WIFI_NAME</code> with the exact SSID (use quotes if it contains spaces).</p>
+                                    <pre class="ft-kb-code mb-0">netsh wlan show profiles
+netsh wlan show profile name="YOUR_WIFI_NAME" key=clear</pre>
+                                    <div class="ft-kb-ethics mb-0"><strong>Use responsibly.</strong> Only run this on hardware you own or are authorised to administer. Do not attempt to capture other people&rsquo;s credentials or break into networks&mdash;that is illegal and unethical. Windows <strong>user account</strong> passwords are not exposed in plain text via CMD; use official password reset or Microsoft account recovery instead.</div>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="ipconfig ping tracert flushdns connectivity internet">
+                                    <span class="ft-kb-tag">Troubleshoot</span>
+                                    <h3>Quick connectivity checks</h3>
+                                    <pre class="ft-kb-code mb-2">ipconfig /all
+ping 8.8.8.8
+tracert fraittech.co.ke
+ipconfig /flushdns</pre>
+                                    <p class="mb-0"><code>ping</code> tests reachability; <code>tracert</code> shows where packets slow down; <code>flushdns</code> clears stale DNS on the PC after DNS changes.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="sfc scannow dism chkdsk repair windows">
+                                    <span class="ft-kb-tag">Maintenance</span>
+                                    <h3>Repair common Windows file issues (elevated)</h3>
+                                    <p class="mb-2">From an <strong>Administrator</strong> command prompt:</p>
+                                    <pre class="ft-kb-code mb-0">sfc /scannow
+DISM /Online /Cleanup-Image /RestoreHealth</pre>
+                                    <p class="mb-0 mt-2 small">For disk problems, schedule <code>chkdsk</code> carefully&mdash;it may require a reboot. Always backup first.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="tasklist taskkill process port netstat powershell">
+                                    <span class="ft-kb-tag">Power user</span>
+                                    <h3>See what is listening on a port</h3>
+                                    <pre class="ft-kb-code mb-0">netstat -ano | findstr :443</pre>
+                                    <p class="mb-0 mt-2">Match the PID in Task Manager or use <code>tasklist /FI "PID eq 1234"</code> to identify the process. Helpful when a dev server or printer utility grabs a port.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-security" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-lock text-primary me-2" aria-hidden="true"></i>Security habits that actually work</h2>
+
+                                <article class="ft-kb-article" data-kb-search="phishing m-pesa business email compromise 2FA">
+                                    <span class="ft-kb-tag">Threats</span>
+                                    <h3>Phishing and fake payment requests</h3>
+                                    <p class="mb-0">Verify M-Pesa or bank changes by calling your contact on a <em>known</em> number. Enable MFA on email and cloud admin accounts. Limit who can approve invoices.</p>
+                                </article>
+
+                                <article class="ft-kb-article" data-kb-search="password manager backup ransomware offline">
+                                    <span class="ft-kb-tag">Basics</span>
+                                    <h3>Passwords, managers, and backups</h3>
+                                    <p class="mb-0">Use a password manager, unique passwords per site, and offline or immutable backups for accounting files. Test restores before ransomware strikes.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-network" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-network-wired text-primary me-2" aria-hidden="true"></i>Networking quick fixes</h2>
+
+                                <article class="ft-kb-article" data-kb-search="router reboot firmware guest wifi qos">
+                                    <span class="ft-kb-tag">Office</span>
+                                    <h3>Stabilise a busy office router</h3>
+                                    <p class="mb-0">Separate guest Wi-Fi, update firmware, place the AP high and central, and use wired Ethernet for desktops or IP phones when possible. For recurring drops, log times and run <code>ping -t</code> to your gateway to show patterns to your ISP.</p>
+                                </article>
+                            </section>
+
+                            <section id="kb-productivity" class="ft-kb-section wow fadeInUp" data-wow-delay="0.1s">
+                                <h2><i class="fa fa-bolt text-primary me-2" aria-hidden="true"></i>Productivity</h2>
+
+                                <article class="ft-kb-article" data-kb-search="clipboard windows v win shift screenshot snipping">
+                                    <span class="ft-kb-tag">Windows</span>
+                                    <h3>Faster screenshots and window snapping</h3>
+                                    <p class="mb-0"><kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> opens Snipping Tool; <kbd>Win</kbd>+<kbd>Arrow</kbd> snaps windows. Pair with a shared cloud folder for quick design feedback loops.</p>
+                                </article>
+                            </section>
+
+                            <div class="alert alert-primary border-0 rounded-3 mb-0 wow fadeInUp" data-wow-delay="0.15s" role="note">
+                                <h3 class="h6 mb-2">Need hands-on IT or a new site?</h3>
+                                <p class="mb-2 small mb-0">Our <a href="service-it-support.html" class="alert-link">IT support</a> and <a href="service-website-development.html" class="alert-link">web development</a> teams cover Nanyuki, remote Kenya-wide engagements, and project-based work. Tell us your goal on the <a href="contact.html" class="alert-link">contact</a> page.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Knowledge base End -->
+
+        <!-- Quick Support Start -->
+        <div class="container-xxl py-5 bg-light">
+            <div class="container-fluid py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title bg-white text-center text-primary px-3">Quick Support</p>
+                    <h1 class="text-center mb-5">Contact Our Support Team</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-white p-5 rounded text-center">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone text-white fs-4"></i>
+                            </div>
+                            <h3 class="mb-3">Call Us</h3>
+                            <p class="mb-2">Available 24/7 for urgent support</p>
+                            <h4 class="text-primary">+254 742 451 220</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="bg-white p-5 rounded text-center">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-envelope text-white fs-4"></i>
+                            </div>
+                            <h3 class="mb-3">Email Us</h3>
+                            <p class="mb-2">We'll respond within 24 hours</p>
+                            <h4 class="text-primary">info@fraittech.co.ke</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="bg-white p-5 rounded text-center">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fab fa-whatsapp text-white fs-4"></i>
+                            </div>
+                            <h3 class="mb-3">WhatsApp</h3>
+                            <p class="mb-2">Quick chat support via WhatsApp</p>
+                            <h4 class="text-primary">+254 742 451 220</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Quick Support End -->
+
+    </div>
+
+            <!-- Footer Start -->
+            <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="ft-footer-bg" aria-hidden="true"></div>
+                <div class="container position-relative py-5 px-3 px-lg-4">
+                    <div class="row g-4 g-xl-5 align-items-start">
+                        <div class="col-md-6 col-lg-4">
+                            <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                                <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                            </a>
+                            <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                            <div class="ft-footer-social d-flex flex-wrap gap-2">
+                                <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                                <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="ft-footer-social-btn" href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <h3 class="ft-footer-heading">Quick links</h3>
+                            <ul class="ft-footer-list list-unstyled mb-0">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="blog/index.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="quotation.html">Get a quote</a></li>
+                                <li><a href="privacy-policy.html">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-3">
+                            <h3 class="ft-footer-heading">Services</h3>
+                            <ul class="ft-footer-list list-unstyled mb-0">
+                                <li><a href="service-website-development.html">Website development</a></li>
+                                <li><a href="service-graphic-design.html">Graphic design</a></li>
+                                <li><a href="service-it-consulting.html">IT consulting</a></li>
+                                <li><a href="service-it-support.html">IT support</a></li>
+                                <li><a href="service-cloud-services.html">Cloud services</a></li>
+                                <li><a href="service-system-integration.html">System integration</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h3 class="ft-footer-heading">Contact</h3>
+                            <ul class="ft-footer-contact list-unstyled mb-0">
+                                <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                                <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-footer-bottom">
+                    <div class="container px-3 px-lg-4">
+                        <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                            <p class="ft-footer-copy mb-0 text-center text-md-start">
+                                &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                            </p>
+                            <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                                <a href="index.html">Home</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">?</span>
+                                <a href="faqs.html">FAQs</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">?</span>
+                                <a href="help.html">Help</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">?</span>
+                                <a href="privacy-policy.html">Privacy</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="js/cookies.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Hero Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+            
+            function showSlide(n) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+
+            var searchInput = document.getElementById('ft-kb-search');
+            if (searchInput) {
+                var articles = document.querySelectorAll('.ft-kb-article');
+                var sections = document.querySelectorAll('.ft-kb-section');
+                function filterKb() {
+                    var q = searchInput.value.trim().toLowerCase();
+                    if (!q) {
+                        articles.forEach(function (el) { el.classList.remove('ft-kb-hidden'); });
+                        sections.forEach(function (sec) { sec.style.display = ''; });
+                        return;
+                    }
+                    var tokens = q.split(/\s+/).filter(Boolean);
+                    articles.forEach(function (el) {
+                        var hay = (el.getAttribute('data-kb-search') || '') + ' ' + el.textContent;
+                        hay = hay.toLowerCase();
+                        var ok = tokens.every(function (t) { return hay.indexOf(t) !== -1; });
+                        el.classList.toggle('ft-kb-hidden', !ok);
+                    });
+                    sections.forEach(function (sec) {
+                        var any = sec.querySelector('.ft-kb-article:not(.ft-kb-hidden)');
+                        sec.style.display = any ? '' : 'none';
+                    });
+                }
+                searchInput.addEventListener('input', filterKb);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,17 +14,17 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contact Fraittech - Digital Solutions Kenya">
     <meta property="og:description" content="Reach out to Fraittech for professional digital marketing and web design services. Contact us for your free quote today.">
-    <meta property="og:url" content="https://fraittech.co.ke/contact.html">
-    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.png">
+    <meta property="og:url" content="https://fraittech.co.ke/contact">
+    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.webp">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://fraittech.co.ke/contact.html">
+    <link rel="canonical" href="https://fraittech.co.ke/contact">
 
     <!-- Favicon -->
     <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
     <link href="img/favicon/favicon.svg" rel="icon" type="image/svg+xml">
-    <link href="img/favicon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/favicon/favicon-96x96.webp" rel="icon" type="image/webp" sizes="96x96">
+    <link href="img/favicon/apple-touch-icon.webp" rel="apple-touch-icon">
     <link href="img/favicon/site.webmanifest" rel="manifest">
 
     <!-- Google Web Fonts -->
@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -46,15 +46,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/contact-page.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="ft-contact-page">
     <!-- Top Header Bar Start -->
-    <div class="bg-dark py-2 px-lg-5">
+    <div class="ft-topbar py-2 px-lg-5">
         <div class="container-xxl">
             <div class="row g-4 align-items-center">
                 <div class="col-md-8">
-                    <div class="d-flex flex-wrap gap-4 small text-white">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone text-primary me-2"></i>
                             <span>+254 742 451 220</span>
@@ -70,367 +72,437 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-end">
-                    <div class="d-flex gap-2 justify-content-md-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
                         <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-x-twitter"></i></a>
                         <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" class="text-white small" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Top Header Bar End -->
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
             </div>
         </div>
-        <!-- Spinner End -->
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <!-- <h1 class="m-0">DGital</h1> -->
-                   <img src="img/Latest logo.png" alt="Logo"> 
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                    </div>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 mt-3 d-block d-lg-none w-100 text-center" style="background: var(--primary); color: #fff;">Get a quotation</a>
-                </div>
-            </nav>
-
-            <!-- Hero Slider Start -->
-            <div class="hero-slider-container position-relative">
-                <div class="hero-slider">
-                    <!-- Slide 1 -->
-                    <div class="hero-slide active">
-                        <img src="img/hero-slide-1.jpg" alt="Fraittech Contact Us" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Contact</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="hero-slide">
-                        <img src="img/hero-slide-2.jpg" alt="Get in Touch" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Let's Connect</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <p class="text-white fs-5">We're here to help and answer any questions</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="hero-slide">
-                        <img src="img/hero-slide-3.jpg" alt="Contact Fraittech" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Reach Out</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <p class="text-white fs-5">Quick response guaranteed</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Previous Button -->
-                <button class="hero-slider-btn prev" onclick="changeSlide(-1)">
-                    <i class="fa fa-chevron-left"></i>
-                </button>
-
-                <!-- Next Button -->
-                <button class="hero-slider-btn next" onclick="changeSlide(1)">
-                    <i class="fa fa-chevron-right"></i>
-                </button>
-
-                <!-- Slider Indicators -->
-                <div class="hero-slider-indicators">
-                    <span class="indicator active" onclick="currentSlide(1)"></span>
-                    <span class="indicator" onclick="currentSlide(2)"></span>
-                    <span class="indicator" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-            <!-- Hero Slider End -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <!-- <h1 class="m-0">DGital</h1> -->
+            <img src="img/Latest logo.webp" alt="Logo">
+        </a>
+        <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
+            <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+            <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+                <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
         </div>
-        <!-- Navbar & Hero End -->
-
-
-        <!-- Contact Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Contact Us<span></span></p>
-                    <h1 class="text-center mb-5">Contact For Any Query</h1>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            <p class="text-center mb-4">We reply within Minutes!</p>
-                            <div id="contactMessage" class="mb-3"></div>
-                            <form id="contactForm">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                                            <label for="name">Your Name</label>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown mega-dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-intro">
+                            <span class="mega-menu-eyebrow">Our expertise</span>
+                            <p class="mega-menu-headline mb-0">Explore services tailored to your goals – web, creative, cloud, and ongoing support.</p>
+                        </div>
+                        <div class="container-fluid mega-menu-inner">
+                            <div class="row g-3 g-lg-4 mega-menu-grid">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-website-development.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-laptop-code"></i>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-                                            <label for="email">Your Email</label>
+                                        <div class="mega-text">
+                                            <h6>Website Development</h6>
+                                            <p>Stunning, responsive websites for business growth</p>
                                         </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px" required></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Send Message</button>
-                                    </div>
+                                    </a>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-        
-
-            <!--Start of Tawk.to Script-->
-            <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-            </script>
-            <!--End of Tawk.to Script-->
-
-    </div>
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Nanyuki, Kenya</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>0742 451 220</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@fraittech.co.ke</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="contact.html">Privacy Policy</a>
-                        <a class="btn btn-link" href="contact.html">Terms & Condition</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Services<span></span></p>
-                        <a class="btn btn-link" href="service-website-development.html">Website Development</a>
-                        <a class="btn btn-link" href="service-graphic-design.html">Graphic Design</a>
-                        <a class="btn btn-link" href="service-it-consulting.html">IT Consulting</a>
-                        <a class="btn btn-link" href="service-it-support.html">IT Support</a>
-                        <a class="btn btn-link" href="service-cloud-services.html">Cloud Services</a>
-                        <a class="btn btn-link" href="service-system-integration.html">System Integration</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Subscribe to our newsletter to receive the latest updates, IT tips, and exclusive offers delivered directly to your inbox.</p>
-                        <form class="newsletter-form position-relative w-100 mt-3" action="newsletter-handler.php" method="POST">
-                            <input name="email" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Your Email" style="height: 48px;" required>
-                            <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2" aria-label="Subscribe">
-                                <i class="fa fa-paper-plane text-primary fs-4"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; 2026 <a class="border-bottom" href="index.html">fraittech.co.ke</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://wa.me/254742451220" target="_blank">Frank Mwaniki</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="contact.html">Cookies</a>
-                                <a href="help.html">Help</a>
-                                <a href="faqs.html">FAQs</a>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-graphic-design.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-palette"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Graphic Design</h6>
+                                            <p>Creative designs that captivate your audience</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-consulting.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Consulting</h6>
+                                            <p>Expert guidance on technology strategy</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-support.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Support</h6>
+                                            <p>Reliable technical support & maintenance</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-system-integration.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-plug"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>System Integration</h6>
+                                            <p>Seamlessly connect your business systems</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-cloud-services.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-cloud"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Cloud Services</h6>
+                                            <p>Scalable cloud solutions & migration</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="service.html" class="btn btn-primary rounded-pill">
+                                    View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+            </div>
+            <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block" style="background: var(--secondary); color: #fff;">Get a quotation</a>
+
+            <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom align-items-center">
+            <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                <img src="img/Latest logo.webp" alt="Fraittech">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                <div class="ft-offcanvas-services">
+                    <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                        <span class="fs-5">Services</span>
+                        <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="ftOffcanvasServices">
+                        <div class="d-flex flex-column ps-2 pb-2">
+                            <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                            <a href="service-graphic-design.html" class="nav-link py-2">Graphic Design</a>
+                            <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                            <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                            <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                            <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                            <a href="service.html" class="nav-link py-2 fw-semibold">View all services</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                <a href="contact.html" class="nav-link py-2 fs-5 active" aria-current="page">Contact</a>
+            </nav>
+            <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+        </div>
+    </div>
+
+            <div class="ft-contact-hero">
+                <div class="ft-contact-hero__overlay" aria-hidden="true"></div>
+                <div class="container position-relative ft-contact-hero__content px-3">
+                    <nav aria-label="Breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-3">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                    <h1 class="animated slideInDown">Contact us</h1>
+                    <p class="ft-contact-hero__lead mb-0">Call, email, message on WhatsApp, or use the form – we aim to respond within one business day.</p>
+                </div>
             </div>
         </div>
-        <!-- Footer End -->
+        <!-- Navbar & Hero End -->
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254742451220" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <main class="ft-contact-main bg-light border-top border-bottom border-light">
+            <section class="py-5" aria-labelledby="contact-main-heading">
+                <div class="container px-3 px-lg-4">
+                    <div class="row g-4 g-lg-5 align-items-start">
+                        <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.05s">
+                            <p class="ft-contact-eyebrow mb-2">Reach us</p>
+                            <h2 id="contact-main-heading" class="h3 fw-bold mb-3" style="font-family: Jost, sans-serif; letter-spacing: -0.02em;">Let's talk about your project</h2>
+                            <p class="text-muted mb-4">Use any channel below. For structured quotes with packages, try <a href="quotation.html" class="fw-semibold">Get a quotation</a>.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                <li>
+                                    <div class="ft-contact-card">
+                                        <div class="ft-contact-card__icon" aria-hidden="true"><i class="fa fa-phone-alt"></i></div>
+                                        <div class="flex-grow-1 min-w-0">
+                                            <div class="ft-contact-card__label">Phone</div>
+                                            <a href="tel:+254742451220" class="ft-contact-card__value d-block">+254 742 451 220</a>
+                                            <span class="ft-contact-card__hint">Mon–Sat – business hours</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ft-contact-card">
+                                        <div class="ft-contact-card__icon" aria-hidden="true"><i class="fa fa-envelope"></i></div>
+                                        <div class="flex-grow-1 min-w-0">
+                                            <div class="ft-contact-card__label">Email</div>
+                                            <a href="mailto:info@fraittech.co.ke" class="ft-contact-card__value d-block">info@fraittech.co.ke</a>
+                                            <span class="ft-contact-card__hint">We read every message</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ft-contact-card">
+                                        <div class="ft-contact-card__icon ft-contact-card__icon--whatsapp" aria-hidden="true"><i class="fab fa-whatsapp"></i></div>
+                                        <div class="flex-grow-1 min-w-0">
+                                            <div class="ft-contact-card__label">WhatsApp</div>
+                                            <a href="https://wa.me/254742451220" class="ft-contact-card__value d-block" target="_blank" rel="noopener noreferrer">+254 742 451 220</a>
+                                            <a href="https://wa.me/254742451220" class="btn btn-sm btn-success rounded-pill mt-2 px-3" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ft-contact-card">
+                                        <div class="ft-contact-card__icon" aria-hidden="true"><i class="fa fa-map-marker-alt"></i></div>
+                                        <div class="flex-grow-1 min-w-0">
+                                            <div class="ft-contact-card__label">Location</div>
+                                            <p class="mb-1 fw-semibold text-dark">Nanyuki, Kenya</p>
+                                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Nanyuki%2C+Kenya" class="small fw-semibold text-primary text-decoration-none" target="_blank" rel="noopener noreferrer">Open in Google Maps <i class="fa fa-external-link-alt ms-1 small" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.15s">
+                            <div class="ft-contact-form-card h-100">
+                                    <h2 id="contact-form-heading" class="h4 fw-bold mb-1">Send a message</h2>
+                                    <p class="text-muted small mb-4">Fields marked with <span class="text-danger">*</span> are required. Validation tips appear under each field as you type.</p>
+                                    <form id="contactForm" action="contact-handler.php" method="POST" novalidate data-ft-busy-label="Sending…">
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <div class="ft-ct-field" data-field="name">
+                                                    <label class="ft-ct-label" for="name">Your name <span class="text-danger">*</span></label>
+                                                    <div class="ft-ct-control">
+                                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                                        <input class="ft-ct-input" type="text" id="name" name="name" placeholder="e.g. Jane Wanjiku" required autocomplete="name" maxlength="80">
+                                                        <span class="ft-ct-status" aria-hidden="true"></span>
+                                                    </div>
+                                                    <p class="ft-field-hint" id="name-hint" role="status" aria-live="polite"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ft-ct-field" data-field="email">
+                                                    <label class="ft-ct-label" for="email">Your email <span class="text-danger">*</span></label>
+                                                    <div class="ft-ct-control">
+                                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                        <input class="ft-ct-input" type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" maxlength="120">
+                                                        <span class="ft-ct-status" aria-hidden="true"></span>
+                                                    </div>
+                                                    <p class="ft-field-hint" id="email-hint" role="status" aria-live="polite"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ft-ct-field" data-field="phone">
+                                                    <label class="ft-ct-label" for="phone">Phone <span class="text-danger">*</span></label>
+                                                    <div class="ft-ct-control">
+                                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                                        <input class="ft-ct-input" type="tel" id="phone" name="phone" placeholder="0712 345 678" required autocomplete="tel" inputmode="tel" maxlength="16">
+                                                        <span class="ft-ct-status" aria-hidden="true"></span>
+                                                    </div>
+                                                    <p class="ft-field-hint" id="phone-hint" role="status" aria-live="polite">Kenyan mobile, 10 digits. e.g. 0712 345 678</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ft-ct-field" data-field="subject">
+                                                    <label class="ft-ct-label" for="subject">Subject <span class="text-danger">*</span></label>
+                                                    <div class="ft-ct-control">
+                                                        <i class="fa fa-tag" aria-hidden="true"></i>
+                                                        <input class="ft-ct-input" type="text" id="subject" name="subject" placeholder="What is this about?" required maxlength="120">
+                                                        <span class="ft-ct-status" aria-hidden="true"></span>
+                                                    </div>
+                                                    <p class="ft-field-hint" id="subject-hint" role="status" aria-live="polite"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="ft-ct-field" data-field="message">
+                                                    <label class="ft-ct-label" for="message">Message <span class="text-danger">*</span></label>
+                                                    <div class="ft-ct-control ft-ct-control--area">
+                                                        <i class="fa fa-comment-alt" aria-hidden="true"></i>
+                                                        <textarea class="ft-ct-input" placeholder="How can we help?" id="message" name="message" rows="6" required maxlength="4000"></textarea>
+                                                        <span class="ft-ct-status" aria-hidden="true"></span>
+                                                    </div>
+                                                    <p class="ft-field-hint" id="message-hint" role="status" aria-live="polite"></p>
+                                                </div>
+                                            </div>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    
-    <!-- Contact Form AJAX Handler -->
-    <script>
-        // Prevent multiple submissions
-        let isSubmitting = false;
-        
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Prevent double submission
-            if (isSubmitting) return;
-            isSubmitting = true;
-            
-            const form = this;
-            const formData = new FormData(form);
-            const submitBtn = document.getElementById('submitBtn');
-            const messageDiv = document.getElementById('contactMessage');
-            
-            // Clear previous messages
-            messageDiv.innerHTML = '';
-            
-            // Show loading state with spinner
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
-            submitBtn.classList.add('disabled');
-            
-            // Send form data via AJAX
-            fetch('contact-handler.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    // Show success message with icon
-                    messageDiv.innerHTML = `
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <i class="fas fa-check-circle me-2"></i>
-                            <strong>Success!</strong> ${data.message}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            <!-- Honeypot — leave empty -->
+                                            <div class="ft-hp" aria-hidden="true">
+                                                <label for="company_website">Company website</label>
+                                                <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+                                            </div>
+                                            <input type="hidden" name="form_started" id="form_started" value="">
+
+                                            <div class="col-12">
+                                                <div class="ft-ct-field" data-field="challenge">
+                                                    <div class="ft-challenge" id="ftChallenge">
+                                                        <div class="ft-challenge__copy">
+                                                            <div class="ft-challenge__head">
+                                                                <span class="ft-challenge__eyebrow">Quick check</span>
+                                                                <p class="ft-challenge__title mb-0">Confirm you are human</p>
+                                                            </div>
+                                                            <p class="ft-challenge__prompt mb-0">
+                                                                What is <strong id="challengeQuestion">…</strong>?
+                                                            </p>
+                                                        </div>
+                                                        <div class="ft-challenge__solve">
+                                                            <div class="ft-challenge__row">
+                                                                <div class="ft-ct-control ft-ct-control--challenge">
+                                                                    <i class="fa fa-shield-alt" aria-hidden="true"></i>
+                                                                    <input class="ft-ct-input" type="number" id="challenge_answer" name="challenge_answer" inputmode="numeric" required autocomplete="off" aria-describedby="challenge-hint" placeholder="Answer">
+                                                                    <span class="ft-ct-status" aria-hidden="true"></span>
+                                                                </div>
+                                                                <button type="button" class="btn btn-outline-secondary ft-challenge__refresh" id="challengeRefresh" aria-label="New challenge">
+                                                                    <i class="fa fa-sync-alt" aria-hidden="true"></i>
+                                                                </button>
+                                                            </div>
+                                                            <p class="ft-field-hint" id="challenge-hint" role="status" aria-live="polite">Type the sum of the two numbers.</p>
+                                                            <input type="hidden" name="challenge_a" id="challenge_a" value="">
+                                                            <input type="hidden" name="challenge_b" id="challenge_b" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="ft-form-summary" id="formSummary" role="status" aria-live="polite" hidden></div>
+                                                <div class="ft-ct-actions">
+                                                    <button class="ft-ct-submit" type="submit" id="submitBtn">Send message</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
                         </div>
-                    `;
-                    
-                    // Reset form
-                    form.reset();
-                    
-                    // Auto-hide success message after 5 seconds
-                    setTimeout(() => {
-                        const alert = messageDiv.querySelector('.alert');
-                        if (alert) {
-                            alert.style.opacity = '1';
-                            alert.style.transition = 'opacity 0.5s ease-out';
-                            setTimeout(() => {
-                                alert.style.opacity = '0';
-                                setTimeout(() => {
-                                    messageDiv.innerHTML = '';
-                                }, 500);
-                            }, 4500);
-                        }
-                    }, 1000);
-                    
-                    // Scroll to message
-                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                } else {
-                    // Show error message with icon
-                    messageDiv.innerHTML = `
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <i class="fas fa-exclamation-circle me-2"></i>
-                            <strong>Error!</strong> ${data.message}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    `;
-                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-            })
-            .catch(error => {
-                // Show network error
-                messageDiv.innerHTML = `
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <i class="fas fa-times-circle me-2"></i>
-                        <strong>Error!</strong> Failed to send message. Please check your connection and try again.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                `;
-                console.error('Fetch error:', error);
-                messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            })
-            .finally(() => {
-                // Reset button state
-                submitBtn.disabled = false;
-                submitBtn.classList.remove('disabled');
-                submitBtn.innerHTML = 'Send Message';
-                isSubmitting = false;
-            });
-        });
-    </script>
+                </div>
+            </section>
+        </main>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254742451220" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    </div>
+
+            <!-- Footer Start -->
+            <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="ft-footer-bg" aria-hidden="true"></div>
+                <div class="container position-relative py-5 px-3 px-lg-4">
+                    <div class="row g-4 g-xl-5 align-items-start">
+                        <div class="col-md-6 col-lg-4">
+                            <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                                <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                            </a>
+                            <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                            <div class="ft-footer-social d-flex flex-wrap gap-2">
+                                <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                                <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a class="ft-footer-social-btn" href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <h3 class="ft-footer-heading">Quick links</h3>
+                            <ul class="ft-footer-list list-unstyled mb-0">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="blog/index.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="quotation.html">Get a quote</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-3">
+                            <h3 class="ft-footer-heading">Services</h3>
+                            <ul class="ft-footer-list list-unstyled mb-0">
+                                <li><a href="service-website-development.html">Website development</a></li>
+                                <li><a href="service-graphic-design.html">Graphic design</a></li>
+                                <li><a href="service-it-consulting.html">IT consulting</a></li>
+                                <li><a href="service-it-support.html">IT support</a></li>
+                                <li><a href="service-cloud-services.html">Cloud services</a></li>
+                                <li><a href="service-system-integration.html">System integration</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h3 class="ft-footer-heading">Contact</h3>
+                            <ul class="ft-footer-contact list-unstyled mb-0">
+                                <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                                <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-footer-bottom">
+                    <div class="container px-3 px-lg-4">
+                        <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                            <p class="ft-footer-copy mb-0 text-center text-md-start">
+                                &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                            </p>
+                            <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                                <a href="index.html">Home</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                <a href="faqs.html">FAQs</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                <a href="help.html">Help</a>
+                                <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                <a href="privacy-policy.html">Privacy</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer End -->
+    <script src="js/cookies.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -443,6 +515,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
     
     <!-- Ensure spinner is hidden on page load -->
     <script>
@@ -450,22 +523,10 @@
         var spinner = document.getElementById('spinner');
         if (spinner) {
             spinner.classList.remove('show');
+            spinner.setAttribute('aria-busy', 'false');
         }
     });
     </script>
 </body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 
 </html>

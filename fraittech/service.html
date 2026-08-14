@@ -14,17 +14,17 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Professional Digital Marketing & Web Services">
     <meta property="og:description" content="Comprehensive digital solutions including web design, SEO, and marketing for businesses in Kenya.">
-    <meta property="og:url" content="https://fraittech.co.ke/service.html">
-    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.png">
+    <meta property="og:url" content="https://fraittech.co.ke/service">
+    <meta property="og:image" content="https://fraittech.co.ke/img/Latest logo.webp">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://fraittech.co.ke/service.html">
+    <link rel="canonical" href="https://fraittech.co.ke/service">
 
     <!-- Favicon -->
     <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
     <link href="img/favicon/favicon.svg" rel="icon" type="image/svg+xml">
-    <link href="img/favicon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/favicon/favicon-96x96.webp" rel="icon" type="image/webp" sizes="96x96">
+    <link href="img/favicon/apple-touch-icon.webp" rel="apple-touch-icon">
     <link href="img/favicon/site.webmanifest" rel="manifest">
 
     <!-- Google Web Fonts -->
@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -46,6 +46,7 @@
 
     <!-- Main Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/footer-brand.css" rel="stylesheet">
 
         <!-- JSON-LD Structured Data for Services -->
         <script type="application/ld+json">
@@ -53,7 +54,7 @@
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Fraittech",
-            "image": "https://fraittech.co.ke/img/Latest logo.png",
+            "image": "https://fraittech.co.ke/img/Latest logo.webp",
             "description": "Professional digital marketing and web design services in Kenya",
             "address": {
                 "@type": "PostalAddress",
@@ -73,11 +74,11 @@
 <body>
 
     <!-- Top Header Bar Start -->
-    <div class="bg-dark py-2 px-lg-5">
+    <div class="ft-topbar py-2 px-lg-5">
         <div class="container-xxl">
             <div class="row g-4 align-items-center">
                 <div class="col-md-8">
-                    <div class="d-flex flex-wrap gap-4 small text-white">
+                    <div class="ft-topbar-contact d-flex flex-wrap gap-4 small text-white">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone text-primary me-2"></i>
                             <span>+254 742 451 220</span>
@@ -93,322 +94,443 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-end">
-                    <div class="d-flex gap-2 justify-content-md-end">
+                    <div class="d-flex gap-2 justify-content-md-end ft-topbar-social">
                         <a href="#" class="text-white small"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white small"><i class="fab fa-x-twitter"></i></a>
                         <a href="#" class="text-white small"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white small"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" class="text-white small" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Top Header Bar End -->
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+    <div class="container-fluid bg-white p-0">
+        <!-- Page preloader -->
+        <div id="spinner" class="ft-preloader show" role="progressbar" aria-busy="true" aria-label="Loading">
+            <div class="ft-preloader__inner">
+                <img class="ft-preloader__logo" src="img/Latest logo.webp" alt="Fraittech" width="160" height="48" decoding="async">
+                <div class="ft-preloader__track" aria-hidden="true"><span class="ft-preloader__progress"></span></div>
             </div>
         </div>
-        <!-- Spinner End -->
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <!-- <h1 class="m-0">DGital</h1> -->
-                   <img src="img/Latest logo.png" alt="Logo"> 
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link active">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light ft-navbar px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <!-- <h1 class="m-0">DGital</h1> -->
+            <img src="img/Latest logo.webp" alt="Logo">
+        </a>
+        <div class="d-flex align-items-center gap-2 ms-auto d-lg-none ft-navbar-mobile-tools">
+            <a href="cart.html" class="ft-mobile-cart-icon d-inline-flex align-items-center justify-content-center text-decoration-none position-relative" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="ft-mobile-cart-icon__badge badge rounded-pill bg-primary" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+            <button class="navbar-toggler ft-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#ftNavOffcanvas" aria-controls="ftNavOffcanvas" aria-expanded="false" aria-label="Open menu">
+                <span class="ft-nav-toggler-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown mega-dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-intro">
+                            <span class="mega-menu-eyebrow">Our expertise</span>
+                            <p class="mega-menu-headline mb-0">Explore services tailored to your goals – web, creative, cloud, and ongoing support.</p>
+                        </div>
+                        <div class="container-fluid mega-menu-inner">
+                            <div class="row g-3 g-lg-4 mega-menu-grid">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-website-development.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-laptop-code"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Website Development</h6>
+                                            <p>Stunning, responsive websites for business growth</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-graphic-design.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-palette"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Graphic Design</h6>
+                                            <p>Creative designs that captivate your audience</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-consulting.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Consulting</h6>
+                                            <p>Expert guidance on technology strategy</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-it-support.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>IT Support</h6>
+                                            <p>Reliable technical support & maintenance</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-system-integration.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-plug"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>System Integration</h6>
+                                            <p>Seamlessly connect your business systems</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="service-cloud-services.html" class="mega-item">
+                                        <div class="mega-icon">
+                                            <i class="fa fa-cloud"></i>
+                                        </div>
+                                        <div class="mega-text">
+                                            <h6>Cloud Services</h6>
+                                            <p>Scalable cloud solutions & migration</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="service.html" class="btn btn-primary rounded-pill">
+                                    View All Services <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get a quotation</a>
-                    <a href="quotation.html" class="btn rounded-pill py-2 px-4 mt-3 d-block d-lg-none w-100 text-center" style="background: var(--primary); color: #fff;">Get a quotation</a>
                 </div>
+                <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
+                <a href="blog/index.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="quotation.html" class="btn rounded-pill py-2 px-4 ms-2 d-none d-lg-block" style="background: var(--secondary); color: #fff;">Get a quotation</a>
+
+            <a href="cart.html" class="btn ft-navbar-cart-btn rounded-pill py-2 px-3 ms-2 d-none d-lg-inline-flex align-items-center gap-2" title="Shopping cart" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge bg-primary rounded-pill" data-cart-count hidden aria-label="Items in cart">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start ft-nav-offcanvas" tabindex="-1" id="ftNavOffcanvas" aria-labelledby="ftNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom align-items-center">
+            <a href="index.html" class="offcanvas-title d-flex align-items-center gap-2 mb-0 text-decoration-none" id="ftNavOffcanvasLabel">
+                <img src="img/Latest logo.webp" alt="Fraittech">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <nav class="nav flex-column gap-1 ft-offcanvas-nav flex-grow-1" aria-label="Mobile">
+                <a href="index.html" class="nav-link py-2 fs-5">Home</a>
+                <a href="about.html" class="nav-link py-2 fs-5">About</a>
+                <div class="ft-offcanvas-services">
+                    <a class="nav-link py-2 d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#ftOffcanvasServices" role="button" aria-expanded="false" aria-controls="ftOffcanvasServices">
+                        <span class="fs-5">Services</span>
+                        <i class="fas fa-chevron-down small" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="ftOffcanvasServices">
+                        <div class="d-flex flex-column ps-2 pb-2">
+                            <a href="service-website-development.html" class="nav-link py-2">Website Development</a>
+                            <a href="service-graphic-design.html" class="nav-link py-2">Graphic Design</a>
+                            <a href="service-it-consulting.html" class="nav-link py-2">IT Consulting</a>
+                            <a href="service-it-support.html" class="nav-link py-2">IT Support</a>
+                            <a href="service-system-integration.html" class="nav-link py-2">System Integration</a>
+                            <a href="service-cloud-services.html" class="nav-link py-2">Cloud Services</a>
+                            <a href="service.html" class="nav-link py-2 fw-semibold active" aria-current="page">View all services</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link py-2 fs-5">Portfolio</a>
+                <a href="blog/index.html" class="nav-link py-2 fs-5">Blog</a>
+                <a href="contact.html" class="nav-link py-2 fs-5">Contact</a>
             </nav>
+            <a href="quotation.html" class="btn btn-primary rounded-pill w-100 py-3 mt-2 fw-semibold">Get a quotation</a>
+        </div>
+    </div>
 
-            <!-- Hero Slider Start -->
-            <div class="hero-slider-container position-relative">
-                <div class="hero-slider">
-                    <!-- Slide 1 -->
-                    <div class="hero-slide active">
-                        <img src="img/graphic design 3.jpg" alt="Our Services" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Service</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item text-white active" aria-current="page">Service</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="hero-slide">
-                        <img src="img/working-1.jpg" alt="Solutions" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Solutions</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <p class="text-white fs-5">Comprehensive digital solutions for your business</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="hero-slide">
-                        <img src="img/branding.jpg" alt="Expertise" class="hero-slide-img">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1 class="text-white animated slideInDown">Expertise</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <p class="text-white fs-5">Professional team ready to help</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Previous Button -->
-                <button class="hero-slider-btn prev" onclick="changeSlide(-1)">
-                    <i class="fa fa-chevron-left"></i>
-                </button>
-
-                <!-- Next Button -->
-                <button class="hero-slider-btn next" onclick="changeSlide(1)">
-                    <i class="fa fa-chevron-right"></i>
-                </button>
-
-                <!-- Slider Indicators -->
-                <div class="hero-slider-indicators">
-                    <span class="indicator active" onclick="currentSlide(1)"></span>
-                    <span class="indicator" onclick="currentSlide(2)"></span>
-                    <span class="indicator" onclick="currentSlide(3)"></span>
+            <div class="ft-services-hero">
+                <div class="ft-services-hero__overlay" aria-hidden="true"></div>
+                <div class="container position-relative ft-services-hero__content px-3">
+                    <nav aria-label="Breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-3">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Services</li>
+                        </ol>
+                    </nav>
+                    <h1 class="animated slideInDown">Our services</h1>
+                    <p class="ft-services-hero__lead mb-0">Web, creative, integration, cloud, and ongoing support – built for teams that want clear delivery and dependable technology.</p>
                 </div>
             </div>
-            <!-- Hero Slider End -->
         </div>
         <!-- Navbar & Hero End -->
 
-
+        <main class="ft-services-main" id="main-content">
         <!-- Service Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-5">What Solutions We Provide</h1>
+        <section class="ft-section section-ft-services-page" aria-labelledby="ft-services-page-heading">
+            <div class="ft-section-bg ft-section-bg--light" aria-hidden="true"></div>
+            <div class="container position-relative py-5 px-3 px-md-4">
+                <header class="ft-head text-center mb-4 mb-lg-5 wow fadeInUp" data-wow-delay="0.05s">
+                    <span class="ft-eyebrow">Capabilities</span>
+                    <h2 id="ft-services-page-heading" class="ft-h2">Six ways we help your business</h2>
+                    <p class="ft-lead mx-auto mb-0">Open any service for scope, typical deliverables, and how we work with you from discovery to launch and beyond.</p>
+                </header>
+                <div class="row g-3 g-md-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <article class="ft-service-card">
+                            <div class="ft-service-icon" aria-hidden="true"><i class="fa fa-laptop-code"></i></div>
+                            <h3>Website development</h3>
+                            <p>Stunning, responsive sites with modern stacks, performance in mind, and content structures that scale as you grow.</p>
+                            <a class="ft-service-link" href="service-website-development.html" aria-label="Website development – view details"><i class="fa fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.15s">
+                        <article class="ft-service-card ft-service-card--accent">
+                            <div class="ft-service-icon" aria-hidden="true"><i class="fa fa-palette"></i></div>
+                            <h3>Graphic design</h3>
+                            <p>Brand identity, marketing collateral, and visuals that stay consistent across print and digital touchpoints.</p>
+                            <a class="ft-service-link" href="service-graphic-design.html" aria-label="Graphic design – view details"><i class="fa fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <article class="ft-service-card">
+                            <div class="ft-service-icon" aria-hidden="true"><i class="fa fa-user-tie"></i></div>
+                            <h3>IT consulting</h3>
+                            <p>Technology strategy, architecture choices, and roadmaps so investments align with how your business actually operates.</p>
+                            <a class="ft-service-link" href="service-it-consulting.html" aria-label="IT consulting – view details"><i class="fa fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <article class="ft-service-card ft-service-card--accent">
+                            <div class="ft-service-icon" aria-hidden="true"><i class="fa fa-headset"></i></div>
+                            <h3>IT support</h3>
+                            <p>Reliable troubleshooting, maintenance, and help-desk style assistance when your team needs a technical partner on call.</p>
+                            <p class="ft-service-price">From KES 20,500 / month</p>
+                            <a class="ft-service-link" href="service-it-support.html" aria-label="IT support – view details"><i class="fa fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.15s">
+                        <article class="ft-service-card">
+                            <div class="ft-service-icon" aria-hidden="true"><i class="fa fa-plug"></i></div>
+                            <h3>System integration</h3>
+                            <p>Connect apps, APIs, and data flows so teams stop re-keying information and workflows stay in sync.</p>
+                            <a class="ft-service-link" href="service-system-integration.html" aria-label="System integration – view details"><i class="fa fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <article class="ft-service-card ft-service-card--accent">
+                            <div class="ft-service-icon" aria-hidden="true"><i class="fa fa-cloud"></i></div>
+                            <h3>Cloud services</h3>
+                            <p>Hosting, migration, and optimisation on cloud platforms so you scale capacity without drowning in complexity.</p>
+                            <a class="ft-service-link" href="service-cloud-services.html" aria-label="Cloud services – view details"><i class="fa fa-arrow-right"></i></a>
+                        </article>
+                    </div>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Website Development</h5>
-                            <p class="m-0">Create stunning, responsive websites that deliver exceptional user experiences and drive business growth with modern web technologies.</p>
-                            <a class="btn btn-primary rounded-pill px-4 py-2 mt-3" href="service-website-development.html">More Info <i class="fa fa-arrow-right ms-2"></i></a>
+            </div>
+        </section>
+
+        <section class="ft-section bg-white border-top border-light" aria-label="Next steps">
+            <div class="container position-relative py-4 py-lg-5 px-3 px-md-4">
+                <div class="ft-services-cta wow fadeInUp" data-wow-delay="0.08s">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <h2 class="h4 fw-bold mb-2" style="font-family: Jost, sans-serif; letter-spacing: -0.02em;">Ready to scope your project?</h2>
+                            <p class="text-muted mb-0">Request a structured quotation or open the store to compare ready-made packages.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-palette fa-2x"></i>
+                        <div class="col-lg-5">
+                            <div class="d-flex flex-column flex-sm-row gap-2 justify-content-lg-end">
+                                <a href="quotation.html" class="btn btn-primary rounded-pill px-4">Get a quotation</a>
+                                <a href="cart.html" class="btn btn-outline-primary rounded-pill px-4">Browse packages</a>
                             </div>
-                            <h5 class="mb-3">Graphic Design</h5>
-                            <p class="m-0">Transform your brand identity with creative and professional graphic design solutions that captivate your audience and communicate your message effectively.</p>
-                            <a class="btn btn-primary rounded-pill px-4 py-2 mt-3" href="service-graphic-design.html">More Info <i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-user-tie fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">IT Consulting</h5>
-                            <p class="m-0">Get expert guidance on technology strategy, infrastructure planning, and digital transformation to optimize your business operations and achieve your goals.</p>
-                            <a class="btn btn-primary rounded-pill px-4 py-2 mt-3" href="service-it-consulting.html">More Info <i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-headset fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">IT Support</h5>
-                            <p class="m-0">Ensure your technology runs smoothly with reliable IT support services, troubleshooting, maintenance, and technical assistance when you need it most.</p>
-                            <div class="text-primary fw-bold mt-2">KES 20,500/month</div>
-                            <a class="btn btn-primary rounded-pill px-4 py-2 mt-3" href="service-it-support.html">More Info <i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-plug fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">System Integration</h5>
-                            <p class="m-0">Seamlessly connect and integrate your business systems, applications, and platforms to improve workflow efficiency and data consistency across your organization.</p>
-                            <a class="btn btn-primary rounded-pill px-4 py-2 mt-3" href="service-system-integration.html">More Info <i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-cloud fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Cloud Services</h5>
-                            <p class="m-0">Leverage the power of cloud computing to scale your business, improve efficiency, and reduce costs with our comprehensive cloud solutions and migration services.</p>
-                            <a class="btn btn-primary rounded-pill px-4 py-2 mt-3" href="service-cloud-services.html">More Info <i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        </main>
         <!-- Service End -->
 
 
         <!-- Newsletter Start -->
-        <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span></p>
-                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
-                        <p class="text-white mb-4">Stay updated with the latest digital trends, exclusive insights, and special offers. Subscribe to our newsletter and never miss an opportunity to grow your business.</p>
-                        <form id="newsletterForm" class="newsletter-form position-relative w-100 mt-3" autocomplete="off">
-                            <input name="email" id="newsletterEmail" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Your Email" style="height: 48px;" required>
-                            <button id="newsletterSubmitBtn" type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2" aria-label="Subscribe">
-                                <i class="fa fa-paper-plane text-primary fs-4"></i>
-                            </button>
-                        </form>
-                        <div id="newsletterMessage" class="mt-3"></div>
+        <section class="section-ft-newsletter py-5 wow fadeInUp" data-wow-delay="0.1s" aria-labelledby="ft-news-heading">
+            <div class="container px-3 px-md-4">
+                <div class="ft-newsletter-panel">
+                    <div class="ft-newsletter-panel__glow" aria-hidden="true"></div>
+                    <div class="row g-4 g-lg-5 align-items-center position-relative">
+                        <div class="col-lg-5 text-center text-lg-start wow fadeInUp" data-wow-delay="0.05s">
+                            <span class="ft-eyebrow ft-eyebrow--on-dark">Newsletter</span>
+                            <h2 id="ft-news-heading" class="ft-newsletter-heading">Stay in touch Always</h2>
+                            <p class="ft-newsletter-desc">Get digital trends, practical insights, and occasional offers – written for teams who care about growing online without the fluff.</p>
+                        </div>
+                        <div class="col-lg-7 text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                            <form id="newsletterForm" class="ft-newsletter-form ft-ajax newsletter-form w-100" action="newsletter-handler.php" method="POST" autocomplete="off" data-ft-busy-label="Subscribing…">
+                                <div class="ft-newsletter-form__row">
+                                    <label class="visually-hidden" for="newsletterEmail">Email address</label>
+                                    <input name="email" id="newsletterEmail" class="form-control ft-newsletter-input rounded-pill w-100 ps-4" type="email" placeholder="you@company.com" required>
+                                    <button id="newsletterSubmitBtn" type="submit" class="ft-newsletter-submit">
+                                        Subscribe <i class="fa fa-paper-plane ms-2" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <p class="ft-newsletter-hint mt-3 mb-0 text-lg-start mx-auto mx-lg-0">We respect your inbox. Unsubscribe anytime – no spam.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Newsletter End -->
 
 
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <p class="section-title text-secondary justify-content-center"><span></span>Testimonial<span></span></p>
-                <h1 class="text-center mb-5">What Say Our Clients!</h1>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Working with Fraittech has been an absolute game-changer for our business. Their expertise in IT solutions and website development helped us achieve remarkable growth and reach new heights.</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ps-4">
-                                <h5 class="mb-1">James Kariuki</h5>
-                                <span>Business Owner, Nairobi</span>
+        <section class="section-ft-testimonials ft-section py-5 wow fadeInUp" data-wow-delay="0.1s" aria-labelledby="ft-testimonials-heading">
+            <div class="ft-section-bg ft-section-bg--muted" aria-hidden="true"></div>
+            <div class="container position-relative py-4 px-3 px-md-4">
+                <header class="ft-head text-center mb-4 mb-lg-5">
+                    <span class="ft-eyebrow">Testimonials</span>
+                    <h2 id="ft-testimonials-heading" class="ft-h2">What our clients say</h2>
+                    <p class="ft-lead mx-auto mb-0">Feedback from teams we have supported across Kenya.</p>
+                </header>
+                <div class="owl-carousel testimonial-carousel ft-testimonial-carousel">
+                    <div class="ft-testimonial-card">
+                        <div class="ft-testimonial-card__inner">
+                            <div class="ft-testimonial-icon" aria-hidden="true"><i class="fa fa-quote-left"></i></div>
+                            <blockquote class="ft-quote">Working with Fraittech has been an absolute game-changer for our business. Their expertise in IT solutions and website development helped us achieve remarkable growth and reach new heights.</blockquote>
+                            <div class="ft-testimonial-meta">
+                                <div class="ft-testimonial-avatar" aria-hidden="true">IM</div>
+                                <div class="ft-testimonial-who">
+                                    <div class="ft-testimonial-name">Isaac Mutahi</div>
+                                    <div class="ft-testimonial-role">Business owner, Nanyuki</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Fraittech delivered exceptional results beyond our expectations. Their strategic approach to IT consulting and system integration significantly improved our business operations and efficiency.</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Mary Wanjiku</h5>
-                                <span>CEO, Mombasa</span>
+                    <div class="ft-testimonial-card">
+                        <div class="ft-testimonial-card__inner">
+                            <div class="ft-testimonial-icon" aria-hidden="true"><i class="fa fa-quote-left"></i></div>
+                            <blockquote class="ft-quote">Fraittech delivered exceptional results beyond our expectations. Their strategic approach to IT consulting and system integration significantly improved our business operations and efficiency.</blockquote>
+                            <div class="ft-testimonial-meta">
+                                <div class="ft-testimonial-avatar" aria-hidden="true">MW</div>
+                                <div class="ft-testimonial-who">
+                                    <div class="ft-testimonial-name">Mary Wanjiku</div>
+                                    <div class="ft-testimonial-role">CEO, Mombasa</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Professional, creative, and results-driven. Fraittech transformed our brand's digital presence and helped us connect with our target audience in meaningful ways. Highly recommended!</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Peter Kamau</h5>
-                                <span>Operations Manager, Kisumu</span>
+                    <div class="ft-testimonial-card">
+                        <div class="ft-testimonial-card__inner">
+                            <div class="ft-testimonial-icon" aria-hidden="true"><i class="fa fa-quote-left"></i></div>
+                            <blockquote class="ft-quote">Professional, creative, and results-driven. Fraittech transformed our brand's digital presence and helped us connect with our target audience in meaningful ways. Highly recommended!</blockquote>
+                            <div class="ft-testimonial-meta">
+                                <div class="ft-testimonial-avatar" aria-hidden="true">PK</div>
+                                <div class="ft-testimonial-who">
+                                    <div class="ft-testimonial-name">Peter Kamau</div>
+                                    <div class="ft-testimonial-role">Operations manager, Kisumu</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Testimonial End -->
         
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Nanyuki, Kenya</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>0742 451 220</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@fraittech.co.ke</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="contact.html">Privacy Policy</a>
-                        <a class="btn btn-link" href="contact.html">Terms & Condition</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Services<span></span></p>
-                        <a class="btn btn-link" href="service-website-development.html">Website Development</a>
-                        <a class="btn btn-link" href="service-graphic-design.html">Graphic Design</a>
-                        <a class="btn btn-link" href="service-it-consulting.html">IT Consulting</a>
-                        <a class="btn btn-link" href="service-it-support.html">IT Support</a>
-                        <a class="btn btn-link" href="service-cloud-services.html">Cloud Services</a>
-                        <a class="btn btn-link" href="service-system-integration.html">System Integration</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Subscribe to our newsletter to receive the latest updates, IT tips, and exclusive offers delivered directly to your inbox.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; 2026 <a class="border-bottom" href="index.html">fraittech.co.ke</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://wa.me/254742451220" target="_blank">Frank Mwaniki</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="contact.html">Cookies</a>
-                                <a href="help.html">Help</a>
-                                <a href="faqs.html">FAQs</a>
+                <!-- Footer Start -->
+                <footer class="ft-footer text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="ft-footer-bg" aria-hidden="true"></div>
+                    <div class="container position-relative py-5 px-3 px-lg-4">
+                        <div class="row g-4 g-xl-5 align-items-start">
+                            <div class="col-md-6 col-lg-4">
+                                <a href="index.html" class="ft-footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-3">
+                                    <img src="img/Latest logo.webp" alt="Fraittech" class="ft-footer-logo" width="128" height="128">
+                                </a>
+                                <p class="ft-footer-lead mb-4">Innovative, reliable technology for businesses that want to grow online and run smoothly every day.</p>
+                                <div class="ft-footer-social d-flex flex-wrap gap-2">
+                                    <a class="ft-footer-social-btn" href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="ft-footer-social-btn" href="https://www.instagram.com/fraittech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a class="ft-footer-social-btn" href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2">
+                                <h3 class="ft-footer-heading">Quick links</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="service.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="blog/index.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="quotation.html">Get a quote</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-3">
+                                <h3 class="ft-footer-heading">Services</h3>
+                                <ul class="ft-footer-list list-unstyled mb-0">
+                                    <li><a href="service-website-development.html">Website development</a></li>
+                                    <li><a href="service-graphic-design.html">Graphic design</a></li>
+                                    <li><a href="service-it-consulting.html">IT consulting</a></li>
+                                    <li><a href="service-it-support.html">IT support</a></li>
+                                    <li><a href="service-cloud-services.html">Cloud services</a></li>
+                                    <li><a href="service-system-integration.html">System integration</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <h3 class="ft-footer-heading">Contact</h3>
+                                <ul class="ft-footer-contact list-unstyled mb-0">
+                                    <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span>Nanyuki, Kenya</span></li>
+                                    <li><i class="fa fa-phone-alt" aria-hidden="true"></i><a href="tel:+254742451220">+254 742 451 220</a></li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@fraittech.co.ke">info@fraittech.co.ke</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+                    <div class="ft-footer-bottom">
+                        <div class="container px-3 px-lg-4">
+                            <div class="ft-footer-bottom-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-4">
+                                <p class="ft-footer-copy mb-0 text-center text-md-start">
+                                    &copy; <span id="currentYear"></span> <a href="index.html">Fraittech.co.ke</a>. All rights reserved.
+                                </p>
+                                <nav class="ft-footer-nav d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-md-2" aria-label="Footer">
+                                    <a href="index.html">Home</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="faqs.html">FAQs</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="help.html">Help</a>
+                                    <span class="ft-footer-nav-sep" aria-hidden="true">·</span>
+                                    <a href="privacy-policy.html">Privacy</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer End -->
 
 
     </div>
+    <script src="js/cookies.js"></script>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254742451220" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -422,88 +544,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-
-    <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/69641d7e010c08197df84813/1jenh6e7s';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-        </script>
-        <!--End of Tawk.to Script-->
-</script>
-
-<!-- Newsletter AJAX Handler -->
-<script>
-    let isNewsletterSubmitting = false;
-    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (isNewsletterSubmitting) return;
-        isNewsletterSubmitting = true;
-        const form = this;
-        const formData = new FormData(form);
-        const submitBtn = document.getElementById('newsletterSubmitBtn');
-        const messageDiv = document.getElementById('newsletterMessage');
-        // Clear previous messages
-        messageDiv.innerHTML = '';
-        // Show loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Subscribing...';
-        submitBtn.classList.add('disabled');
-        fetch('newsletter-handler.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
-            return response.json();
-        })
-        .then(data => {
-            if (data.status === 'success') {
-                messageDiv.innerHTML = `
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong>Success!</strong> ${data.message}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                `;
-                form.reset();
-                setTimeout(() => {
-                    const alert = messageDiv.querySelector('.alert');
-                    if (alert) alert.classList.remove('show');
-                }, 5000);
-            } else {
-                messageDiv.innerHTML = `
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <i class="fas fa-exclamation-circle me-2"></i>
-                        <strong>Error!</strong> ${data.message}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                `;
-            }
-        })
-        .catch(() => {
-            messageDiv.innerHTML = `
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <i class="fas fa-exclamation-circle me-2"></i>
-                    <strong>Error!</strong> Could not subscribe. Please try again later.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            `;
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fa fa-paper-plane text-primary fs-4"></i>';
-            submitBtn.classList.remove('disabled');
-            isNewsletterSubmitting = false;
-        });
-    });
-</script>
 </body>
 
 </html>
